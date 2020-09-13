@@ -21,7 +21,7 @@ namespace Evernus
     namespace ESIUrls
     {
         const auto esiUrl = QStringLiteral("https://esi.evetech.net");
-        const auto callbackUrl = QStringLiteral("https://evernus.com/sso-authentication-2/");
+        const auto callbackUrl = QStringLiteral("http://evernus.anver.ee/auth.php");
         const auto verifyUrl = QStringLiteral("https://login.eveonline.com/oauth/verify");
     }
 }

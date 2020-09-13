@@ -45,8 +45,9 @@ namespace Evernus
             "Created by <strong><a href='http://evewho.com/pilot/Pete+Butcher'>Pete Butcher</a></strong><br />"
             "German translation by <strong><a href='http://evewho.com/pilot/Hel+O%27Ween'>Hel O'Ween</a></strong><br />"
             "Thanks to <strong><a href='https://www.twitch.tv/maximilon'>Robert Knox</a></strong> for testing and tips.<br />"
-            "All donations are welcome :)<br /><br />"
-            "<a href='%3'>%3</a><br />"
+            "Current DEV <strong><a href='https://evewho.com/character/2113351129'>Sasha Winston</a></strong><br />"
+			"All donations are welcome :)<br /><br />"
+            "<a href='http://evernus.anver.ee'>http://evernus.anver.ee</a><br />"
             "Twitter: <a href='http://twitter.com/evernusproject'>@evernusproject</a><br />"
             "New forum topic: <a href='%4'>%4</a><br />"
             "Old forum topic: <a href='%5'>%5</a>")

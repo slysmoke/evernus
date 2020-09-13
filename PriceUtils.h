@@ -32,6 +32,8 @@ namespace Evernus
         double getBuyPrice(double buyPrice, const Taxes &taxes, bool limitOrder = true);
         double getSellPrice(double sellPrice, const Taxes &taxes, bool limitOrder = true);
         double getMargin(double cost, double price, const Taxes &taxes, bool limitOrder = true);
+		double round_to_digits(double value, int digits);
+		double getPriceStep(double price);
 
         double getPriceDelta();
     }

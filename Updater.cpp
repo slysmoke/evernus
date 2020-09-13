@@ -263,7 +263,7 @@ namespace Evernus
 
         mCheckingForUpdates = true;
 
-        auto reply = mAccessManager.get(QNetworkRequest{QUrl{QStringLiteral("https://evernus.com/latest_version.json")}});
+        auto reply = mAccessManager.get(QNetworkRequest{QUrl{QStringLiteral("http://evernus.anver.ee/latest_version.json")}});
         connect(reply, &QNetworkReply::finished, this, [=] {
             finishCheck(quiet);
         });
@@ -314,7 +314,7 @@ namespace Evernus
             return;
         }
 
-        const QUrl downloadUrl{QStringLiteral("https://evernus.com/download")};
+        const QUrl downloadUrl{QStringLiteral("http://evernus.anver.ee/")};
 
 #ifndef Q_OS_WIN
         const auto ret = QMessageBox::question(

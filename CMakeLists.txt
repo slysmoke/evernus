@@ -10,13 +10,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PROJECT_NAME "evernus")
 set(MAJOR_VERSION "3")
-set(MINOR_VERSION "8")
+set(MINOR_VERSION "9.4")
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMakeHelpers")
+
 
 option(EVERNUS_CREATE_DUMPS "create crash dumps using Google Breakpad" ON)
 
 find_package(Boost REQUIRED)
 find_package(Qt5Concurrent REQUIRED)
-find_package(Qt5Core 5.11 REQUIRED)
+find_package(Qt5Core 5.12.7 REQUIRED)
 find_package(Qt5DataVisualization REQUIRED)
 find_package(Qt5Gui REQUIRED)
 find_package(Qt5LinguistTools REQUIRED)
@@ -37,6 +40,7 @@ else()
     # because Defines.h will define to 1 if undefined
     add_definitions(-DEVERNUS_CREATE_DUMPS=0)
 endif()
+
 
 if(DEFINED EVERNUS_CLIENT_ID AND DEFINED EVERNUS_CLIENT_SECRET)
     add_definitions(-DEVERNUS_CLIENT_ID=${EVERNUS_CLIENT_ID} -DEVERNUS_CLIENT_SECRET=${EVERNUS_CLIENT_SECRET})

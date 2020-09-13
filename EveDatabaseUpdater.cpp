@@ -42,7 +42,7 @@ namespace Evernus
         mProgress.setRange(0, 100);
         mProgress.setWindowTitle(tr("Downloading..."));
 
-        const auto reply = mNetworkAccessManager.get(QNetworkRequest{QUrl{"https://evernus.com/latest_version.json"}});
+        const auto reply = mNetworkAccessManager.get(QNetworkRequest{QUrl{"http://evernus.anver.ee/latest_version.json"}});
         connect(reply, &QNetworkReply::finished, this, [=] {
             checkUpdate(*reply);
         });
@@ -78,7 +78,7 @@ namespace Evernus
         mProgress.move(qApp->desktop()->availableGeometry(&mProgress).center() - mProgress.rect().center());
         mProgress.show();
 
-        const auto download = new FileDownload{QStringLiteral("http://repo.evernus.com/sde/eve.db"), EveDatabaseConnectionProvider::getDatabasePath(), this};
+        const auto download = new FileDownload{QStringLiteral("http://evernus.anver.ee/eve.db"), EveDatabaseConnectionProvider::getDatabasePath(), this};
         connect(download, &FileDownload::downloadProgress, this, [=](auto received, auto total) {
             mProgress.setValue(received * 100 / total);
         });

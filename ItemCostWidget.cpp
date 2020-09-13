@@ -109,6 +109,7 @@ namespace Evernus
 
         mFilterEdit = new QLineEdit{this};
         toolBarLayout->addWidget(mFilterEdit, 1);
+		
         mFilterEdit->setPlaceholderText(tr("type in wildcard and press Enter"));
         mFilterEdit->setClearButtonEnabled(true);
         connect(mFilterEdit, &QLineEdit::returnPressed, this, &ItemCostWidget::applyWildcard);

@@ -490,8 +490,10 @@ namespace Evernus
         info.mOrderLocalTimestamp = mCacheTimerProvider.getLocalUpdateTimer(order->getCharacterId(), TimerType::MarketOrders);
         info.mMarketLocalTimestamp = price->getUpdateTime().toLocalTime();
 
-        if (info.mMarketPrice > info.mOrderPrice || settings.value(PriceSettings::copyNonOverbidPriceKey, PriceSettings::copyNonOverbidPriceDefault).toBool())
-            info.mTargetPrice = info.mMarketPrice + PriceUtils::getPriceDelta();
+		if (info.mMarketPrice > info.mOrderPrice || settings.value(PriceSettings::copyNonOverbidPriceKey, PriceSettings::copyNonOverbidPriceDefault).toBool())
+
+			info.mTargetPrice = PriceUtils::round_to_digits(info.mMarketPrice,4) + PriceUtils::getPriceStep(info.mMarketPrice);
+			//info.mTargetPrice = info.mMarketPrice + PriceUtils::getPriceDelta();
         else
             info.mTargetPrice = info.mOrderPrice;
 

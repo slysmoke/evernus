@@ -20,7 +20,7 @@ namespace Evernus
 {
     namespace TypeLookupUtils
     {
-        const QString eveMarketdataUrl = "http://eve-marketdata.com/price_check.php?type_id=%1";
+        const QString eveMarketdataUrl = "https://evemarket.brianum.de/type/%1";
         const QString eveMarketerUrl = "https://evemarketer.com/types/%1";
 
         void lookupType(EveType::IdType id, const QString &baseUrl);

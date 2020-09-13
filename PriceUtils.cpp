@@ -14,6 +14,10 @@
  */
 #include <random>
 #include <cmath>
+#include <string> 
+#include <cstdlib>
+#include <iostream>
+
 
 #include <QSettings>
 
@@ -29,15 +33,31 @@ namespace Evernus
         Taxes calculateTaxes(const Character &character)
         {
             const auto feeSkills = character.getFeeSkills();
-            const auto salesTax = 0.02 - feeSkills.mAccounting * 0.002;
+            const auto salesTax = 0.05 - feeSkills.mAccounting * 0.0055;
 
             auto calcBrokersFee = [&](auto customBrokersFee) {
-                return (customBrokersFee) ? (*customBrokersFee) : (0.03 - (feeSkills.mBrokerRelations * 0.001 +
+                return (customBrokersFee) ? (*customBrokersFee) : (0.05 - (feeSkills.mBrokerRelations * 0.003 +
                     0.0003 * character.getFactionStanding() + 0.0002 * character.getCorpStanding()));
             };
 
             return Taxes{calcBrokersFee(character.getBuyBrokersFee()), calcBrokersFee(character.getSellBrokersFee()), salesTax};
         }
+
+		double round_to_digits(double value, int digits)
+		{
+			if (value == 0.0) // otherwise it will return 'nan' due to the log10() of zero
+				return 0.0;
+
+			double factor = pow(10.0, digits - ceil(log10(fabs(value))));
+			return round(value * factor) / factor;
+		}
+
+
+
+		double getPriceStep(double price) {
+			double order = pow(10, floor(log(price) / 2.302585092994046 + 0.000000001));
+			return order * .001;
+		}
 
         double getBuyPrice(double buyPrice, const Taxes &taxes, bool limitOrder)
         {

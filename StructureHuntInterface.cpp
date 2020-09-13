@@ -24,8 +24,8 @@
 
 namespace Evernus
 {
-    const QUrl StructureHuntInterface::url{"https://stop.hammerti.me.uk/api/citadel/all"};
-
+    const QUrl StructureHuntInterface::url{"http://evernus.anver.ee/citadel.json"};
+	//const QUrl StructureHuntInterface::url{"https://stop.hammerti.me.uk/api/citadel/all"};
     void StructureHuntInterface::fetchCitadels(Callback callback) const
     {
         QNetworkRequest request{url};

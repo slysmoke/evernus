@@ -98,7 +98,8 @@ namespace Evernus
             FighterTube2,
             FighterTube3,
             FighterTube4,
-            Module
+            Module,
+			FrigateEscapeBay
         };
 
         static const int magicBPCQuantity = -2;

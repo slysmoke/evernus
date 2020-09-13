@@ -261,7 +261,7 @@ namespace Evernus
 
         feeLayout->addRow(tr("Accounting:"), createSkillEdit(mAccountingSkillEdit, QStringLiteral("accounting_skill")));
         feeLayout->addRow(tr("Broker relations:"), createSkillEdit(mBrokerRelationsSkillEdit, QStringLiteral("broker_relations_skill")));
-        feeLayout->addRow(tr("Margin trading:"), createSkillEdit(mMarginTradingSkillEdit, QStringLiteral("margin_trading_skill")));
+        feeLayout->addRow(tr("Advanced Broker Relations:"), createSkillEdit(mMarginTradingSkillEdit, QStringLiteral("margin_trading_skill")));
 
         auto contractingGroup = new QGroupBox{tr("Contracting skills"), this};
         skillsLayout->addWidget(contractingGroup);

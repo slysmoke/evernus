@@ -1288,6 +1288,8 @@ namespace Evernus
                 { QStringLiteral("FighterTube3"), Blueprint::Location::FighterTube3 },
                 { QStringLiteral("FighterTube4"), Blueprint::Location::FighterTube4 },
                 { QStringLiteral("Module"), Blueprint::Location::Module },
+                { QStringLiteral("FrigateEscapeBay"), Blueprint::Location::FrigateEscapeBay },
+                
             };
 
             QtConcurrent::blockingMap(blueprintList, [&](const auto &blueprint) {

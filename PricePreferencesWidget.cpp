@@ -109,6 +109,7 @@ namespace Evernus
 
         mPriceDeltaEdit = new QDoubleSpinBox{this};
         priceDeltaLayout->addWidget(mPriceDeltaEdit);
+		mPriceDeltaEdit->setEnabled(false);
         mPriceDeltaEdit->setSingleStep(0.01);
         mPriceDeltaEdit->setMinimum(0.01);
         mPriceDeltaEdit->setMaximum(100000000.);
@@ -119,6 +120,7 @@ namespace Evernus
 
         mPriceDeltaRandomEdit = new QDoubleSpinBox{this};
         priceDeltaLayout->addWidget(mPriceDeltaRandomEdit);
+		mPriceDeltaRandomEdit->setEnabled(false);
         mPriceDeltaRandomEdit->setSingleStep(0.01);
         mPriceDeltaRandomEdit->setMaximum(100000000.);
         mPriceDeltaRandomEdit->setSuffix(" ISK");

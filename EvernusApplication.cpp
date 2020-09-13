@@ -1844,23 +1844,23 @@ namespace Evernus
                 const QString line = file.readLine();
                 const auto values = line.split(',');
 
-                if (values.size() >= 22)
+                if (values.size() >= 24)
                 {
                     const auto idColumn = 0;
                     const auto typeIdColumn = 1;
                     const auto characterIdColumn = 2;
-                    const auto stationIdColumn = 6;
-                    const auto rangeColumn = 8;
-                    const auto typeColumn = 9;
-                    const auto priceColumn = 10;
-                    const auto volumeEnteredColumn = 11;
-                    const auto volumeRemainingColumn = 12;
-                    const auto issuedColumn = 13;
-                    const auto stateColumn = 14;
+                    const auto stationIdColumn = 8;
+                    const auto rangeColumn = 10;
+                    const auto typeColumn = 11;
+                    const auto priceColumn = 12;
+                    const auto volumeEnteredColumn = 13;
+                    const auto volumeRemainingColumn = 14;
+                    const auto issuedColumn = 16;
+                    const auto stateColumn = 17;
                     const auto minVolumeColumn = 15;
-                    const auto durationColumn = 17;
-                    const auto isCorpColumn = 18;
-                    const auto escrowColumn = 21;
+                    const auto durationColumn = 18;
+                    const auto isCorpColumn = 20;
+                    const auto escrowColumn = 19;
 
                     const auto characterId = values[characterIdColumn].toULongLong();
                     if (!characterFound && !corp)

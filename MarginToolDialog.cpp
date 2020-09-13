@@ -729,7 +729,7 @@ namespace Evernus
                 }
                 else
                 {
-                    mBuyPrice = buy + priceDelta;
+                    mBuyPrice = PriceUtils::round_to_digits(buy,4) + PriceUtils::getPriceStep(buy);
 
                     mBestBuyEdit->setText(curLocale.toString(mBuyPrice, 'f', 2));
                     mCostOfSalesLabel->setText(TextUtils::currencyToString(PriceUtils::getBuyPrice(mBuyPrice, taxes), curLocale));
@@ -749,7 +749,7 @@ namespace Evernus
                 }
                 else
                 {
-                    mSellPrice = sell - priceDelta;
+                    mSellPrice = PriceUtils::round_to_digits(sell,4) - PriceUtils::getPriceStep(sell);
 
                     mBestSellEdit->setText(curLocale.toString(mSellPrice, 'f', 2));
                     mRevenueLabel->setText(TextUtils::currencyToString(PriceUtils::getSellPrice(mSellPrice, taxes), curLocale));
@@ -770,8 +770,8 @@ namespace Evernus
                     const auto bestBuy = buy;
                     const auto bestSell = sell;
 
-                    mSellPrice = bestSell - priceDelta;
-                    mBuyPrice = bestBuy + priceDelta;
+                    mSellPrice = PriceUtils::round_to_digits(bestSell,4) - PriceUtils::getPriceStep(bestSell);
+                    mBuyPrice = PriceUtils::round_to_digits(bestBuy,4) + PriceUtils::getPriceStep(bestBuy);
 
                     const auto revenue = PriceUtils::getSellPrice(mSellPrice, taxes);
                     const auto cos = PriceUtils::getBuyPrice(mBuyPrice, taxes);

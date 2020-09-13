@@ -126,7 +126,7 @@ int main(int argc, char *argv[])
     {
         QCoreApplication::setApplicationName(QStringLiteral("Evernus"));
         QCoreApplication::setApplicationVersion(version::fullStr());
-        QCoreApplication::setOrganizationDomain(QStringLiteral("evernus.com"));
+        QCoreApplication::setOrganizationDomain(QStringLiteral("evernus.anver.ee"));
         QCoreApplication::setOrganizationName(QStringLiteral("evernus.com"));
         QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
         QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -464,7 +464,7 @@ int main(int argc, char *argv[])
                 );
 
                 if (ret == QMessageBox::Yes)
-                    QDesktopServices::openUrl(QUrl{QStringLiteral("http://evernus.com/latest-evernus-version")});
+                    QDesktopServices::openUrl(QUrl{QStringLiteral("http://evernus.anver.ee/")});
 
                 settings.setValue(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, true);
             }

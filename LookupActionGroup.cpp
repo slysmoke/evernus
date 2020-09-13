@@ -23,7 +23,7 @@ namespace Evernus
         : QActionGroup{parent}
         , mTypeProvider{typeProvider}
     {
-        auto action = addAction(tr("Lookup item on eve-marketdata.com"));
+        auto action = addAction(tr("Lookup item on evemarket.brianum.de"));
         connect(action, &QAction::triggered, this, &LookupActionGroup::lookupOnEveMarketdata);
 
         action = addAction(tr("Lookup item on evemarketer.com"));

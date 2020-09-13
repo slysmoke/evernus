@@ -27,6 +27,7 @@
 #include "TextUtils.h"
 
 #include "MarketOrderInfoWidget.h"
+#include "PriceUtils.h"
 
 namespace Evernus
 {
@@ -85,7 +86,7 @@ namespace Evernus
         infoLayout->addWidget(new QLabel{tr("Difference:"), this}, 2, 0);
         infoLayout->addWidget(new QLabel{TextUtils::currencyToString(info.mMarketPrice - info.mOrderPrice, curLocale), this}, 2, 1);
         infoLayout->addWidget(new QLabel{tr("New price:"), this}, 2, 2);
-        infoLayout->addWidget(new QLabel{QString{"<strong>%1</strong>"}.arg(TextUtils::currencyToString(info.mTargetPrice, curLocale)), this}, 2, 3);
+        infoLayout->addWidget(new QLabel{QString{"<strong>%1</strong>"}.arg(TextUtils::currencyToString( info.mTargetPrice, curLocale)), this}, 2, 3);
 
         setFrameStyle(QFrame::StyledPanel);
 
