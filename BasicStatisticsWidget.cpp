@@ -715,6 +715,7 @@ namespace Evernus
 
         mJournalPlot->getPlot().legend->setVisible(true);
         mTransactionPlot->getPlot().legend->setVisible(true);
+        
 
         updateGraphColors();
     }

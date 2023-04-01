@@ -123,14 +123,14 @@ namespace Evernus
         mTotalIncomeLabel = new QLabel{"-", this};
         infoLayout->addWidget(mTotalIncomeLabel);
         mTotalIncomeLabel->setFont(font);
-        mTotalIncomeLabel->setStyleSheet("color: darkGreen;");
+        mTotalIncomeLabel->setStyleSheet("color: lime;");
 
         infoLayout->addWidget(new QLabel{tr("Total cost:"), this});
 
         mTotalCostLabel = new QLabel{"-", this};
         infoLayout->addWidget(mTotalCostLabel);
         mTotalCostLabel->setFont(font);
-        mTotalCostLabel->setStyleSheet("color: darkRed;");
+        mTotalCostLabel->setStyleSheet("color: red;");
 
         infoLayout->addWidget(new QLabel{tr("Total balance:"), this});
 
@@ -197,9 +197,9 @@ namespace Evernus
 
         const auto setColor = [](auto label, auto value) {
             if (value > 0.)
-                label->setStyleSheet("color: darkGreen;");
+                label->setStyleSheet("color: green;");
             else
-                label->setStyleSheet("color: darkRed;");
+                label->setStyleSheet("color: red;");
         };
 
         mTotalTransactionsLabel->setText(curLocale.toString(mModel.rowCount()));

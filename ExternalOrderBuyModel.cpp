@@ -359,14 +359,14 @@ namespace Evernus
             if (column == totalCostColumn)
             {
                 if (mPriceColorMode == PriceColorMode::Direction)
-                    return QColor{Qt::darkRed};
+                    return QColor{Qt::red};
 
-                return (computeDeviation(order) > 0.) ? (QColor{Qt::darkRed}) : (QColor{Qt::darkGreen});
+                return (computeDeviation(order) > 0.) ? (QColor{Qt::red}) : (QColor{Qt::green});
             }
             break;
         case Qt::BackgroundRole:
             if (mOwnOrders.find(order.getId()) != std::end(mOwnOrders))
-                return QColor{255, 255, 128};
+                return QColor{ 43, 61, 255 };
             break;
         case Qt::ToolTipRole:
             if (mOwnOrders.find(order.getId()) != std::end(mOwnOrders))
@@ -425,7 +425,7 @@ namespace Evernus
             break;
         case Qt::ForegroundRole:
             if (column == groupedTotalCostColumn)
-                return QColor{Qt::darkRed};
+                return QColor{Qt::red};
             break;
         case Qt::TextAlignmentRole:
             if (column == volumeColumn)

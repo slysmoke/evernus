@@ -189,7 +189,7 @@ namespace Evernus
             case statusColumn:
                 switch (data->getState()) {
                 case MarketOrder::State::Active:
-                    return QColor{Qt::darkGreen};
+                    return QColor{Qt::green};
                 case MarketOrder::State::Closed:
                     return QColor{Qt::gray};
                 case MarketOrder::State::Pending:
@@ -206,7 +206,7 @@ namespace Evernus
                 }
                 break;
             case profitColumn:
-                return QColor{Qt::darkGreen};
+                return QColor{Qt::green};
             }
         }
 

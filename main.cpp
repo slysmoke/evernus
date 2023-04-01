@@ -18,6 +18,7 @@
 #include <QDesktopServices>
 #include <QStandardPaths>
 #include <QApplication>
+#include <QStyleFactory>
 #include <QLocalSocket>
 #include <QLocalServer>
 #include <QMessageBox>
@@ -69,6 +70,7 @@
 #   else
 #       include <client/windows/handler/exception_handler.h>
 #   endif
+#include <QtWidgets>
 #endif
 
 #define STR_VALUE(s) #s
@@ -126,10 +128,12 @@ int main(int argc, char *argv[])
     {
         QCoreApplication::setApplicationName(QStringLiteral("Evernus"));
         QCoreApplication::setApplicationVersion(version::fullStr());
-        QCoreApplication::setOrganizationDomain(QStringLiteral("evernus.anver.ee"));
+        QCoreApplication::setOrganizationDomain(QStringLiteral("evernus.test"));
         QCoreApplication::setOrganizationName(QStringLiteral("evernus.com"));
         QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
         QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+
+
 
 #if EVERNUS_CREATE_DUMPS
         const auto dumpPath = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QStringLiteral("/dump");
@@ -334,6 +338,33 @@ int main(int argc, char *argv[])
                                         app.getESIInterfaceManager(),
                                         app};
 
+            QFile file("style.qss");
+            file.open(QFile::ReadOnly);
+            QString styleSheet = QLatin1String(file.readAll());
+            qApp->setStyle(QStyleFactory::create("fusion"));
+            qDebug() << QStyleFactory::keys();
+            //qApp->setStyleSheet(styleSheet);
+
+            QPalette palette;
+            // Настраиваем палитру для цветовых ролей элементов интерфейса
+            palette.setColor(QPalette::Window, QColor(53, 53, 53));
+            palette.setColor(QPalette::WindowText, Qt::white);
+            palette.setColor(QPalette::Base, QColor(25, 25, 25));
+            palette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
+            palette.setColor(QPalette::ToolTipBase, Qt::white);
+            palette.setColor(QPalette::ToolTipText, Qt::white);
+            palette.setColor(QPalette::Text, Qt::white);
+            palette.setColor(QPalette::Button, QColor(53, 53, 53));
+            palette.setColor(QPalette::ButtonText, Qt::white);
+            palette.setColor(QPalette::BrightText, Qt::red);
+            palette.setColor(QPalette::Link, QColor(42, 130, 218));
+            palette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+            palette.setColor(QPalette::HighlightedText, Qt::black);
+            palette.setColor(QPalette::Disabled, QPalette::Text, Qt::darkGray);
+            palette.setColor(QPalette::Disabled, QPalette::ButtonText, Qt::darkGray);
+            qApp->setPalette(palette);
+            
+
             QObject::connect(&mainWnd, &Evernus::MainWindow::refreshCharacters,
                              &app, &Evernus::EvernusApplication::refreshCharacters);
             QObject::connect(&mainWnd, &Evernus::MainWindow::refreshCitadels,
@@ -464,7 +495,7 @@ int main(int argc, char *argv[])
                 );
 
                 if (ret == QMessageBox::Yes)
-                    QDesktopServices::openUrl(QUrl{QStringLiteral("http://evernus.anver.ee/")});
+                    QDesktopServices::openUrl(QUrl{QStringLiteral("http://evernus.test/")});
 
                 settings.setValue(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, true);
             }

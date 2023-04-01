@@ -202,7 +202,7 @@ namespace Evernus
             return;
         }
 
-        get(QStringLiteral("/v4/characters/%1/").arg(charId), {}, callback, getNumRetries());
+        get(QStringLiteral("/v5/characters/%1/").arg(charId), {}, callback, getNumRetries());
     }
 
     void ESIInterface::fetchCharacterSkills(Character::IdType charId, const JsonCallback &callback) const

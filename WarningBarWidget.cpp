@@ -32,6 +32,7 @@ namespace Evernus
         mText = new QLabel{this};
         mainLayout->addWidget(mText, 1, Qt::AlignLeft | Qt::AlignVCenter);
         mText->setTextFormat(Qt::RichText);
+        mText->setStyleSheet("color: black;");
 
         auto closeBtn = new QPushButton{QIcon{":/images/cross.png"}, QString{}, this};
         mainLayout->addWidget(closeBtn, 0, Qt::AlignRight | Qt::AlignVCenter);

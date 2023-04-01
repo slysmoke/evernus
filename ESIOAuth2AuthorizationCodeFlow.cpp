@@ -22,8 +22,8 @@ namespace Evernus
                                                                    const QString &clientSecret,
                                                                    QObject *parent)
         : QOAuth2AuthorizationCodeFlow{clientIdentifier,
-                                       QStringLiteral("https://login.eveonline.com/oauth/authorize"),
-                                       QStringLiteral("https://login.eveonline.com/oauth/token"),
+                                       QStringLiteral("https://login.eveonline.com/v2/oauth/authorize"),
+                                       QStringLiteral("https://login.eveonline.com/v2/oauth/token"),
                                        nullptr,
                                        parent}
         , mNetworkAccessManager{clientIdentifier, clientSecret}

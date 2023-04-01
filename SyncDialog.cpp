@@ -106,7 +106,7 @@ namespace Evernus
     };
 
     const QString SyncDialog::mainDbPath = "/sandbox/main.db";
-    const QString SyncDialog::redirectLink = "http://evernus.anver.ee/auth.php";
+    const QString SyncDialog::redirectLink = "https://slysmoke.github.io/evernus-auth/index.html#/";
     const QString SyncDialog::localRedirectLink = QStringLiteral("http://localhost:%1").arg(localPort);
 
     QDateTime SyncDialog::mLastSyncTime;

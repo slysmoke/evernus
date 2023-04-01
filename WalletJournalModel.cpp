@@ -114,7 +114,7 @@ namespace Evernus
             return mData[row][column];
         case Qt::ForegroundRole:
             if (column == amountColumn)
-                return (mData[row][amountColumn].toDouble() < 0.) ? (QColor{Qt::darkRed}) : (QColor{Qt::darkGreen});
+                return (mData[row][amountColumn].toDouble() < 0.) ? (QColor{Qt::red}) : (QColor{Qt::green});
             break;
         case Qt::CheckStateRole:
             if (column == ignoredColumn)

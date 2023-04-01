@@ -81,7 +81,9 @@ namespace Evernus
     const QString MainWindow::settingsPosKey = QStringLiteral("mainWindow/pos");
     const QString MainWindow::settingsSizeKey = QStringLiteral("mainWindow/size");
 
-    const QString MainWindow::redirectDomain = "evernus.anver.ee";
+    const QString MainWindow::redirectDomain = "evernus.test";
+
+
 
     MainWindow::MainWindow(const RepositoryProvider &repositoryProvider,
                            MarketOrderProvider &charOrderProvider,

@@ -271,7 +271,7 @@ namespace Evernus
             "corporation_id BIGINT NOT NULL,"
             "race TEXT NOT NULL,"
             "bloodline TEXT NOT NULL,"
-            "ancestry TEXT NOT NULL,"
+            "ancestry TEXT,"
             "gender TEXT NOT NULL,"
             "isk DOUBLE NOT NULL,"
             "corp_standing FLOAT NOT NULL,"

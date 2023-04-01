@@ -99,6 +99,7 @@ namespace Evernus
         toolBarLayout->addWidget(new QLabel{tr("Relative added cost:"), this});
 
         auto relCostEdit = new QDoubleSpinBox{this};
+        relCostEdit->setMinimum(std::numeric_limits<double>::lowest());
         toolBarLayout->addWidget(relCostEdit);
         relCostEdit->setValue(settings.value(PriceSettings::itemRelativeCostAddKey, PriceSettings::itemRelativeCostAddDefault).toDouble());
         relCostEdit->setSuffix(locale().percent());

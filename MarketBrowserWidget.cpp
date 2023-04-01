@@ -314,12 +314,12 @@ namespace Evernus
         mLowSecFilter = new QCheckBox{tr("0.1 - 0.4"), this};
         securityStatusFilterLayout->addWidget(mLowSecFilter);
         mLowSecFilter->setChecked(true);
-        mLowSecFilter->setStyleSheet("color: darkOrange;");
+        mLowSecFilter->setStyleSheet("color: orange;");
 
         mHighSecFilter = new QCheckBox{tr("0.5 - 1.0"), this};
         securityStatusFilterLayout->addWidget(mHighSecFilter);
         mHighSecFilter->setChecked(true);
-        mHighSecFilter->setStyleSheet("color: darkGreen;");
+        mHighSecFilter->setStyleSheet("color: green;");
 
         securityStatusFilterLayout->addStretch();
 

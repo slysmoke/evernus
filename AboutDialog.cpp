@@ -47,7 +47,7 @@ namespace Evernus
             "Thanks to <strong><a href='https://www.twitch.tv/maximilon'>Robert Knox</a></strong> for testing and tips.<br />"
             "Current DEV <strong><a href='https://evewho.com/character/2113351129'>Sasha Winston</a></strong><br />"
 			"All donations are welcome :)<br /><br />"
-            "<a href='http://evernus.anver.ee'>http://evernus.anver.ee</a><br />"
+            "<a href='http://evernus.test'>http://evernus.test</a><br />"
             "Twitter: <a href='http://twitter.com/evernusproject'>@evernusproject</a><br />"
             "New forum topic: <a href='%4'>%4</a><br />"
             "Old forum topic: <a href='%5'>%5</a>")

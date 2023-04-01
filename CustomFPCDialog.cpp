@@ -30,6 +30,9 @@ namespace Evernus
     CustomFPCDialog::CustomFPCDialog(QWidget *parent)
         : QDialog(parent)
     {
+        
+        CustomFPCDialog::setMinimumWidth(335);
+        
         auto mainLayout = new QVBoxLayout{this};
 
         auto helpLabel = new QLabel{tr(
@@ -45,8 +48,8 @@ namespace Evernus
 
         mDataView = new QTableWidget{this};
         mainLayout->addWidget(mDataView);
-        mDataView->setColumnCount(2);
-        mDataView->setHorizontalHeaderLabels({ tr("Type"), tr("Price") });
+        mDataView->setColumnCount(3);
+        mDataView->setHorizontalHeaderLabels({ tr("Type"), tr("Price"), tr("QTY") });
         mDataView->setSelectionMode(QAbstractItemView::SingleSelection);
     }
 
@@ -101,6 +104,10 @@ namespace Evernus
                 mDataView->setItem(row, 0, new QTableWidgetItem{values[0]});
                 if (values.size() > 1)
                     mDataView->setItem(row, 1, new QTableWidgetItem{values[1]});
+                if (values.size() > 2) {
+                    mDataView->setItem(row, 2, new QTableWidgetItem{ values[2] });
+                    }
+
 
                 ++row;
             }

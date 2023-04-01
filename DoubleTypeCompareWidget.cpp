@@ -55,11 +55,11 @@ namespace Evernus
         plot.yAxis->setLabel(tr("Avg. price [ISK]"));
 
         mFirstPriceGraph = plot.addGraph();
-        mFirstPriceGraph->setPen(QPen{Qt::darkRed});
+        mFirstPriceGraph->setPen(QPen{Qt::red});
         mFirstPriceGraph->setName(firstInfo);
 
         mSecondPriceGraph = plot.addGraph();
-        mSecondPriceGraph->setPen(QPen{Qt::darkGreen});
+        mSecondPriceGraph->setPen(QPen{Qt::green});
         mSecondPriceGraph->setName(secondInfo);
 
         const auto volumeAxisRect = new QCPAxisRect{&plot};

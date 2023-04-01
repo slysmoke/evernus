@@ -428,11 +428,11 @@ namespace Evernus
                 if (!price->isNew())
                 {
                     if (price->getPrice() < data->getPrice())
-                        return QColor{255, 192, 192};
+                        return QColor{ 245, 170, 10 };
 
                     const auto maxAge = settings.value(PriceSettings::priceMaxAgeKey, PriceSettings::priceMaxAgeDefault).toInt();
                     if (price->getUpdateTime() < QDateTime::currentDateTimeUtc().addSecs(-3600 * maxAge))
-                        return QColor{255, 255, 192};
+                        return QColor{ 245, 170, 10 };
                 }
             }
             else if (column == firstSeenColumn)
@@ -441,7 +441,7 @@ namespace Evernus
                 const auto maxAge
                     = settings.value(OrderSettings::marketOrderMaxAgeKey, OrderSettings::marketOrderMaxAgeDefault).toInt();
                 if (data->getFirstSeen() < QDateTime::currentDateTimeUtc().addDays(-maxAge))
-                    return QColor{255, 255, 192};
+                    return QColor{ 245, 170, 10 };
             }
 
             if (data->getColorTag().isValid())
@@ -452,7 +452,7 @@ namespace Evernus
             case statusColumn:
                 switch (data->getState()) {
                 case MarketOrder::State::Active:
-                    return QColor{Qt::darkGreen};
+                    return QColor{Qt::green};
                 case MarketOrder::State::Closed:
                     return QColor{Qt::gray};
                 case MarketOrder::State::Pending:
@@ -470,7 +470,7 @@ namespace Evernus
                 break;
             case customCostColumn:
             case priceStatusColumn:
-                return QColor{Qt::darkRed};
+                return QColor{Qt::red};
             case marginColumn:
                 return TextUtils::getMarginColor(getMargin(*data));
             case newMarginColumn:
@@ -478,7 +478,7 @@ namespace Evernus
             case profitColumn:
             case totalProfitColumn:
             case profitPerItemColumn:
-                return QColor{Qt::darkGreen};
+                return QColor{Qt::green};
             }
             break;
         case Qt::TextAlignmentRole:

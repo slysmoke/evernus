@@ -36,8 +36,8 @@ namespace Evernus
             const auto warning
                 = (settings.value(OrderSettings::volumeWarningKey, OrderSettings::volumeWarningDefault).toInt() / 100.) > alpha;
 
-            const QColor brightColor = (warning) ? (qRgb(255, 192, 192)) : (qRgb(192, 255, 192));
-            const QColor darkColor = (warning) ? (qRgb(255, 128, 128)) : (qRgb(128, 255, 128));
+            const QColor brightColor = (warning) ? (qRgb(252, 200, 131)) : (qRgb(110, 122, 250));
+            const QColor darkColor = (warning) ? (qRgb(250, 170, 65)) : (qRgb(51, 68, 255));
 
             painter->save();
 

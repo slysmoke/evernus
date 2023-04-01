@@ -191,7 +191,12 @@ namespace Evernus
                                     character.setCorporationId(publicDataObj.value(QStringLiteral("corporation_id")).toDouble());
                                     character.setRace(mDataProvider.getRaceName(publicDataObj.value(QStringLiteral("race_id")).toDouble()));
                                     character.setBloodline(mDataProvider.getBloodlineName(publicDataObj.value(QStringLiteral("bloodline_id")).toDouble()));
+                                    
+                                   
                                     character.setAncestry(mDataProvider.getAncestryName(publicDataObj.value(QStringLiteral("ancestry_id")).toDouble()));
+                                    
+                                    
+
                                     character.setGender(publicDataObj.value(QStringLiteral("gender")).toString());
                                     character.setISK(walletData.toDouble());
 

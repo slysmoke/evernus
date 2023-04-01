@@ -125,8 +125,8 @@ namespace Evernus
             if (column == priceColumn)
             {
                 return (getType(row) == WalletTransaction::Type::Buy) ?
-                       (QColor{Qt::darkRed}) :
-                       (QColor{Qt::darkGreen});
+                       (QColor{Qt::red}) :
+                       (QColor{Qt::green});
             }
             break;
         case Qt::CheckStateRole:
