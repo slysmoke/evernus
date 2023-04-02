@@ -1,1 +1,40 @@
 # CI
+
+
+on:
+  workflow_dispatch:
+    inputs:
+      NAME:
+        description: "A random input name for the workflow"
+        type: string
+      SOME_VALUE:
+        description: "Some other input to pass"
+        type: string
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-18.04
+
+    steps:
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          aqtversion: '==3.1.*'
+          py7zrversion: '>=0.20.2'
+          version: '5.12.5'
+          dir: '${{ github.workspace }}/QT/'
+          host: 'linux'
+          target: 'desktop'
+          arch: 'gcc_64'
+          modules: 'qtcharts qtdatavis3d qtscript qtwebengine qtwebglplugin'
+          tools: 'tools_ifw tools_cmake tools_maintenance'      
+
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: "evernus"
+          
+      - run: ls -al
