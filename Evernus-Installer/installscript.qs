@@ -54,8 +54,8 @@ Component.prototype.createOperations = function()
         // call the base create operations function
         component.createOperations();
         if (systemInfo.productType === "windows") {
-            component.addOperation("CreateShortcut", "@TargetDir@/x64/evernus.exe", "@DesktopDir@/Evernus.lnk");
-            component.addOperation("CreateShortcut", "@TargetDir@/x64/evernus.exe", "@StartMenuDir@/Evernus/Evernus.lnk");
+            component.addOperation("CreateShortcut", "@TargetDir@/bin/evernus.exe", "@DesktopDir@/Evernus.lnk");
+            component.addOperation("CreateShortcut", "@TargetDir@/bin/evernus.exe", "@StartMenuDir@/Evernus/Evernus.lnk");
     }
     } catch (e) {
         console.log(e);

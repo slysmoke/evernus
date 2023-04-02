@@ -6,7 +6,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-set(REQUIRED_QT_VERSION "5.12.0")
+set(REQUIRED_QT_VERSION "5.12.7")
 
 
 set(CMAKE_CXX_STANDARD 17)
@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PROJECT_NAME "Evernus")
 set(MAJOR_VERSION "3")
-set(MINOR_VERSION "9.62")
+set(MINOR_VERSION "9.8")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/Evernus/CMakeHelpers")
 
@@ -949,18 +949,13 @@ include(GNUInstallDirs)
 install(TARGETS Evernus DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT ${COMPONENT_NAME_MAIN})
 #install(TARGETS ${PROJECT_BIN_NAME_} DESTINATION ${CMAKE_INSTALL_BINDIR}/.. COMPONENT ${COMPONENT_NAME_MAIN})
 
-# Upon include(InstallRequiredSystemLibraries), install(PROGRAMS) is called.
-# We can specify the install(PROGRAMS) command COMPONENT option.
-# If none is specified and we use COMPONENT_NAME_MAIN for our target, CMAKE_INSTALL_DEFAULT_COMPONENT_NAME ("Unspecified") will be used
-# If we specify COMPONENT_NAME_MAIN for this, cpack_ifw_configure_component(${COMPONENT_NAME_MAIN} LICENSES... doesn't work
-#set(CMAKE_INSTALL_SYSTEM_RUNTIME_COMPONENT ${COMPONENT_NAME_DEPENDENCIES})
-#include(InstallRequiredSystemLibraries)
+
 
 set(CPACK_GENERATOR "IFW")
-#set(CPACK_IFW_ROOT "C:/Qt/Tools/QtInstallerFramework/4.1/") #QTIFWDIR is used by default
-set(CPACK_IFW_ROOT "D:/Qt6/Tools/QtInstallerFramework/4.5")
-set(CPACK_PACKAGE_VERSION_MAJOR "1")
-set(CPACK_PACKAGE_VERSION_MINOR "0")
+set(CPACK_IFW_ROOT "${QTIFWDIR}") #QTIFWDIR is used by default
+#set(CPACK_IFW_ROOT "D:/Qt6/Tools/QtInstallerFramework/4.5")
+set(CPACK_PACKAGE_VERSION_MAJOR "${MAJOR_VERSION}")
+set(CPACK_PACKAGE_VERSION_MINOR "${MINOR_VERSION}")
 
 set (CPACK_IFW_PACKAGE_NAME "Evernus")
 set (CPACK_IFW_PACKAGE_TITLE "Evernus Installer")
@@ -994,15 +989,9 @@ cpack_ifw_configure_component(${COMPONENT_NAME_DEPENDENCIES} VIRTUAL FORCED_INST
 # The awesome app component HAS to be installed
 cpack_ifw_configure_component(${COMPONENT_NAME_MAIN} ESSENTIAL FORCED_INSTALLATION)
 
-# Adds license info to package.xml file
-# Also copies licence.txt to 'meta' directory to display the license text in the installer.
-#cpack_ifw_configure_component(${COMPONENT_NAME_MAIN} LICENSES "ICS License" ${CPACK_RESOURCE_FILE_LICENSE})
-
 # Customizing the UI with a script
 cpack_ifw_configure_component(${COMPONENT_NAME_MAIN} SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/../Evernus-Installer/installscript.qs)
-# ... and an associated .ui file
-#cpack_ifw_configure_component(${COMPONENT_NAME_MAIN} USER_INTERFACES ${CMAKE_CURRENT_SOURCE_DIR}/../AwesomeWorld-Installer/page.ui)
 
 # Adds basic repository entries to config.xml file
 # Runs repogen command on the packages directory
-cpack_ifw_add_repository("AwesomeRepository" URL "https://drive.google.com/drive/folders/1JrulzOfb_rXb4mnn-nCThq8zbv0319Wu" )
+cpack_ifw_add_repository("AwesomeRepository" URL "https://slysmoke.github.io/repo" )
