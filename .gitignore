@@ -41,3 +41,4 @@ Evernus-Installer/INSTALL.vcxproj.filters
 INSTALL.vcxproj
 INSTALL.vcxproj.filters
 build.bat
+db/*
