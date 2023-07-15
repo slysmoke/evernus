@@ -269,7 +269,7 @@ namespace Evernus
                 QSettings settings;
                 const auto maxPriceAge = settings.value(PriceSettings::priceMaxAgeKey, PriceSettings::priceMaxAgeDefault).toInt();
                 if (item->priceTimestamp() < QDateTime::currentDateTimeUtc().addSecs(-3600 * maxPriceAge))
-                    return QColor{255, 255, 192};
+                    return QColor{60, 60, 60};
             }
             break;
         case Qt::ToolTipRole:

@@ -1,0 +1,2 @@
+C:/Users/dimus/Desktop/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.1-win64/packages/Unspecified/data/bin/libssl-1_1-x64.dll
+C:/Users/dimus/Desktop/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.1-win64/packages/Unspecified/data/bin/libcrypto-1_1-x64.dll

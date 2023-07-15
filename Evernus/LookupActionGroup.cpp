@@ -23,8 +23,11 @@ namespace Evernus
         : QActionGroup{parent}
         , mTypeProvider{typeProvider}
     {
-        auto action = addAction(tr("Lookup item on evemarket.brianum.de"));
+        auto action = addAction(tr("Lookup item on evetycoon.com"));
         connect(action, &QAction::triggered, this, &LookupActionGroup::lookupOnEveMarketdata);
+
+        action = addAction(tr("Lookup item on adam4eve.eu"));
+        connect(action, &QAction::triggered, this, &LookupActionGroup::lookupOnAdam4Eve);
 
         action = addAction(tr("Lookup item on evemarketer.com"));
         connect(action, &QAction::triggered, this, &LookupActionGroup::lookupOnEveMarketer);
@@ -38,6 +41,11 @@ namespace Evernus
     void LookupActionGroup::lookupOnEveMarketer()
     {
         lookupOnWeb(TypeLookupUtils::eveMarketerUrl);
+    }
+
+    void LookupActionGroup::lookupOnAdam4Eve()
+    {
+        lookupOnWeb(TypeLookupUtils::adam4eveUrl);
     }
 
     void LookupActionGroup::lookupOnWeb(const QString &baseUrl) const

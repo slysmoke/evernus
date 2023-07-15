@@ -314,7 +314,7 @@ namespace Evernus
             return;
         }
 
-        const QUrl downloadUrl{QStringLiteral("http://evernus.test/")};
+        const QUrl downloadUrl{QStringLiteral("https://github.com/slysmoke/evernus-db")};
 
 #ifndef Q_OS_WIN
         const auto ret = QMessageBox::question(

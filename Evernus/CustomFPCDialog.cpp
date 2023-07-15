@@ -32,6 +32,7 @@ namespace Evernus
     {
         
         CustomFPCDialog::setMinimumWidth(335);
+        // CustomFPCDialog::setWindowFlags(Qt::WindowStaysOnTopHint);
         
         auto mainLayout = new QVBoxLayout{this};
 

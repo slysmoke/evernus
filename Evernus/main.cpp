@@ -122,6 +122,10 @@ namespace
 }
 #endif
 
+
+
+
+
 int main(int argc, char *argv[])
 {
     try
@@ -495,7 +499,7 @@ int main(int argc, char *argv[])
                 );
 
                 if (ret == QMessageBox::Yes)
-                    QDesktopServices::openUrl(QUrl{QStringLiteral("http://evernus.test/")});
+                    QDesktopServices::openUrl(QUrl{QStringLiteral("https://github.com/slysmoke/evernus")});
 
                 settings.setValue(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, true);
             }

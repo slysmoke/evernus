@@ -37,6 +37,7 @@ namespace Evernus
     private slots:
         void lookupOnEveMarketdata();
         void lookupOnEveMarketer();
+        void lookupOnAdam4Eve();
 
     private:
         const EveTypeProvider &mTypeProvider;

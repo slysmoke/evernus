@@ -73,6 +73,8 @@
 #include "UISettings.h"
 #include "Updater.h"
 
+
+
 #include "MainWindow.h"
 
 namespace Evernus
@@ -81,7 +83,7 @@ namespace Evernus
     const QString MainWindow::settingsPosKey = QStringLiteral("mainWindow/pos");
     const QString MainWindow::settingsSizeKey = QStringLiteral("mainWindow/size");
 
-    const QString MainWindow::redirectDomain = "evernus.test";
+    const QString MainWindow::redirectDomain = "github.com/slysmoke/evernus";
 
 
 
@@ -1015,6 +1017,10 @@ namespace Evernus
         connect(action, &QAction::triggered, this, [=](bool checked) {
             toggleDefaultTabs(checked, TabType::Corp);
         });
+
+
+
+
     }
 
     void MainWindow::createStatusBar()

@@ -13,8 +13,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PROJECT_NAME "Evernus")
-set(MAJOR_VERSION "3")
-set(MINOR_VERSION "9.8")
+set(MAJOR_VERSION "${Major}")
+set(MINOR_VERSION "${Minor}")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/Evernus/CMakeHelpers")
 
@@ -38,6 +38,8 @@ find_package(Qt5Sql REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Threads REQUIRED)
 
+
+
 if(EVERNUS_CREATE_DUMPS)
     find_package(Breakpad REQUIRED)
     add_definitions(-DEVERNUS_CREATE_DUMPS=1)
@@ -52,6 +54,21 @@ if(DEFINED EVERNUS_CLIENT_ID AND DEFINED EVERNUS_CLIENT_SECRET)
 endif()
 
 configure_file(Version.h.in Version.h)
+
+
+
+
+set(STK_SSL_DIR "D:/openssl-1.1/x64")
+set(OPENSSL_ROOT_DIR ${STK_SSL_DIR})
+
+include(FindOpenSSL)
+if(${OPENSSL_FOUND})
+    message(STATUS "FindSSL found: ${OPENSSL_FOUND}")
+else()
+    message(WARNING "ERROR: SSL required, install: Qt-maintenance.exe -> tools -> openSSL")
+endif()
+
+
 
 
 if(APPLE)
@@ -85,6 +102,9 @@ elseif(UNIX)
     set(ADDITIONAL_LIBS ${X11_LIBRARIES})
 elseif(WIN32)
     find_package(Qt5WinExtras REQUIRED)
+
+
+    
 
     include(generate_product_version)
     generate_product_version(
@@ -122,6 +142,8 @@ if(DEFINED EVERNUS_ESI_SISI)
 endif()
 
 qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATIONS})
+
+
 
 
 add_executable(
@@ -837,7 +859,9 @@ add_executable(
     ${TRANSLATIONS}
     ${QM_FILES}
     ${ADDITIONAL_SRC}
+   
 )
+
 
 
 if(WIN32)
@@ -881,8 +905,12 @@ target_link_libraries(
     Qt5::Sql
     Qt5::Widgets
     Threads::Threads
+
     ${ADDITIONAL_LIBS}
 )
+
+
+
 
 if(EVERNUS_CREATE_DUMPS)
     target_link_libraries(
@@ -895,6 +923,8 @@ set(RESOURCES
     "resources"
     "${CMAKE_CURRENT_BINARY_DIR}/translations"
 )
+
+
 
 
 if(APPLE)
@@ -950,6 +980,23 @@ install(TARGETS Evernus DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT ${COMPONEN
 #install(TARGETS ${PROJECT_BIN_NAME_} DESTINATION ${CMAKE_INSTALL_BINDIR}/.. COMPONENT ${COMPONENT_NAME_MAIN})
 
 
+install(FILES ${OPENSSL_LIB_DIR}/libssl-1_1-x64.dll DESTINATION bin COMPONENT ${COMPONENT_NAME_DEPENDENCIES})
+install(FILES ${OPENSSL_LIB_DIR}/libcrypto-1_1-x64.dll DESTINATION bin COMPONENT ${COMPONENT_NAME_DEPENDENCIES})
+install(FILES ${OPENSSL_LIB_DIR}/ssleay32.dll DESTINATION bin COMPONENT ${COMPONENT_NAME_DEPENDENCIES})
+install(FILES ${OPENSSL_LIB_DIR}/libeay32.dll DESTINATION bin COMPONENT ${COMPONENT_NAME_DEPENDENCIES})
+install(FILES ${OPENSSL_LIB_DIR}/msvcr90.dll DESTINATION bin COMPONENT ${COMPONENT_NAME_DEPENDENCIES})
+
+
+
+
+
+
+set(CMAKE_INSTALL_SYSTEM_RUNTIME_COMPONENT ${COMPONENT_NAME_DEPENDENCIES})
+include(InstallRequiredSystemLibraries)
+
+
+
+
 
 set(CPACK_GENERATOR "IFW")
 set(CPACK_IFW_ROOT "${QTIFWDIR}") #QTIFWDIR is used by default
@@ -962,6 +1009,7 @@ set (CPACK_IFW_PACKAGE_TITLE "Evernus Installer")
 set (CPACK_IFW_PACKAGE_PUBLISHER "Winston")
 set (CPACK_IFW_PACKAGE_WIZARD_STYLE "Aero")
 set (CPACK_IFW_PACKAGE_WIZARD_SHOW_PAGE_LIST OFF)
+set (CPACK_IFW_TARGET_DIRECTORY "@ApplicationsDir@/${PROJECT_NAME}")
 
 #set(CPACK_RESOURCE_FILE_LICENSE ${CMAKE_CURRENT_SOURCE_DIR}/../Evernus-Installer/licence.txt)
 
@@ -994,4 +1042,4 @@ cpack_ifw_configure_component(${COMPONENT_NAME_MAIN} SCRIPT ${CMAKE_CURRENT_SOUR
 
 # Adds basic repository entries to config.xml file
 # Runs repogen command on the packages directory
-cpack_ifw_add_repository("AwesomeRepository" URL "https://slysmoke.github.io/repo" )
+cpack_ifw_add_repository("AwesomeRepository" URL "https://slysmoke.github.io/evernus-db" )

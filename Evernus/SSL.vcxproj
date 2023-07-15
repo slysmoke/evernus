@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B6818A7-AEA3-34C2-A680-452BD11698F8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>SSL</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dimus\Desktop\github\evernus\Evernus\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SSL.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SSL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dimus\Desktop\github\evernus\Evernus\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SSL.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SSL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dimus\Desktop\github\evernus\Evernus\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">SSL.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">SSL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dimus\Desktop\github\evernus\Evernus\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">SSL.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">SSL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4503</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;EVERNUS_CREATE_DUMPS=0;EVERNUS_CLIENT_ID=9690dbe6c0874b4ca7a57ca53f3d5635;EVERNUS_CLIENT_SECRET=8znGhFVq4QwLx9SbESjEyEuaNkvDRLmv3NvnpCHF;QXT_STATIC;QTDROPBOX_DEBUG;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;EVERNUS_CREATE_DUMPS=0;EVERNUS_CLIENT_ID=9690dbe6c0874b4ca7a57ca53f3d5635;EVERNUS_CLIENT_SECRET=8znGhFVq4QwLx9SbESjEyEuaNkvDRLmv3NvnpCHF;QXT_STATIC;QTDROPBOX_DEBUG;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message>Automatic MOC for target SSL</Message>
+      <Command>setlocal
+cd C:\Users\dimus\Desktop\github\evernus\Evernus
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeFiles/SSL_autogen.dir/AutogenInfo.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Deploying system DLL's</Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/openssl-1.1/x64bin/libssl-1_1-x64.dll D:/openssl-1.1/x64bin/libcrypto-1_1-x64.dll "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_1.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_2.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_codecvt_ids.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/vcruntime140_1.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/vcruntime140.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/concrt140.dll" C:/Users/dimus/Desktop/github/evernus/Evernus/windows_dependencies
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/dimus/Desktop/github/evernus/Evernus/Debug/SSL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dimus/Desktop/github/evernus/Evernus/Debug/SSL.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_Release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4503</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EVERNUS_CREATE_DUMPS=0;EVERNUS_CLIENT_ID=9690dbe6c0874b4ca7a57ca53f3d5635;EVERNUS_CLIENT_SECRET=8znGhFVq4QwLx9SbESjEyEuaNkvDRLmv3NvnpCHF;QXT_STATIC;QTDROPBOX_DEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EVERNUS_CREATE_DUMPS=0;EVERNUS_CLIENT_ID=9690dbe6c0874b4ca7a57ca53f3d5635;EVERNUS_CLIENT_SECRET=8znGhFVq4QwLx9SbESjEyEuaNkvDRLmv3NvnpCHF;QXT_STATIC;QTDROPBOX_DEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_Release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_Release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message>Automatic MOC for target SSL</Message>
+      <Command>setlocal
+cd C:\Users\dimus\Desktop\github\evernus\Evernus
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeFiles/SSL_autogen.dir/AutogenInfo.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Deploying system DLL's</Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/openssl-1.1/x64bin/libssl-1_1-x64.dll D:/openssl-1.1/x64bin/libcrypto-1_1-x64.dll "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_1.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_2.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_codecvt_ids.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/vcruntime140_1.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/vcruntime140.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/concrt140.dll" C:/Users/dimus/Desktop/github/evernus/Evernus/windows_dependencies
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/dimus/Desktop/github/evernus/Evernus/Release/SSL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dimus/Desktop/github/evernus/Evernus/Release/SSL.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_MinSizeRel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4503</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EVERNUS_CREATE_DUMPS=0;EVERNUS_CLIENT_ID=9690dbe6c0874b4ca7a57ca53f3d5635;EVERNUS_CLIENT_SECRET=8znGhFVq4QwLx9SbESjEyEuaNkvDRLmv3NvnpCHF;QXT_STATIC;QTDROPBOX_DEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EVERNUS_CREATE_DUMPS=0;EVERNUS_CLIENT_ID=9690dbe6c0874b4ca7a57ca53f3d5635;EVERNUS_CLIENT_SECRET=8znGhFVq4QwLx9SbESjEyEuaNkvDRLmv3NvnpCHF;QXT_STATIC;QTDROPBOX_DEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_MinSizeRel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_MinSizeRel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message>Automatic MOC for target SSL</Message>
+      <Command>setlocal
+cd C:\Users\dimus\Desktop\github\evernus\Evernus
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeFiles/SSL_autogen.dir/AutogenInfo.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Deploying system DLL's</Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/openssl-1.1/x64bin/libssl-1_1-x64.dll D:/openssl-1.1/x64bin/libcrypto-1_1-x64.dll "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_1.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_2.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_codecvt_ids.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/vcruntime140_1.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/vcruntime140.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/concrt140.dll" C:/Users/dimus/Desktop/github/evernus/Evernus/windows_dependencies
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/dimus/Desktop/github/evernus/Evernus/MinSizeRel/SSL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dimus/Desktop/github/evernus/Evernus/MinSizeRel/SSL.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_RelWithDebInfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4503</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EVERNUS_CREATE_DUMPS=0;EVERNUS_CLIENT_ID=9690dbe6c0874b4ca7a57ca53f3d5635;EVERNUS_CLIENT_SECRET=8znGhFVq4QwLx9SbESjEyEuaNkvDRLmv3NvnpCHF;QXT_STATIC;QTDROPBOX_DEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EVERNUS_CREATE_DUMPS=0;EVERNUS_CLIENT_ID=9690dbe6c0874b4ca7a57ca53f3d5635;EVERNUS_CLIENT_SECRET=8znGhFVq4QwLx9SbESjEyEuaNkvDRLmv3NvnpCHF;QXT_STATIC;QTDROPBOX_DEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_RelWithDebInfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimus\Desktop\github\evernus\Evernus;C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\include_RelWithDebInfo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message>Automatic MOC for target SSL</Message>
+      <Command>setlocal
+cd C:\Users\dimus\Desktop\github\evernus\Evernus
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeFiles/SSL_autogen.dir/AutogenInfo.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Message>Deploying system DLL's</Message>
+      <Command>setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/openssl-1.1/x64bin/libssl-1_1-x64.dll D:/openssl-1.1/x64bin/libcrypto-1_1-x64.dll "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_1.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_2.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/msvcp140_codecvt_ids.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/vcruntime140_1.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/vcruntime140.dll" "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.27.29016/x64/Microsoft.VC142.CRT/concrt140.dll" C:/Users/dimus/Desktop/github/evernus/Evernus/windows_dependencies
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/dimus/Desktop/github/evernus/Evernus/RelWithDebInfo/SSL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dimus/Desktop/github/evernus/Evernus/RelWithDebInfo/SSL.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimus/Desktop/github/evernus -BC:/Users/dimus/Desktop/github/evernus --check-stamp-file C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPackIFW.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.26\Templates\CPackConfig.cmake.in;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\VersionInfo.in;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\VersionResource.rc;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\generate_product_version.cmake;C:\Users\dimus\Desktop\github\evernus\Evernus\Version.h.in;C:\Users\dimus\Desktop\github\evernus\Evernus\deploy-qt-windows.cmake.in;C:\Users\dimus\Desktop\github\evernus\Evernus\evernus.qrc;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_AudioCaptureServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_DSServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QM3uPlaylistPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWasapiPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWindowsAudioPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_WMFServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QDebugMessageServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QLocalClientConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebugServerFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebuggerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlInspectorServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugConnectorFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlPreviewServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlProfilerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQuickProfilerAdapterFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QTcpServerConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QODBCDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QPSQLDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QSQLiteDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfigVersion.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimus/Desktop/github/evernus -BC:/Users/dimus/Desktop/github/evernus --check-stamp-file C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPackIFW.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.26\Templates\CPackConfig.cmake.in;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\VersionInfo.in;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\VersionResource.rc;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\generate_product_version.cmake;C:\Users\dimus\Desktop\github\evernus\Evernus\Version.h.in;C:\Users\dimus\Desktop\github\evernus\Evernus\deploy-qt-windows.cmake.in;C:\Users\dimus\Desktop\github\evernus\Evernus\evernus.qrc;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_AudioCaptureServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_DSServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QM3uPlaylistPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWasapiPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWindowsAudioPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_WMFServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QDebugMessageServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QLocalClientConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebugServerFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebuggerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlInspectorServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugConnectorFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlPreviewServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlProfilerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQuickProfilerAdapterFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QTcpServerConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QODBCDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QPSQLDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QSQLiteDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfigVersion.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimus/Desktop/github/evernus -BC:/Users/dimus/Desktop/github/evernus --check-stamp-file C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPackIFW.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.26\Templates\CPackConfig.cmake.in;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\VersionInfo.in;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\VersionResource.rc;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\generate_product_version.cmake;C:\Users\dimus\Desktop\github\evernus\Evernus\Version.h.in;C:\Users\dimus\Desktop\github\evernus\Evernus\deploy-qt-windows.cmake.in;C:\Users\dimus\Desktop\github\evernus\Evernus\evernus.qrc;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_AudioCaptureServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_DSServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QM3uPlaylistPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWasapiPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWindowsAudioPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_WMFServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QDebugMessageServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QLocalClientConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebugServerFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebuggerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlInspectorServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugConnectorFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlPreviewServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlProfilerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQuickProfilerAdapterFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QTcpServerConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QODBCDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QPSQLDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QSQLiteDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfigVersion.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimus/Desktop/github/evernus -BC:/Users/dimus/Desktop/github/evernus --check-stamp-file C:/Users/dimus/Desktop/github/evernus/Evernus/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.26\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CPackIFW.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.26\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.26\Templates\CPackConfig.cmake.in;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\VersionInfo.in;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\VersionResource.rc;C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeHelpers\generate_product_version.cmake;C:\Users\dimus\Desktop\github\evernus\Evernus\Version.h.in;C:\Users\dimus\Desktop\github\evernus\Evernus\deploy-qt-windows.cmake.in;C:\Users\dimus\Desktop\github\evernus\Evernus\evernus.qrc;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_AudioCaptureServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_DSServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QM3uPlaylistPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWasapiPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWindowsAudioPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_WMFServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QDebugMessageServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QLocalClientConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebugServerFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebuggerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlInspectorServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugConnectorFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlPreviewServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlProfilerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQuickProfilerAdapterFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QTcpServerConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QODBCDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QPSQLDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QSQLiteDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfigVersion.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dimus\Desktop\github\evernus\Evernus\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\mocs_compilation_Debug.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimus\Desktop\github\evernus\Evernus\main.cpp" />
+    <ClCompile Include="C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\mocs_compilation_Release.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\mocs_compilation_MinSizeRel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimus\Desktop\github\evernus\Evernus\SSL_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\dimus\Desktop\github\evernus\ZERO_CHECK.vcxproj">
+      <Project>{0254D8C3-77E6-3E9A-B89F-27F1CA4248A5}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
