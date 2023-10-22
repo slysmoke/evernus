@@ -17,6 +17,7 @@
 
 #include "OrderSettings.h"
 
+
 #include "MarketOrderVolumeItemDelegate.h"
 
 namespace Evernus
@@ -36,8 +37,8 @@ namespace Evernus
             const auto warning
                 = (settings.value(OrderSettings::volumeWarningKey, OrderSettings::volumeWarningDefault).toInt() / 100.) > alpha;
 
-            const QColor brightColor = (warning) ? (qRgb(252, 200, 131)) : (qRgb(110, 122, 250));
-            const QColor darkColor = (warning) ? (qRgb(250, 170, 65)) : (qRgb(51, 68, 255));
+            const QColor brightColor = (warning) ? (qRgb(252, 200, 131)) : (qRgb(255, 196, 0));
+            const QColor darkColor = (warning) ? (qRgb(250, 170, 65)) : (qRgb(255, 140, 0));
 
             painter->save();
 

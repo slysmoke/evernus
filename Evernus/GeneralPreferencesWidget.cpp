@@ -63,6 +63,12 @@ namespace Evernus
 
         auto generalGroupLayout = new QVBoxLayout{generalGroup};
 
+
+        mDarkMode = new QCheckBox{ tr("Dark Mode (requires restart)"), this };
+        generalGroupLayout->addWidget(mDarkMode);
+        mDarkMode->setChecked(settings.value(UISettings::mDarkModeKey, UISettings::mDarkModeDefault).toBool());
+
+
         mMinimizeToTrayBtn = new QCheckBox{tr("Minimize to tray"), this};
         generalGroupLayout->addWidget(mMinimizeToTrayBtn);
         mMinimizeToTrayBtn->setChecked(settings.value(UISettings::minimizeToTrayKey, UISettings::minimizeToTrayDefault).toBool());
@@ -129,6 +135,7 @@ namespace Evernus
 
         QSettings settings;
         settings.setValue(UISettings::languageKey, mLanguageEdit->currentData(Qt::UserRole));
+        settings.setValue(UISettings::mDarkModeKey, mDarkMode->isChecked());
         settings.setValue(UISettings::minimizeToTrayKey, mMinimizeToTrayBtn->isChecked());
         settings.setValue(UISettings::minimizeByMarginToolKey, mMinimizeByMarginToolBtn->isChecked());
         settings.setValue(UpdaterSettings::autoUpdateKey, mAutoUpdateBtn->isChecked());

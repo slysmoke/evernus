@@ -28,6 +28,7 @@
 #include "PriceUtils.h"
 #include "IconUtils.h"
 #include "TextUtils.h"
+#include "DarkModeColor.h"
 
 #include "MarketOrderBuyModel.h"
 
@@ -48,6 +49,9 @@ namespace Evernus
         if (mCorp)
             connect(&mDataProvider, &EveDataProvider::namesChanged, this, &MarketOrderBuyModel::updateNames);
     }
+
+
+
 
     int MarketOrderBuyModel::columnCount(const QModelIndex &parent) const
     {
@@ -379,8 +383,8 @@ namespace Evernus
             switch (column) {
             case statusColumn:
                 switch (data->getState()) {
-                case MarketOrder::State::Active:
-                    return QColor{Qt::green};
+                case MarketOrder::State::Active:                                   
+                     return Evernus::DarkModeColor::green();
                 case MarketOrder::State::Closed:
                     return QColor{Qt::gray};
                 case MarketOrder::State::Pending:
@@ -402,6 +406,8 @@ namespace Evernus
                 return TextUtils::getMarginColor(getMargin(*data));
             case newMarginColumn:
                 return TextUtils::getMarginColor(getNewMargin(*data));
+            case volumeColumn:
+                return QColor{ Qt::black };
             }
             break;
         case Qt::TextAlignmentRole:

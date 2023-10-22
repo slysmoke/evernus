@@ -750,12 +750,30 @@ namespace Evernus
 
     DateFilteredPlotWidget *BasicStatisticsWidget::createPlot()
     {
+        QSettings settings;
         auto plot = new DateFilteredPlotWidget{this};
         plot->getPlot().xAxis->grid()->setVisible(false);
         plot->getPlot().yAxis->setNumberPrecision(2);
         plot->getPlot().yAxis->setLabel("ISK");
+        
+        if (settings.value(UISettings::mDarkModeKey, UISettings::mDarkModeDefault).toBool())
+        {
 
-        QSettings settings;
+            QLinearGradient plotGradient;
+            plot->getPlot().yAxis->setLabelColor(QColor(255, 255, 255));
+            plot->getPlot().yAxis->setTickLabelColor(QColor(255, 255, 255));
+            plot->getPlot().xAxis->setTickLabelColor(QColor(255, 255, 255));
+            plotGradient.setStart(0, 0);
+            plotGradient.setFinalStop(0, 350);
+            plotGradient.setColorAt(0, QColor(80, 80, 80));
+            plotGradient.setColorAt(1, QColor(50, 50, 50));
+            plot->getPlot().setBackground(plotGradient);
+
+
+        }
+
+
+        
         plot->getPlot().yAxis->setNumberFormat(
             settings.value(UISettings::plotNumberFormatKey, UISettings::plotNumberFormatDefault).toString());
 

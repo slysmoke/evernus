@@ -20,6 +20,7 @@
 
 #include "PriceSettings.h"
 #include "UISettings.h"
+#include "DarkModeColor.h"
 
 #include "TextUtils.h"
 
@@ -69,7 +70,10 @@ namespace Evernus
             if (margin < settings.value(PriceSettings::preferredMarginKey, PriceSettings::preferredMarginDefault).toDouble())
                 return QColor{0xff, 0xa5, 0x00};
 
-            return QColor{Qt::green};
+            
+            return Evernus::DarkModeColor::green();
+            
+            
         }
 
         QString getMarginStyleSheet(double margin)
@@ -80,7 +84,14 @@ namespace Evernus
             if (margin < settings.value(PriceSettings::preferredMarginKey, PriceSettings::preferredMarginDefault).toDouble())
                 return "color: orange;";
 
-            return "color: green;";
+            if (settings.value(UISettings::mDarkModeKey, UISettings::mDarkModeDefault).toBool()) {
+                return "color: green;";
+            }
+            else
+            {
+                return "color: darkgreen;";
+            }
+            
         }
     }
 }

@@ -123,7 +123,7 @@ namespace Evernus
         mTotalIncomeLabel = new QLabel{"-", this};
         infoLayout->addWidget(mTotalIncomeLabel);
         mTotalIncomeLabel->setFont(font);
-        mTotalIncomeLabel->setStyleSheet("color: lime;");
+        mTotalIncomeLabel->setStyleSheet("color: green;");
 
         infoLayout->addWidget(new QLabel{tr("Total cost:"), this});
 

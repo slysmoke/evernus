@@ -25,6 +25,7 @@
 #include "EveDataProvider.h"
 #include "MathUtils.h"
 #include "TextUtils.h"
+#include "DarkModeColor.h"
 
 #include "ExternalOrderSellModel.h"
 
@@ -45,7 +46,7 @@ namespace Evernus
         , mCostProvider{costProvider}
     {
     }
-
+   
     int ExternalOrderSellModel::columnCount(const QModelIndex &parent) const
     {
         return (mGrouping == Grouping::None) ? (static_cast<int>(numUngroupedColumns)) : (static_cast<int>(numGroupedColumns));
@@ -312,14 +313,18 @@ namespace Evernus
             if (column == totalProfitColumn)
             {
                 if (mPriceColorMode == PriceColorMode::Direction)
-                    return QColor{Qt::green};
 
-                return (computeDeviation(order) < 0.) ? (QColor{Qt::red}) : (QColor{Qt::green});
+                    return Evernus::DarkModeColor::green();
+                    //return QColor{Qt::green};
+
+                return (computeDeviation(order) < 0.) ? (QColor{Qt::red}) : (Evernus::DarkModeColor::green());
             }
             break;
         case Qt::BackgroundRole:
             if (mOwnOrders.find(order.getId()) != std::end(mOwnOrders))
-                return QColor{ 43, 61, 255 };
+
+                //return QColor{ 43, 61, 255 };
+                return Evernus::DarkModeColor::orderHighlight();
             break;
         case Qt::ToolTipRole:
             if (mOwnOrders.find(order.getId()) != std::end(mOwnOrders))
@@ -378,7 +383,7 @@ namespace Evernus
             break;
         case Qt::ForegroundRole:
             if (column == groupedTotalProfitColumn)
-                return QColor{Qt::green};
+                return Evernus::DarkModeColor::green();
             break;
         case Qt::TextAlignmentRole:
             if (column == volumeColumn)

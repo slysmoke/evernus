@@ -15,11 +15,14 @@
 #include <QLocale>
 #include <QColor>
 #include <QFont>
+#include <QSettings>
+
 
 #include "CharacterRepository.h"
 #include "ItemCostProvider.h"
 #include "EveDataProvider.h"
 #include "TextUtils.h"
+#include "UISettings.h"
 
 #include "WalletTransactionsModel.h"
 
@@ -51,6 +54,8 @@ namespace Evernus
 
         connect(&mDataProvider, &EveDataProvider::namesChanged, this, &WalletTransactionsModel::updateNames);
     }
+
+    QSettings settings;
 
     Qt::ItemFlags WalletTransactionsModel::flags(const QModelIndex &index) const
     {
@@ -125,8 +130,9 @@ namespace Evernus
             if (column == priceColumn)
             {
                 return (getType(row) == WalletTransaction::Type::Buy) ?
-                       (QColor{Qt::red}) :
-                       (QColor{Qt::green});
+                    (QColor{ Qt::red }) :
+                    (QColor{ Qt::darkGreen });
+                
             }
             break;
         case Qt::CheckStateRole:
