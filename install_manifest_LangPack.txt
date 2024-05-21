@@ -1,0 +1,13 @@
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/libssl-1_1-x64.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/libcrypto-1_1-x64.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/ssleay32.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/libeay32.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/msvcr90.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/msvcp140.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/msvcp140_1.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/msvcp140_2.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/msvcp140_atomic_wait.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/msvcp140_codecvt_ids.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/vcruntime140_1.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/vcruntime140.dll
+D:/github/evernus/_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/LangPack/data/bin/concrt140.dll

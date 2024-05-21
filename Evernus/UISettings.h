@@ -38,12 +38,15 @@ namespace Evernus
         const auto showMarginToolSampleDataDefault = true;
         const auto combineReportsDefault = false;
         const auto combineReportsWithCorpDefault = false;
+        const auto mDarkModeDefault = true;
+
 
         const auto autoCloseTasksKey = QStringLiteral("ui/tasks/autoClose");
         const auto autoCopyPriceFromInfoKey = QStringLiteral("ui/price/copyFromInfo");
         const auto marketOrderStateFilterKey = QStringLiteral("ui/orders/stateFilter");
         const auto marketOrderPriceStatusFilterKey = QStringLiteral("ui/orders/priceStatusFilter");
         const auto minimizeToTrayKey = QStringLiteral("ui/mainWindow/minimizeToTray");
+        const auto mDarkModeKey = QStringLiteral("ui/mainWindow/darkMode");
         const auto minimizeByMarginToolKey = QStringLiteral("ui/mainWindow/minimizeByMarginTool");
         const auto languageKey = QStringLiteral("ui/global/language");
         const auto dateTimeFormatKey = QStringLiteral("ui/global/dateTimeFormat");

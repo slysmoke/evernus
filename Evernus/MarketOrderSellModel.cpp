@@ -18,6 +18,7 @@
 #include <QIcon>
 #include <QFont>
 
+
 #include "MarketOrderProvider.h"
 #include "CharacterRepository.h"
 #include "CacheTimerProvider.h"
@@ -29,6 +30,9 @@
 #include "PriceUtils.h"
 #include "IconUtils.h"
 #include "TextUtils.h"
+#include "UISettings.h"
+#include "DarkModeColor.h"
+
 
 #include "MarketOrderSellModel.h"
 
@@ -51,6 +55,9 @@ namespace Evernus
         if (mCorp)
             connect(&mDataProvider, &EveDataProvider::namesChanged, this, &MarketOrderSellModel::updateNames);
     }
+
+
+ 
 
     int MarketOrderSellModel::columnCount(const QModelIndex &parent) const
     {
@@ -452,7 +459,7 @@ namespace Evernus
             case statusColumn:
                 switch (data->getState()) {
                 case MarketOrder::State::Active:
-                    return QColor{Qt::green};
+                    return Evernus::DarkModeColor::green();
                 case MarketOrder::State::Closed:
                     return QColor{Qt::gray};
                 case MarketOrder::State::Pending:
@@ -476,9 +483,12 @@ namespace Evernus
             case newMarginColumn:
                 return TextUtils::getMarginColor(getNewMargin(*data));
             case profitColumn:
+            
             case totalProfitColumn:
             case profitPerItemColumn:
-                return QColor{Qt::green};
+                return Evernus::DarkModeColor::green();
+            case volumeColumn:
+                return QColor{ Qt::black };
             }
             break;
         case Qt::TextAlignmentRole:

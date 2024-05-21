@@ -425,7 +425,7 @@ namespace Evernus
     {
         if (mRegionCache.empty())
         {
-            auto query = mConnectionProvider.getConnection().exec(QStringLiteral("SELECT regionID, regionName FROM mapRegions ORDER BY regionName"));
+            auto query = mConnectionProvider.getConnection().exec(QStringLiteral("SELECT regionID, regionName FROM mapRegions WHERE regionID <= 11000000 ORDER BY regionName"));
 
             const auto size = query.size();
             if (size > 0)
@@ -437,6 +437,7 @@ namespace Evernus
 
         return mRegionCache;
     }
+
 
     const std::vector<EveDataProvider::MapLocation> &CachingEveDataProvider::getConstellations(uint regionId) const
     {

@@ -71,8 +71,8 @@ namespace Evernus
 
         const auto curLocale = locale();
 
-        infoLayout->addWidget(new QLabel{tr("<span style='color: blue'>Your price:</span>"), this}, 0, 0);
-        infoLayout->addWidget(new QLabel{tr("<span style='color: blue'>%1</span>")
+        infoLayout->addWidget(new QLabel{tr("<span style='color: green'>Your price:</span>"), this}, 0, 0);
+        infoLayout->addWidget(new QLabel{tr("<span style='color: green'>%1</span>")
             .arg(TextUtils::currencyToString(info.mOrderPrice, curLocale)), this}, 0, 1);
         infoLayout->addWidget(new QLabel{tr("Valid on:"), this}, 0, 2);
         infoLayout->addWidget(new QLabel{(info.mOrderLocalTimestamp.isValid()) ? (TextUtils::dateTimeToString(info.mOrderLocalTimestamp, curLocale)) : ("-"), this}, 0, 3);

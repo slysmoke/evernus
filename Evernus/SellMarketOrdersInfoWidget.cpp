@@ -38,7 +38,7 @@ namespace Evernus
         mTotalIncomeLabel = new QLabel{this};
         mainLayout->addWidget(mTotalIncomeLabel);
         mTotalIncomeLabel->setFont(font);
-        mTotalIncomeLabel->setStyleSheet("color: lime;");
+        mTotalIncomeLabel->setStyleSheet("color: green;");
 
         mainLayout->addWidget(new QLabel{tr("Total cost:"), this});
 
@@ -52,6 +52,7 @@ namespace Evernus
         mTotalMarginLabel = new QLabel{this};
         mainLayout->addWidget(mTotalMarginLabel);
         mTotalMarginLabel->setFont(font);
+        mTotalMarginLabel->setStyleSheet("color:green");
     }
 
     void SellMarketOrdersInfoWidget::updateData()

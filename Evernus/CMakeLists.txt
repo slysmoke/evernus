@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 
+include(CMakePrintHelpers)
+
 project(Evernus VERSION 1.0 LANGUAGES CXX DESCRIPTION "Evernus - NTT Edition")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -124,8 +126,28 @@ elseif(WIN32)
     endif()
 endif()
 
-set(TRANSLATIONS lang/lang_pl_PL.ts lang/lang_de_DE.ts)
+
+
+set(TRANSLATIONS lang/lang_ru_RU.ts lang/lang_pl_PL.ts lang/lang_de_DE.ts )
 set_source_files_properties(${TRANSLATIONS} PROPERTIES OUTPUT_LOCATION "${CMAKE_CURRENT_BINARY_DIR}/translations")
+qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATIONS})
+
+
+#set(TRANSLATIONS "lang/lang_ru_RU.ts")
+#set_source_files_properties(${TRANSLATIONS} PROPERTIES OUTPUT_LOCATION "${CMAKE_CURRENT_BINARY_DIR}/translations")
+#qt5_add_translation(QM_FILES ${TRANSLATIONS})
+
+#add_custom_target(${TRANSLATIONS} DEPENDS ${QM_FILES})
+
+#cmake_print_variables("${QM_FILES}")
+
+
+
+#qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATIONS})
+
+
+
+
 
 add_definitions(-DQXT_STATIC -DQTDROPBOX_DEBUG)
 
@@ -141,7 +163,7 @@ if(DEFINED EVERNUS_ESI_SISI)
     add_definitions(-DEVERNUS_ESI_SISI)
 endif()
 
-qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATIONS})
+
 
 
 
@@ -301,6 +323,8 @@ add_executable(
     DateFilteredPlotWidget.h
     DateRangeWidget.cpp
     DateRangeWidget.h
+	DarkModeColor.cpp
+	DarkModeColor.h
     DbSettings.h
     Defines.h
     DeviationSourceWidget.cpp
@@ -859,6 +883,7 @@ add_executable(
     ${TRANSLATIONS}
     ${QM_FILES}
     ${ADDITIONAL_SRC}
+    
    
 )
 
@@ -961,7 +986,6 @@ endif()
 
 
 
-
 # set_target_properties(awesomeWorld PROPERTIES
 #    WIN32_EXECUTABLE true
 #    MACOSX_BUNDLE_GUI_IDENTIFIER  awesomeworld.ics.com
@@ -974,6 +998,8 @@ endif()
 # Set the name of our components
 set(COMPONENT_NAME_MAIN "Evernus")
 set(COMPONENT_NAME_DEPENDENCIES "RuntimeLibs")
+set(COMPONENT_NAME_LANG "LangPack")
+
 
 include(GNUInstallDirs)
 install(TARGETS Evernus DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT ${COMPONENT_NAME_MAIN})
@@ -1028,8 +1054,8 @@ include(CPackIFW)
 CPACK_ADD_COMPONENT(${COMPONENT_NAME_MAIN})
 
 # List controlling which components are installed
-#set(CPACK_COMPONENTS_ALL ${COMPONENT_NAME_MAIN})
-#message(STATUS "CPACK_COMPONENTS_ALL = " ${CPACK_COMPONENTS_ALL})
+set(CPACK_COMPONENTS_ALL ${COMPONENT_NAME_MAIN})
+message(STATUS "CPACK_COMPONENTS_ALL = " ${CPACK_COMPONENTS_ALL})
 
 # Install the runtime libs but don't show them in the installer
 cpack_ifw_configure_component(${COMPONENT_NAME_DEPENDENCIES} VIRTUAL FORCED_INSTALLATION)
@@ -1039,6 +1065,14 @@ cpack_ifw_configure_component(${COMPONENT_NAME_MAIN} ESSENTIAL FORCED_INSTALLATI
 
 # Customizing the UI with a script
 cpack_ifw_configure_component(${COMPONENT_NAME_MAIN} SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/../Evernus-Installer/installscript.qs)
+
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/translations
+    DESTINATION ${CMAKE_INSTALL_BINDIR}
+    COMPONENT ${COMPONENT_NAME_MAIN}
+    FILES_MATCHING PATTERN "*.qm"
+)
+
 
 # Adds basic repository entries to config.xml file
 # Runs repogen command on the packages directory

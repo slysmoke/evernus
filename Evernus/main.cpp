@@ -1,3 +1,7 @@
+// This is an open source non-commercial project. Dear PVS-Studio, please check it.
+
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
+
 /**
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -53,6 +57,7 @@
 #include "ImportSettings.h"
 #include "BezierCurve.h"
 #include "MainWindow.h"
+#include "UISettings.h"
 #include "VolumeType.h"
 #include "Version.h"
 #include "Defines.h"
@@ -342,31 +347,45 @@ int main(int argc, char *argv[])
                                         app.getESIInterfaceManager(),
                                         app};
 
-            QFile file("style.qss");
-            file.open(QFile::ReadOnly);
-            QString styleSheet = QLatin1String(file.readAll());
+            
+            QSettings settings;
+
+            //QFile file("style.qss");
+                //file.open(QFile::ReadOnly);
+                //QString styleSheet = QLatin1String(file.readAll());
             qApp->setStyle(QStyleFactory::create("fusion"));
             qDebug() << QStyleFactory::keys();
             //qApp->setStyleSheet(styleSheet);
 
-            QPalette palette;
-            // Настраиваем палитру для цветовых ролей элементов интерфейса
-            palette.setColor(QPalette::Window, QColor(53, 53, 53));
-            palette.setColor(QPalette::WindowText, Qt::white);
-            palette.setColor(QPalette::Base, QColor(25, 25, 25));
-            palette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
-            palette.setColor(QPalette::ToolTipBase, Qt::white);
-            palette.setColor(QPalette::ToolTipText, Qt::white);
-            palette.setColor(QPalette::Text, Qt::white);
-            palette.setColor(QPalette::Button, QColor(53, 53, 53));
-            palette.setColor(QPalette::ButtonText, Qt::white);
-            palette.setColor(QPalette::BrightText, Qt::red);
-            palette.setColor(QPalette::Link, QColor(42, 130, 218));
-            palette.setColor(QPalette::Highlight, QColor(42, 130, 218));
-            palette.setColor(QPalette::HighlightedText, Qt::black);
-            palette.setColor(QPalette::Disabled, QPalette::Text, Qt::darkGray);
-            palette.setColor(QPalette::Disabled, QPalette::ButtonText, Qt::darkGray);
-            qApp->setPalette(palette);
+            if (settings.value(Evernus::UISettings::mDarkModeKey, Evernus::UISettings::mDarkModeDefault).toBool()) {
+
+
+                
+
+                QPalette palette;
+                // Настраиваем палитру для цветовых ролей элементов интерфейса
+                palette.setColor(QPalette::Window, QColor(53, 53, 53));
+                palette.setColor(QPalette::WindowText, Qt::white);
+                palette.setColor(QPalette::Base, QColor(25, 25, 25));
+                palette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
+                palette.setColor(QPalette::ToolTipBase, Qt::white);
+                palette.setColor(QPalette::ToolTipText, Qt::white);
+                palette.setColor(QPalette::Text, Qt::white);
+                palette.setColor(QPalette::Button, QColor(53, 53, 53));
+                palette.setColor(QPalette::ButtonText, Qt::white);
+                palette.setColor(QPalette::BrightText, Qt::red);
+                palette.setColor(QPalette::Link, QColor(42, 130, 218));
+                palette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+                palette.setColor(QPalette::HighlightedText, Qt::black);
+                palette.setColor(QPalette::Disabled, QPalette::Text, Qt::darkGray);
+                palette.setColor(QPalette::Disabled, QPalette::ButtonText, Qt::darkGray);
+                qApp->setPalette(palette);
+
+
+
+            }
+            
+            
             
 
             QObject::connect(&mainWnd, &Evernus::MainWindow::refreshCharacters,
@@ -489,7 +508,7 @@ int main(int argc, char *argv[])
                              webImporterPtr, &Evernus::ProxyWebExternalOrderImporter::handleNewPreferences);
             mainWnd.showAsSaved();
 
-            QSettings settings;
+            
             if (!settings.value(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, false).toBool())
             {
                 const auto ret = QMessageBox::question(

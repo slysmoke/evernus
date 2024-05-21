@@ -41,9 +41,12 @@ Evernus-Installer/INSTALL.vcxproj.filters
 INSTALL.vcxproj
 INSTALL.vcxproj.filters
 build.bat
+dev.bat
 db/
-Evernus/SSL.dir/
+compile_commands*
+Evernus/SSL.dir/*
 install_manifest_Unspecified.txt
 time.bat
 Evernus/.vscode/
 db
+

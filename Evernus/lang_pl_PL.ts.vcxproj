@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{31682471-2E6E-3C54-82A2-5BBC4B3D97D1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>lang_pl_PL.ts</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\github\evernus\Evernus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\github\evernus\Evernus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\github\evernus\Evernus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\github\evernus\Evernus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\github\evernus\CMakeFiles\4553eb78ab6eea7fc6817311b23db10a\lang_de_DE.qm.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating translations/lang_de_DE.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_de_DE.ts -qm D:/github/evernus/Evernus/translations/lang_de_DE.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\lang_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\translations\lang_de_DE.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating translations/lang_de_DE.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_de_DE.ts -qm D:/github/evernus/Evernus/translations/lang_de_DE.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\lang_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\translations\lang_de_DE.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating translations/lang_de_DE.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_de_DE.ts -qm D:/github/evernus/Evernus/translations/lang_de_DE.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\lang_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\translations\lang_de_DE.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating translations/lang_de_DE.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_de_DE.ts -qm D:/github/evernus/Evernus/translations/lang_de_DE.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\lang_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\translations\lang_de_DE.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\github\evernus\CMakeFiles\4553eb78ab6eea7fc6817311b23db10a\lang_pl_PL.qm.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating translations/lang_pl_PL.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_pl_PL.ts -qm D:/github/evernus/Evernus/translations/lang_pl_PL.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\lang_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\translations\lang_pl_PL.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating translations/lang_pl_PL.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_pl_PL.ts -qm D:/github/evernus/Evernus/translations/lang_pl_PL.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\lang_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\translations\lang_pl_PL.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating translations/lang_pl_PL.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_pl_PL.ts -qm D:/github/evernus/Evernus/translations/lang_pl_PL.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\lang_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\translations\lang_pl_PL.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating translations/lang_pl_PL.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_pl_PL.ts -qm D:/github/evernus/Evernus/translations/lang_pl_PL.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\lang_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\translations\lang_pl_PL.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\github\evernus\CMakeFiles\4553eb78ab6eea7fc6817311b23db10a\lang_ru_RU.qm.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating translations/lang_ru_RU.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_ru_RU.ts -qm D:/github/evernus/Evernus/translations/lang_ru_RU.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\lang_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\translations\lang_ru_RU.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating translations/lang_ru_RU.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_ru_RU.ts -qm D:/github/evernus/Evernus/translations/lang_ru_RU.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\lang_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\translations\lang_ru_RU.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating translations/lang_ru_RU.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_ru_RU.ts -qm D:/github/evernus/Evernus/translations/lang_ru_RU.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\lang_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\translations\lang_ru_RU.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating translations/lang_ru_RU.qm</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\bin\lrelease.exe D:/github/evernus/Evernus/lang_ru_RU.ts -qm D:/github/evernus/Evernus/translations/lang_ru_RU.qm
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\lang_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\translations\lang_ru_RU.qm</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\github\evernus\CMakeFiles\0040bce41cadb39d6277a2bba4606754\lang_pl_PL.ts.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+lang_de_DE.ts lang_ru_RU.ts
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\translations\lang_pl_PL.qm;D:\github\evernus\Evernus\translations\lang_de_DE.qm;D:\github\evernus\Evernus\translations\lang_ru_RU.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\CMakeFiles\lang_pl_PL.ts</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+lang_de_DE.ts lang_ru_RU.ts
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\translations\lang_pl_PL.qm;D:\github\evernus\Evernus\translations\lang_de_DE.qm;D:\github\evernus\Evernus\translations\lang_ru_RU.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\CMakeFiles\lang_pl_PL.ts</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+lang_de_DE.ts lang_ru_RU.ts
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\translations\lang_pl_PL.qm;D:\github\evernus\Evernus\translations\lang_de_DE.qm;D:\github\evernus\Evernus\translations\lang_ru_RU.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\CMakeFiles\lang_pl_PL.ts</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+lang_de_DE.ts lang_ru_RU.ts
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\translations\lang_pl_PL.qm;D:\github\evernus\Evernus\translations\lang_de_DE.qm;D:\github\evernus\Evernus\translations\lang_ru_RU.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\CMakeFiles\lang_pl_PL.ts</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\github\evernus\Evernus\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/github/evernus/Evernus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/github/evernus -BD:/github/evernus --check-stamp-file D:/github/evernus/Evernus/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakePrintHelpers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPackIFW.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.27\Templates\CPackConfig.cmake.in;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_AudioCaptureServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_DSServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QM3uPlaylistPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWasapiPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWindowsAudioPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_WMFServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QDebugMessageServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QLocalClientConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebugServerFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebuggerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlInspectorServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugConnectorFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlPreviewServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlProfilerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQuickProfilerAdapterFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QTcpServerConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QODBCDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QPSQLDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QSQLiteDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfigVersion.cmake;D:\github\evernus\Evernus\CMakeHelpers\VersionInfo.in;D:\github\evernus\Evernus\CMakeHelpers\VersionResource.rc;D:\github\evernus\Evernus\CMakeHelpers\generate_product_version.cmake;D:\github\evernus\Evernus\Version.h.in;D:\github\evernus\Evernus\deploy-qt-windows.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\github\evernus\Evernus\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/github/evernus/Evernus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/github/evernus -BD:/github/evernus --check-stamp-file D:/github/evernus/Evernus/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakePrintHelpers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPackIFW.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.27\Templates\CPackConfig.cmake.in;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_AudioCaptureServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_DSServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QM3uPlaylistPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWasapiPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWindowsAudioPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_WMFServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QDebugMessageServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QLocalClientConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebugServerFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebuggerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlInspectorServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugConnectorFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlPreviewServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlProfilerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQuickProfilerAdapterFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QTcpServerConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QODBCDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QPSQLDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QSQLiteDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfigVersion.cmake;D:\github\evernus\Evernus\CMakeHelpers\VersionInfo.in;D:\github\evernus\Evernus\CMakeHelpers\VersionResource.rc;D:\github\evernus\Evernus\CMakeHelpers\generate_product_version.cmake;D:\github\evernus\Evernus\Version.h.in;D:\github\evernus\Evernus\deploy-qt-windows.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\github\evernus\Evernus\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/github/evernus/Evernus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/github/evernus -BD:/github/evernus --check-stamp-file D:/github/evernus/Evernus/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakePrintHelpers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPackIFW.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.27\Templates\CPackConfig.cmake.in;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_AudioCaptureServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_DSServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QM3uPlaylistPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWasapiPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWindowsAudioPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_WMFServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QDebugMessageServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QLocalClientConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebugServerFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebuggerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlInspectorServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugConnectorFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlPreviewServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlProfilerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQuickProfilerAdapterFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QTcpServerConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QODBCDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QPSQLDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QSQLiteDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfigVersion.cmake;D:\github\evernus\Evernus\CMakeHelpers\VersionInfo.in;D:\github\evernus\Evernus\CMakeHelpers\VersionResource.rc;D:\github\evernus\Evernus\CMakeHelpers\generate_product_version.cmake;D:\github\evernus\Evernus\Version.h.in;D:\github\evernus\Evernus\deploy-qt-windows.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\github\evernus\Evernus\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/github/evernus/Evernus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/github/evernus -BD:/github/evernus --check-stamp-file D:/github/evernus/Evernus/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.27\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CMakePrintHelpers.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CPackIFW.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindBoost.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindOpenSSL.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.27\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.27\Templates\CPackConfig.cmake.in;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Concurrent\Qt5ConcurrentConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigExtrasMkspecDir.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5DataVisualization\Qt5DataVisualizationConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5GuiConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QGifPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICNSPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QICOPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QJpegPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QMinimalIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QOffscreenIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTgaPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTiffPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QTuioTouchPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QVirtualKeyboardPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWbmpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebGLIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWebpPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QWindowsIntegrationPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Gui\Qt5Gui_QXdgDesktopPortalThemePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5MultimediaConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_AudioCaptureServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_DSServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QM3uPlaylistPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWasapiPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_QWindowsAudioPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Multimedia\Qt5Multimedia_WMFServicePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5NetworkConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Network\Qt5Network_QGenericEnginePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5NetworkAuth\Qt5NetworkAuthConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupportConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5PrintSupport\Qt5PrintSupport_QWindowsPrinterSupportPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5QmlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QDebugMessageServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QLocalClientConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebugServerFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlDebuggerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlInspectorServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugConnectorFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlNativeDebugServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlPreviewServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQmlProfilerServiceFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QQuickProfilerAdapterFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Qml\Qt5Qml_QTcpServerConnectionFactory.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Quick\Qt5QuickConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5QuickWidgets\Qt5QuickWidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5SqlConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QODBCDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QPSQLDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Sql\Qt5Sql_QSQLiteDriverPlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigExtras.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsConfigVersion.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5Widgets\Qt5Widgets_QWindowsVistaStylePlugin.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfig.cmake;D:\Qt\Qt5.12.7\5.12.7\msvc2017_64\lib\cmake\Qt5WinExtras\Qt5WinExtrasConfigVersion.cmake;D:\github\evernus\Evernus\CMakeHelpers\VersionInfo.in;D:\github\evernus\Evernus\CMakeHelpers\VersionResource.rc;D:\github\evernus\Evernus\CMakeHelpers\generate_product_version.cmake;D:\github\evernus\Evernus\Version.h.in;D:\github\evernus\Evernus\deploy-qt-windows.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\github\evernus\Evernus\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\github\evernus\Evernus\CMakeFiles\lang_pl_PL.ts">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\github\evernus\ZERO_CHECK.vcxproj">
+      <Project>{99339A51-2920-3319-B3F6-ABA68A939C33}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

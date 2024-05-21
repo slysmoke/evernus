@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\github\evernus\CMakeFiles\4553eb78ab6eea7fc6817311b23db10a\lang_de_DE.qm.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github\evernus\CMakeFiles\4553eb78ab6eea7fc6817311b23db10a\lang_pl_PL.qm.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github\evernus\CMakeFiles\4553eb78ab6eea7fc6817311b23db10a\lang_ru_RU.qm.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github\evernus\CMakeFiles\0040bce41cadb39d6277a2bba4606754\lang_pl_PL.ts.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github\evernus\Evernus\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\github\evernus\Evernus\CMakeFiles\lang_pl_PL.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3F5948C6-5AEF-376F-9BE9-EA5583F1991A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -33,6 +33,7 @@
 #include <QPushButton>
 #include <QClipboard>
 #include <QTabWidget>
+
 #include <QDateTime>
 #include <QSettings>
 #include <QCheckBox>
@@ -60,9 +61,11 @@
 
 #include "MarginToolDialog.h"
 
+
 namespace Evernus
 {
     const QString MarginToolDialog::settingsGeometryKey = "marginTool/geometry";
+   
 
     MarginToolDialog::MarginToolDialog(const Repository<Character> &characterRepository,
                                        const ItemCostProvider &itemCostProvider,
@@ -72,9 +75,11 @@ namespace Evernus
         , mCharacterRepository(characterRepository)
         , mItemCostProvider(itemCostProvider)
         , mDataProvider(dataProvider)
+        
     {
-        QSettings settings;
+        
 
+        QSettings settings;
         const auto alwaysOnTop
             = settings.value(MarginToolSettings::alwaysOnTopKey, MarginToolSettings::alwaysOnTopDefault).toBool();
 
@@ -117,6 +122,8 @@ namespace Evernus
         setNewWindowFlags(alwaysOnTop);
 
         restoreGeometry(settings.value(settingsGeometryKey).toByteArray());
+
+
     }
 
     void MarginToolDialog::setCharacter(Character::IdType id)

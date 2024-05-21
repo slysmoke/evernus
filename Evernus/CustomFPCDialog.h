@@ -49,6 +49,6 @@ namespace Evernus
     private:
         QTableWidget *mDataView = nullptr;
 
-        void copyData(int row) const;
+        void copyData(int row, int column) const;
     };
 }

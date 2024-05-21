@@ -15,6 +15,7 @@
 #include <QTableWidgetItem>
 #include <QApplication>
 #include <QTableWidget>
+#include <QHeaderView>
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QClipboard>
@@ -30,16 +31,18 @@ namespace Evernus
     CustomFPCDialog::CustomFPCDialog(QWidget *parent)
         : QDialog(parent)
     {
-        
+
         CustomFPCDialog::setMinimumWidth(335);
+        CustomFPCDialog::resize(400, 650);
+
         // CustomFPCDialog::setWindowFlags(Qt::WindowStaysOnTopHint);
-        
+
         auto mainLayout = new QVBoxLayout{this};
 
         auto helpLabel = new QLabel{tr(
-            "You can copy raw data into the clipboard for use as a custom Fast Price Copy source. "
-            "The first column should contain item type id, and the second its price to copy (optional)."
-        ), this};
+                                        "You can copy raw data into the clipboard for use as a custom Fast Price Copy source. "
+                                        "The first column should contain item type id, the second its price to copy (optional) and third its Quantity (optional) ."),
+                                    this};
         mainLayout->addWidget(helpLabel);
         helpLabel->setWordWrap(true);
 
@@ -50,35 +53,77 @@ namespace Evernus
         mDataView = new QTableWidget{this};
         mainLayout->addWidget(mDataView);
         mDataView->setColumnCount(3);
-        mDataView->setHorizontalHeaderLabels({ tr("Type"), tr("Price"), tr("QTY") });
+        mDataView->setHorizontalHeaderLabels({tr("Type"), tr("Price"), tr("Quantity")});
         mDataView->setSelectionMode(QAbstractItemView::SingleSelection);
+        mDataView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     }
 
     void CustomFPCDialog::executeFPC()
     {
+        static int mCurrentColumn = 1;
+
         auto row = mDataView->currentRow();
         if (row >= 0)
         {
-            copyData(row);
+            copyData(row, mCurrentColumn);
 
-            ++row;
-            if (row >= mDataView->rowCount())
-                row = 0;
+            QIcon icon(":/images/accept.png");
+            mDataView->item(row, mCurrentColumn)->setIcon(icon);
+
+            if (mCurrentColumn == 1 && mDataView->item(row, 2) != nullptr)
+            {
+                mCurrentColumn = 2;
+            }
+            else
+            {
+                mCurrentColumn = 1;
+                ++row;
+                if (row >= mDataView->rowCount())
+                    row = 0;
+            }
 
             mDataView->setCurrentCell(row, 0);
         }
     }
 
+    // void CustomFPCDialog::executeFPC()
+    // {
+    //     auto row = mDataView->currentRow();
+    //     if (row >= 0)
+    //     {
+    //         copyData(row);
+
+    //         ++row;
+    //         if (row >= mDataView->rowCount())
+    //             row = 0;
+
+    //         mDataView->setCurrentCell(row, 0);
+    //     }
+    // }
+
     void CustomFPCDialog::executeBackwardFPC()
     {
+        static int mCurrentColumn = 1;
+
         auto row = mDataView->currentRow();
         if (row >= 0)
         {
-            copyData(row);
+            copyData(row, mCurrentColumn);
 
-            --row;
-            if (row < 0)
-                row = mDataView->rowCount() - 1;
+            mDataView->item(row, mCurrentColumn)->setIcon(QIcon());
+
+            if (mCurrentColumn == 1 && mDataView->item(row, 2) != nullptr)
+            {
+                mCurrentColumn = 2;
+            }
+            else
+            {
+                mCurrentColumn = 1;
+
+                --row;
+                if (row < 0)
+                    row = mDataView->rowCount() - 1;
+            }
 
             mDataView->setCurrentCell(row, 0);
         }
@@ -105,10 +150,10 @@ namespace Evernus
                 mDataView->setItem(row, 0, new QTableWidgetItem{values[0]});
                 if (values.size() > 1)
                     mDataView->setItem(row, 1, new QTableWidgetItem{values[1]});
-                if (values.size() > 2) {
-                    mDataView->setItem(row, 2, new QTableWidgetItem{ values[2] });
-                    }
-
+                if (values.size() > 2)
+                {
+                    mDataView->setItem(row, 2, new QTableWidgetItem{values[2]});
+                }
 
                 ++row;
             }
@@ -118,24 +163,52 @@ namespace Evernus
         mDataView->setCurrentCell(0, 0);
     }
 
-    void CustomFPCDialog::copyData(int row) const
+    void CustomFPCDialog::copyData(int row, int column) const
     {
-        const auto priceItem = mDataView->item(row, 1);
-        if (priceItem != nullptr)
+        const auto item = mDataView->item(row, column);
+        if (item != nullptr)
         {
             auto ok = false;
-            const auto price = priceItem->text().toDouble(&ok);
+            const auto text = item->text();
+            const auto value = text.toDouble(&ok);
 
             if (ok)
-                QApplication::clipboard()->setText(QString::number(price, 'f', 2));
+                QApplication::clipboard()->setText(QString::number(value, 'f', 2));
+            else
+                QApplication::clipboard()->setText(text); // Если значение не число, копируем текст как есть
         }
 
         QSettings settings;
         if (settings.value(PriceSettings::showInEveOnFpcKey, PriceSettings::showInEveOnFpcDefault).toBool())
         {
-            const auto id = mDataView->item(row, 0)->text().toULongLong();
-            if (id != EveType::invalidId)
-                emit showInEve(id);
+            const auto idItem = mDataView->item(row, 0);
+            if (idItem != nullptr)
+            {
+                const auto id = idItem->text().toULongLong();
+                if (id != EveType::invalidId)
+                    emit showInEve(id);
+            }
         }
     }
+
+    // void CustomFPCDialog::copyData(int row) const
+    // {
+    //     const auto priceItem = mDataView->item(row, 1);
+    //     if (priceItem != nullptr)
+    //     {
+    //         auto ok = false;
+    //         const auto price = priceItem->text().toDouble(&ok);
+
+    //         if (ok)
+    //             QApplication::clipboard()->setText(QString::number(price, 'f', 2));
+    //     }
+
+    //     QSettings settings;
+    //     if (settings.value(PriceSettings::showInEveOnFpcKey, PriceSettings::showInEveOnFpcDefault).toBool())
+    //     {
+    //         const auto id = mDataView->item(row, 0)->text().toULongLong();
+    //         if (id != EveType::invalidId)
+    //             emit showInEve(id);
+    //     }
+    // }
 }

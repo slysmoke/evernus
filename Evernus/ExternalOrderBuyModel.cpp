@@ -24,6 +24,7 @@
 #include "ItemCostProvider.h"
 #include "EveDataProvider.h"
 #include "TextUtils.h"
+#include "DarkModeColor.h"
 
 #include "ExternalOrderBuyModel.h"
 
@@ -361,12 +362,13 @@ namespace Evernus
                 if (mPriceColorMode == PriceColorMode::Direction)
                     return QColor{Qt::red};
 
-                return (computeDeviation(order) > 0.) ? (QColor{Qt::red}) : (QColor{Qt::green});
+                return (computeDeviation(order) > 0.) ? (QColor{Qt::red}) : (Evernus::DarkModeColor::green());
             }
             break;
         case Qt::BackgroundRole:
             if (mOwnOrders.find(order.getId()) != std::end(mOwnOrders))
-                return QColor{ 43, 61, 255 };
+                //return QColor{ 43, 61, 255 };
+                return Evernus::DarkModeColor::green();
             break;
         case Qt::ToolTipRole:
             if (mOwnOrders.find(order.getId()) != std::end(mOwnOrders))

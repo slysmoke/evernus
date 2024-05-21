@@ -1,0 +1,10 @@
+<!DOCTYPE RCC><RCC version="1.0">
+  <qresource prefix="i18n">
+    <file alias="lang_de_DE.qm">D:/github/evernus/Evernus/.qm/lang_de_DE.qm</file>
+    <file alias="lang_pl_PL.qm">D:/github/evernus/Evernus/.qm/lang_pl_PL.qm</file>
+    <file alias="lang_ru_RU.qm">D:/github/evernus/Evernus/.qm/lang_ru_RU.qm</file>
+    <file alias="lang_de_DE.qm">D:/github/evernus/Evernus/.qm/lang_de_DE.qm</file>
+    <file alias="lang_pl_PL.qm">D:/github/evernus/Evernus/.qm/lang_pl_PL.qm</file>
+    <file alias="lang_ru_RU.qm">D:/github/evernus/Evernus/.qm/lang_ru_RU.qm</file>
+  </qresource>
+</RCC>
