@@ -197,7 +197,7 @@ namespace Evernus
                                     character.setBloodline(mDataProvider.getBloodlineName(publicDataObj.value(QStringLiteral("bloodline_id")).toDouble()));
                                     
                                    
-                                    character.setAncestry(mDataProvider.getAncestryName(publicDataObj.value(QStringLiteral("ancestry_id")).toDouble()));
+                                    
                                     
                                     
 
@@ -447,32 +447,7 @@ namespace Evernus
         });
     }
 
-    void ESIManager::fetchAncestries(const Callback<NameMap> &callback) const
-    {
-        getInterface().fetchAncestries([=](auto &&data, const auto &error, const auto &expires) {
-            if (Q_UNLIKELY(!error.isEmpty()))
-            {
-                callback({}, error, expires);
-                return;
-            }
-
-            const auto ancestries = data.array();
-
-            NameMap names;
-            names.reserve(ancestries.size());
-
-            for (const auto &ancestry : ancestries)
-            {
-                const auto ancestryObj = ancestry.toObject();
-                names.emplace(
-                    static_cast<quint64>(ancestryObj.value(QStringLiteral("id")).toDouble()),
-                    ancestryObj.value(QStringLiteral("name")).toString()
-                );
-            }
-
-            callback(std::move(names), {}, expires);
-        });
-    }
+    
 
     void ESIManager::fetchCharacterMarketOrders(Character::IdType charId, const MarketOrdersCallback &callback) const
     {

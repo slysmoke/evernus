@@ -706,11 +706,10 @@ namespace Evernus
                 const auto industrySkills = character->getIndustrySkills();
 
                 mNameLabel->setText(character->getName());
-                mBackgroundLabel->setText(QStringLiteral("%1 %2, %3, %4")
+                mBackgroundLabel->setText(QStringLiteral("%1 %2, %3")
                     .arg(character->getGender())
                     .arg(character->getRace())
-                    .arg(character->getBloodline())
-                    .arg(character->getAncestry()));
+                    .arg(character->getBloodline()));
                 mCorporationLabel->setText(character->getCorporationName());
                 mISKLabel->setText(character->getISKPresentation());
                 mAlphaClone->setChecked(character->isAlphaClone());

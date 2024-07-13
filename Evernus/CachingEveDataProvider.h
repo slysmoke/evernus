@@ -109,7 +109,7 @@ namespace Evernus
 
         virtual QString getRaceName(uint raceId) const override;
         virtual QString getBloodlineName(uint bloodlineId) const override;
-        virtual QString getAncestryName(uint ancestryId) const override;
+
 
         virtual const ManufacturingInfo &getTypeManufacturingInfo(EveType::IdType typeId) const override;
         virtual EveType::IdType getBlueprintOutputType(EveType::IdType blueprintId) const override;
@@ -143,7 +143,7 @@ namespace Evernus
         static const QString nameCacheFileName;
         static const QString raceCacheFileName;
         static const QString bloodlineCacheFileName;
-        static const QString ancestryCacheFileName;
+
 
         static const QStringList oreGroupNames;
 
@@ -225,7 +225,7 @@ namespace Evernus
 
         NameMap mRaceNameCache;
         NameMap mBloodlineNameCache;
-        NameMap mAncestryNameCache;
+
 
         uint mManufacturingActivityId = 1; // 1 - fallback id at the time of writing
 

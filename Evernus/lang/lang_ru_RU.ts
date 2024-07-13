@@ -572,7 +572,7 @@ Total: %7</source>
     <message>
         <location filename="../CachingEveDataProvider.cpp" line="187"/>
         <location filename="../CachingEveDataProvider.cpp" line="199"/>
-        <location filename="../CachingEveDataProvider.cpp" line="957"/>
+        <location filename="../CachingEveDataProvider.cpp" line="956"/>
         <source>(unknown)</source>
         <translation>(неизвестный)</translation>
     </message>
@@ -1128,22 +1128,22 @@ Total: %7</source>
         <translation>Контракты: %1</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="821"/>
+        <location filename="../CharacterWidget.cpp" line="820"/>
         <source>Character error</source>
         <translation>Ошибка персонажа</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="821"/>
+        <location filename="../CharacterWidget.cpp" line="820"/>
         <source>Character not found in DB. Refresh characters.</source>
         <translation>Персонаж не найден в БД. Обновите персонажей.</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="909"/>
+        <location filename="../CharacterWidget.cpp" line="908"/>
         <source>&lt;strong&gt;%1 of %2&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;%1 из %2&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="919"/>
+        <location filename="../CharacterWidget.cpp" line="918"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>

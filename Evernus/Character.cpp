@@ -110,25 +110,7 @@ namespace Evernus
         mData.mBloodline = std::move(bloodline);
     }
 
-    QString Character::getAncestry() const &
-    {
-        return mData.mAncestry;
-    }
-
-    QString &&Character::getAncestry() && noexcept
-    {
-        return std::move(mData.mAncestry);
-    }
-
-    void Character::setAncestry(const QString &ancestry)
-    {
-        mData.mAncestry = ancestry;
-    }
-
-    void Character::setAncestry(QString &&ancestry)
-    {
-        mData.mAncestry = std::move(ancestry);
-    }
+   
 
     QString Character::getGender() const &
     {

@@ -1071,7 +1071,7 @@ Are you sure you wish to proceed (doing so can compromise your account security)
     <message>
         <location filename="../CachingEveDataProvider.cpp" line="187"/>
         <location filename="../CachingEveDataProvider.cpp" line="199"/>
-        <location filename="../CachingEveDataProvider.cpp" line="957"/>
+        <location filename="../CachingEveDataProvider.cpp" line="956"/>
         <source>(unknown)</source>
         <translation>(unbekannt)</translation>
     </message>
@@ -1696,22 +1696,22 @@ Are you sure you wish to proceed (doing so can compromise your account security)
         <translation>Corp. Verträge: %1</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="821"/>
+        <location filename="../CharacterWidget.cpp" line="820"/>
         <source>Character error</source>
         <translation>Fehler bei Charakter</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="821"/>
+        <location filename="../CharacterWidget.cpp" line="820"/>
         <source>Character not found in DB. Refresh characters.</source>
         <translation>Charakter nicht in der DB gefunden. Aktualisiere die Charaktere.</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="909"/>
+        <location filename="../CharacterWidget.cpp" line="908"/>
         <source>&lt;strong&gt;%1 of %2&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;%1 von %2&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="919"/>
+        <location filename="../CharacterWidget.cpp" line="918"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>

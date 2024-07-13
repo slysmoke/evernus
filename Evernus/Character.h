@@ -58,10 +58,8 @@ namespace Evernus
         void setBloodline(const QString &bloodline);
         void setBloodline(QString &&bloodline);
 
-        QString getAncestry() const &;
-        QString &&getAncestry() && noexcept;
-        void setAncestry(const QString &ancestry);
-        void setAncestry(QString &&ancestry);
+
+        
 
         QString getGender() const &;
         QString &&getGender() && noexcept;

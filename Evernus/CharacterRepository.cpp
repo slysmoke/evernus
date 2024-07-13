@@ -38,7 +38,7 @@ namespace Evernus
         character->setCorporationId(record.value(QStringLiteral("corporation_id")).toULongLong());
         character->setRace(record.value(QStringLiteral("race")).toString());
         character->setBloodline(record.value(QStringLiteral("bloodline")).toString());
-        character->setAncestry(record.value(QStringLiteral("ancestry")).toString());
+        
         character->setGender(record.value(QStringLiteral("gender")).toString());
         character->setISK(record.value(QStringLiteral("isk")).value<CharacterData::ISKType>());
         character->setCorpStanding(record.value(QStringLiteral("corp_standing")).toFloat());
@@ -271,7 +271,7 @@ namespace Evernus
             "corporation_id BIGINT NOT NULL,"
             "race TEXT NOT NULL,"
             "bloodline TEXT NOT NULL,"
-            "ancestry TEXT,"
+            
             "gender TEXT NOT NULL,"
             "isk DOUBLE NOT NULL,"
             "corp_standing FLOAT NOT NULL,"
@@ -349,7 +349,7 @@ namespace Evernus
             QStringLiteral("corporation_id"),
             QStringLiteral("race"),
             QStringLiteral("bloodline"),
-            QStringLiteral("ancestry"),
+        
             QStringLiteral("gender"),
             QStringLiteral("isk"),
             QStringLiteral("corp_standing"),
@@ -435,7 +435,7 @@ namespace Evernus
         query.bindValue(QStringLiteral(":corporation_id"), entity.getCorporationId());
         query.bindValue(QStringLiteral(":race"), entity.getRace());
         query.bindValue(QStringLiteral(":bloodline"), entity.getBloodline());
-        query.bindValue(QStringLiteral(":ancestry"), entity.getAncestry());
+       
         query.bindValue(QStringLiteral(":gender"), entity.getGender());
         query.bindValue(QStringLiteral(":isk"), entity.getISK());
         query.bindValue(QStringLiteral(":corp_standing"), entity.getCorpStanding());
@@ -520,7 +520,7 @@ namespace Evernus
         query.addBindValue(entity.getCorporationId());
         query.addBindValue(entity.getRace());
         query.addBindValue(entity.getBloodline());
-        query.addBindValue(entity.getAncestry());
+        
         query.addBindValue(entity.getGender());
         query.addBindValue(entity.getISK());
         query.addBindValue(entity.getCorpStanding());

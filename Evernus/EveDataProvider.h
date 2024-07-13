@@ -130,7 +130,7 @@ namespace Evernus
 
         virtual QString getRaceName(uint raceId) const = 0;
         virtual QString getBloodlineName(uint bloodlineId) const = 0;
-        virtual QString getAncestryName(uint ancestryId) const = 0;
+        
 
         virtual const ManufacturingInfo &getTypeManufacturingInfo(EveType::IdType typeId) const = 0;
         virtual EveType::IdType getBlueprintOutputType(EveType::IdType blueprintId) const = 0;

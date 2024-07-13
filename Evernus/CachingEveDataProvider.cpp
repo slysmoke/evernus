@@ -36,7 +36,7 @@ namespace Evernus
     const QString CachingEveDataProvider::nameCacheFileName = "generic_names";
     const QString CachingEveDataProvider::raceCacheFileName = "race_names";
     const QString CachingEveDataProvider::bloodlineCacheFileName = "bloodline_names";
-    const QString CachingEveDataProvider::ancestryCacheFileName = "ancestry_names";
+   
 
     const QString CachingEveDataProvider::systemDistanceCacheFileName = "system_distances";
 
@@ -99,7 +99,7 @@ namespace Evernus
                 cacheWrite(systemDistanceCacheFileName, mSystemDistances);
                 cacheWrite(raceCacheFileName, mRaceNameCache);
                 cacheWrite(bloodlineCacheFileName, mBloodlineNameCache);
-                cacheWrite(ancestryCacheFileName, mAncestryNameCache);
+                
             }
         }
         catch (...)
@@ -853,14 +853,13 @@ SELECT m.typeID, m.materialTypeID, m.quantity, t.portionSize, t.groupID FROM inv
     {
         readCache(raceCacheFileName, mRaceNameCache);
         readCache(bloodlineCacheFileName, mBloodlineNameCache);
-        readCache(ancestryCacheFileName, mAncestryNameCache);
+       
 
         if (mRaceNameCache.isEmpty())
             mDataManagerProvider.getESIManager().fetchRaces(getFillNameMapCallback(mRaceNameCache));
         if (mBloodlineNameCache.isEmpty())
             mDataManagerProvider.getESIManager().fetchBloodlines(getFillNameMapCallback(mBloodlineNameCache));
-        if (mAncestryNameCache.isEmpty())
-            mDataManagerProvider.getESIManager().fetchAncestries(getFillNameMapCallback(mAncestryNameCache));
+       
     }
 
     void CachingEveDataProvider::precacheJumpMap()
@@ -1125,10 +1124,7 @@ SELECT m.typeID, m.materialTypeID, m.quantity, t.portionSize, t.groupID FROM inv
         return mBloodlineNameCache.value(bloodlineId);
     }
 
-    QString CachingEveDataProvider::getAncestryName(uint ancestryId) const
-    {
-        return mAncestryNameCache.value(ancestryId);
-    }
+
 
     const CachingEveDataProvider::ManufacturingInfo &CachingEveDataProvider::getTypeManufacturingInfo(EveType::IdType typeId) const
     {

@@ -108,7 +108,7 @@ namespace Evernus
         quint64 mCorporationId = 0;
         QString mRace;
         QString mBloodline;
-        QString mAncestry;
+        
         QString mGender;
         ISKType mISK = 0;
         float mCorpStanding = 0.f;

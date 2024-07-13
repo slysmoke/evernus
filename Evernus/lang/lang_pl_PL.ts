@@ -1351,7 +1351,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
     <message>
         <location filename="../CachingEveDataProvider.cpp" line="187"/>
         <location filename="../CachingEveDataProvider.cpp" line="199"/>
-        <location filename="../CachingEveDataProvider.cpp" line="957"/>
+        <location filename="../CachingEveDataProvider.cpp" line="956"/>
         <source>(unknown)</source>
         <translation>(nieznane)</translation>
     </message>
@@ -1978,22 +1978,22 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation>Kontrakty korporacji: %1</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="821"/>
+        <location filename="../CharacterWidget.cpp" line="820"/>
         <source>Character error</source>
         <translation>Błąd postaci</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="821"/>
+        <location filename="../CharacterWidget.cpp" line="820"/>
         <source>Character not found in DB. Refresh characters.</source>
         <translation>Postać nie została znaleziona w bazie danych. Odśwież postacie.</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="909"/>
+        <location filename="../CharacterWidget.cpp" line="908"/>
         <source>&lt;strong&gt;%1 of %2&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;%1 z %2&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../CharacterWidget.cpp" line="919"/>
+        <location filename="../CharacterWidget.cpp" line="918"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
