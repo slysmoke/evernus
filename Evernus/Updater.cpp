@@ -64,128 +64,163 @@
 namespace Evernus
 {
     Updater::Updater()
-        : QObject{}
-        , mCoreUpdateSteps{
-            { {0, 3}, [](auto &) {
-                migrateCoreTo03();
-            } },
-            { {1, 13}, [](auto &) {
-                migrateCoreTo113();
-            } },
-            { {1, 30}, [](auto &) {
-                migrateCoreTo130();
-            } },
-            { {1, 36}, [](auto &) {
-                migrateCoreTo136();
-            } },
-            { {2, 3}, [](auto &) {
-                migrateCoreTo23();
-            } },
-            { {2, 7}, [](auto &) {
-                migrateCoreTo27();
-            } },
-            { { 2, 15 }, [](auto &citadelAccessCache) {
-                migrateCoreTo214(citadelAccessCache);
-            } },
-            { {2, 17}, [](auto &) {
-                migrateCoreTo217();
-            } },
-            { {2, 18}, [](auto &) {
-                migrateCoreTo218();
-            } },
-            { {3, 0}, [](auto &) {
-                migrateCoreTo30();
-            } },
-            { {3, 1}, [](auto &) {
-                migrateCoreTo31();
-            } },
-        }
-        , mDbUpdateSteps{
-            { {0, 5}, [](const auto &provider) {
-                migrateDatabaseTo05(provider.getCacheTimerRepository(),
-                                    provider.getCharacterRepository(),
-                                    provider.getMarketOrderRepository(),
-                                    provider.getCorpMarketOrderRepository());
-            } },
-            { {1, 8}, [](const auto &provider) {
-                migrateDatabaseTo18(provider.getExternalOrderRepository());
-            } },
-            { {1, 9}, [](const auto &provider) {
-                migrateDatabaseTo19(provider.getCharacterRepository(),
-                                    provider.getWalletJournalEntryRepository(),
-                                    provider.getCorpWalletJournalEntryRepository(),
-                                    provider.getWalletTransactionRepository(),
-                                    provider.getCorpWalletTransactionRepository());
-            } },
-            { {1, 11}, [](const auto &provider) {
-                migrateDatabaseTo111(provider.getCacheTimerRepository(),
-                                     provider.getUpdateTimerRepository(),
-                                     provider.getCharacterRepository());
-            } },
-            { {1, 16}, [](const auto &provider) {
-                migrateDatabaseTo116(provider.getMarketOrderValueSnapshotRepository(),
-                                     provider.getCorpMarketOrderValueSnapshotRepository());
-            } },
-            { {1, 23}, [](const auto &provider) {
-                migrateDatabaseTo123(provider.getExternalOrderRepository(),
-                                     provider.getItemRepository());
-            } },
-            { {1, 27}, [](const auto &provider) {
-                migrateDatabaseTo127(provider.getMarketOrderRepository(),
-                                     provider.getCorpMarketOrderRepository());
-            } },
-            { {1, 41}, [](const auto &provider) {
-                migrateDatabaseTo141(provider.getCharacterRepository());
-            } },
-            { {1, 45}, [](const auto &provider) {
-                migrateDatabaseTo145(provider.getCharacterRepository(),
-                                     provider.getMarketOrderRepository(),
-                                     provider.getCorpMarketOrderRepository());
-            } },
-            { {1, 47}, [](const auto &provider) {
-                migrateDatabaseTo147(provider.getMarketOrderRepository(),
-                                     provider.getCorpMarketOrderRepository());
-            } },
-            { {1, 49}, [](const auto &provider) {
-                migrateDatabaseTo149(provider.getCitadelRepository());
-            } },
-            { {1, 50}, [](const auto &provider) {
-                migrateDatabaseTo150(provider.getCitadelRepository());
-            } },
-            { {1, 53}, [](const auto &provider) {
-                migrateDatabaseTo153(provider.getItemRepository());
-            } },
-            { {2, 0}, [](const auto &provider) {
-                migrateDatabaseTo20(provider.getCharacterRepository());
-            } },
-            { {2, 2}, [](const auto &provider) {
-                migrateDatabaseTo22(provider.getCitadelRepository(),
-                                    provider.getCorpItemRepository());
-            } },
-            { {2, 3}, [](const auto &provider) {
-                migrateDatabaseTo23(provider.getCitadelRepository());
-            } },
-            { {2, 6}, [](const auto &provider) {
-                migrateDatabaseTo26(
-                    provider.getWalletJournalEntryRepository(),
-                                    provider.getCorpWalletJournalEntryRepository(),
-                                    provider.getCharacterRepository());
-            } },
-            { {2, 11}, [](const auto &provider) {
-                migrateDatabaseTo211(provider.getWalletTransactionRepository(),
-                                     provider.getCorpWalletTransactionRepository(),
-                                     provider.getCharacterRepository());
-            } },
-            { {2, 16}, [](const auto &provider) {
-                migrateDatabaseTo216(provider.getCharacterRepository());
-            } },
-            { {3, 4}, [](const auto &provider) {
-                migrateDatabaseTo34(provider.getWalletJournalEntryRepository(), provider.getCorpWalletJournalEntryRepository());
-            } },
-            { {3, 6}, [](const auto &provider) {
-                migrateDatabaseTo36(provider.getItemRepository(), provider.getCorpItemRepository());
-            } },
-        }
+        : QObject{}, mCoreUpdateSteps{
+                         {{0, 3}, [](auto &)
+                          {
+                              migrateCoreTo03();
+                          }},
+                         {{1, 13}, [](auto &)
+                          {
+                              migrateCoreTo113();
+                          }},
+                         {{1, 30}, [](auto &)
+                          {
+                              migrateCoreTo130();
+                          }},
+                         {{1, 36}, [](auto &)
+                          {
+                              migrateCoreTo136();
+                          }},
+                         {{2, 3}, [](auto &)
+                          {
+                              migrateCoreTo23();
+                          }},
+                         {{2, 7}, [](auto &)
+                          {
+                              migrateCoreTo27();
+                          }},
+                         {{2, 15}, [](auto &citadelAccessCache)
+                          {
+                              migrateCoreTo214(citadelAccessCache);
+                          }},
+                         {{2, 17}, [](auto &)
+                          {
+                              migrateCoreTo217();
+                          }},
+                         {{2, 18}, [](auto &)
+                          {
+                              migrateCoreTo218();
+                          }},
+                         {{3, 0}, [](auto &)
+                          {
+                              migrateCoreTo30();
+                          }},
+                         {{3, 1}, [](auto &)
+                          {
+                              migrateCoreTo31();
+                          }},
+                     },
+          mDbUpdateSteps{
+              {{0, 5}, [](const auto &provider)
+               {
+                   migrateDatabaseTo05(provider.getCacheTimerRepository(),
+                                       provider.getCharacterRepository(),
+                                       provider.getMarketOrderRepository(),
+                                       provider.getCorpMarketOrderRepository());
+               }},
+              {{1, 8}, [](const auto &provider)
+               {
+                   migrateDatabaseTo18(provider.getExternalOrderRepository());
+               }},
+              {{1, 9}, [](const auto &provider)
+               {
+                   migrateDatabaseTo19(provider.getCharacterRepository(),
+                                       provider.getWalletJournalEntryRepository(),
+                                       provider.getCorpWalletJournalEntryRepository(),
+                                       provider.getWalletTransactionRepository(),
+                                       provider.getCorpWalletTransactionRepository());
+               }},
+              {{1, 11}, [](const auto &provider)
+               {
+                   migrateDatabaseTo111(provider.getCacheTimerRepository(),
+                                        provider.getUpdateTimerRepository(),
+                                        provider.getCharacterRepository());
+               }},
+              {{1, 16}, [](const auto &provider)
+               {
+                   migrateDatabaseTo116(provider.getMarketOrderValueSnapshotRepository(),
+                                        provider.getCorpMarketOrderValueSnapshotRepository());
+               }},
+              {{1, 23}, [](const auto &provider)
+               {
+                   migrateDatabaseTo123(provider.getExternalOrderRepository(),
+                                        provider.getItemRepository());
+               }},
+              {{1, 27}, [](const auto &provider)
+               {
+                   migrateDatabaseTo127(provider.getMarketOrderRepository(),
+                                        provider.getCorpMarketOrderRepository());
+               }},
+              {{1, 41}, [](const auto &provider)
+               {
+                   migrateDatabaseTo141(provider.getCharacterRepository());
+               }},
+              {{1, 45}, [](const auto &provider)
+               {
+                   migrateDatabaseTo145(provider.getCharacterRepository(),
+                                        provider.getMarketOrderRepository(),
+                                        provider.getCorpMarketOrderRepository());
+               }},
+              {{1, 47}, [](const auto &provider)
+               {
+                   migrateDatabaseTo147(provider.getMarketOrderRepository(),
+                                        provider.getCorpMarketOrderRepository());
+               }},
+              {{1, 49}, [](const auto &provider)
+               {
+                   migrateDatabaseTo149(provider.getCitadelRepository());
+               }},
+              {{1, 50}, [](const auto &provider)
+               {
+                   migrateDatabaseTo150(provider.getCitadelRepository());
+               }},
+              {{1, 53}, [](const auto &provider)
+               {
+                   migrateDatabaseTo153(provider.getItemRepository());
+               }},
+              {{2, 0}, [](const auto &provider)
+               {
+                   migrateDatabaseTo20(provider.getCharacterRepository());
+               }},
+              {{2, 2}, [](const auto &provider)
+               {
+                   migrateDatabaseTo22(provider.getCitadelRepository(),
+                                       provider.getCorpItemRepository());
+               }},
+              {{2, 3}, [](const auto &provider)
+               {
+                   migrateDatabaseTo23(provider.getCitadelRepository());
+               }},
+              {{2, 6}, [](const auto &provider)
+               {
+                   migrateDatabaseTo26(
+                       provider.getWalletJournalEntryRepository(),
+                       provider.getCorpWalletJournalEntryRepository(),
+                       provider.getCharacterRepository());
+               }},
+              {{2, 11}, [](const auto &provider)
+               {
+                   migrateDatabaseTo211(provider.getWalletTransactionRepository(),
+                                        provider.getCorpWalletTransactionRepository(),
+                                        provider.getCharacterRepository());
+               }},
+              {{2, 16}, [](const auto &provider)
+               {
+                   migrateDatabaseTo216(provider.getCharacterRepository());
+               }},
+              {{3, 4}, [](const auto &provider)
+               {
+                   migrateDatabaseTo34(provider.getWalletJournalEntryRepository(), provider.getCorpWalletJournalEntryRepository());
+               }},
+              {{3, 6}, [](const auto &provider)
+               {
+                   migrateDatabaseTo36(provider.getItemRepository(), provider.getCorpItemRepository());
+               }},
+              {{4, 4}, [](const auto &provider)
+               {
+                   migrateDatabaseTo44(provider.getCharacterRepository());
+               }},
+          }
     {
     }
 
@@ -225,7 +260,8 @@ namespace Evernus
                 minor INTEGER NOT NULL,
                 PRIMARY KEY (major, minor)
             )
-        )").arg(version::dbTableName()));
+        )")
+                    .arg(version::dbTableName()));
 
         const auto error = db.lastError();
         if (error.isValid())
@@ -264,9 +300,8 @@ namespace Evernus
         mCheckingForUpdates = true;
 
         auto reply = mAccessManager.get(QNetworkRequest{QUrl{QStringLiteral("https://raw.githubusercontent.com/slysmoke/evernus-db/main/latest_version.json")}});
-        connect(reply, &QNetworkReply::finished, this, [=] {
-            finishCheck(quiet);
-        });
+        connect(reply, &QNetworkReply::finished, this, [=]
+                { finishCheck(quiet); });
     }
 
     void Updater::finishCheck(bool quiet) const
@@ -364,8 +399,7 @@ namespace Evernus
         settings.remove(UpdaterSettings::askedToShowReleaseNotesKey);
     }
 
-    void Updater
-    ::updateDatabase(const QVersionNumber &prevVersion, const RepositoryProvider &provider) const
+    void Updater::updateDatabase(const QVersionNumber &prevVersion, const RepositoryProvider &provider) const
     {
         qInfo() << "Update db from" << prevVersion;
 
@@ -391,9 +425,9 @@ namespace Evernus
         }
         catch (...)
         {
-            QMessageBox::critical(nullptr, tr("Update"), tr(
-                "An error occurred during the update process.\n"
-                "Database backup was saved as %1. Please read online help how to deal with this situation.").arg(dbBak));
+            QMessageBox::critical(nullptr, tr("Update"), tr("An error occurred during the update process.\n"
+                                                            "Database backup was saved as %1. Please read online help how to deal with this situation.")
+                                                             .arg(dbBak));
 
             throw;
         }
@@ -416,9 +450,8 @@ namespace Evernus
         corporationOrderRepo.copyDataWithoutCorporationIdFrom(QStringLiteral("%1_temp").arg(corporationOrderRepo.getTableName()));
         corporationOrderRepo.exec(QStringLiteral("DROP TABLE %1_temp").arg(corporationOrderRepo.getTableName()));
 
-        QMessageBox::information(nullptr, tr("Update"), tr(
-            "This update requires re-importing all data.\n"
-            "Please click on \"Import all\" after the update."));
+        QMessageBox::information(nullptr, tr("Update"), tr("This update requires re-importing all data.\n"
+                                                           "Please click on \"Import all\" after the update."));
     }
 
     void Updater::migrateDatabaseTo18(const ExternalOrderRepository &externalOrderRepo)
@@ -473,9 +506,11 @@ namespace Evernus
     void Updater::migrateDatabaseTo116(const MarketOrderValueSnapshotRepository &orderValueSnapshotRepo,
                                        const CorpMarketOrderValueSnapshotRepository &corpOrderValueSnapshotRepo)
     {
-        const auto updateShots = [](const auto &repo) {
+        const auto updateShots = [](const auto &repo)
+        {
             auto query = repo.prepare(QStringLiteral(
-                "UPDATE %1 SET buy_value = buy_value / 2, sell_value = sell_value / 2 WHERE timestamp >= ?").arg(repo.getTableName()));
+                                          "UPDATE %1 SET buy_value = buy_value / 2, sell_value = sell_value / 2 WHERE timestamp >= ?")
+                                          .arg(repo.getTableName()));
             query.bindValue(0, QDateTime{QDate{2014, 9, 9}, QTime{0, 0}, Qt::UTC});
 
             Evernus::DatabaseUtils::execQuery(query);
@@ -495,7 +530,7 @@ namespace Evernus
     }
 
     void Updater::migrateDatabaseTo127(const MarketOrderRepository &characterOrderRepo,
-                               const MarketOrderRepository &corporationOrderRepo)
+                                       const MarketOrderRepository &corporationOrderRepo)
     {
         const QString sql = "ALTER TABLE %1 ADD COLUMN notes TEXT NULL DEFAULT NULL";
         safelyExecQuery(characterOrderRepo, sql.arg(characterOrderRepo.getTableName()));
@@ -530,7 +565,7 @@ namespace Evernus
     void Updater::migrateDatabaseTo149(const CitadelRepository &citadelRepo)
     {
         // disable - never released
-        //QMessageBox::information(nullptr, tr("Update"), tr("This update requires re-importing citadels."));
+        // QMessageBox::information(nullptr, tr("Update"), tr("This update requires re-importing citadels."));
 
         citadelRepo.deleteAll();
         safelyExecQuery(citadelRepo, QStringLiteral("ALTER TABLE %1 ADD COLUMN region_id INTEGER NOT NULL DEFAULT 0").arg(citadelRepo.getTableName()));
@@ -590,7 +625,8 @@ namespace Evernus
                                       const WalletJournalEntryRepository &corpWalletJournalRepo,
                                       const Repository<Character> &characterRepo)
     {
-        const auto update = [&](const auto &repo) {
+        const auto update = [&](const auto &repo)
+        {
             safelyExecQuery(repo, QStringLiteral("DROP TABLE %1").arg(repo.getTableName()));
             repo.create(characterRepo);
         };
@@ -603,15 +639,14 @@ namespace Evernus
 
         safelyExecQuery(characterRepo,
                         QStringLiteral("ALTER TABLE %1 ADD COLUMN manufacturing_time_implant_bonus FLOAT NOT NULL DEFAULT 0")
-                            .arg(characterRepo.getTableName())
-        );
+                            .arg(characterRepo.getTableName()));
 
-        const auto addSkillColumn = [&](const auto &name) {
+        const auto addSkillColumn = [&](const auto &name)
+        {
             safelyExecQuery(characterRepo,
                             QStringLiteral("ALTER TABLE %1 ADD COLUMN %2 TINYINT NOT NULL DEFAULT 0")
                                 .arg(characterRepo.getTableName())
-                                .arg(name)
-            );
+                                .arg(name));
         };
 
         addSkillColumn(QStringLiteral("industry"));
@@ -661,9 +696,10 @@ namespace Evernus
     void Updater::migrateDatabaseTo34(const WalletJournalEntryRepository &walletJournalRepo,
                                       const WalletJournalEntryRepository &corpWalletJournalRepo)
     {
-        const auto addColumns = [](const auto &repo) {
-            safelyExecQuery(repo, QStringLiteral("ALTER TABLE %1 ADD COLUMN context_id BIGINT NULL DEFAULT NULL") .arg(repo.getTableName()));
-            safelyExecQuery(repo, QStringLiteral("ALTER TABLE %1 ADD COLUMN context_id_type TEXT NULL DEFAULT NULL") .arg(repo.getTableName()));
+        const auto addColumns = [](const auto &repo)
+        {
+            safelyExecQuery(repo, QStringLiteral("ALTER TABLE %1 ADD COLUMN context_id BIGINT NULL DEFAULT NULL").arg(repo.getTableName()));
+            safelyExecQuery(repo, QStringLiteral("ALTER TABLE %1 ADD COLUMN context_id_type TEXT NULL DEFAULT NULL").arg(repo.getTableName()));
         };
 
         addColumns(walletJournalRepo);
@@ -672,12 +708,104 @@ namespace Evernus
 
     void Updater::migrateDatabaseTo36(const ItemRepository &itemRepo, const ItemRepository &corpItemRepo)
     {
-        const auto addColumns = [](const auto &repo) {
+        const auto addColumns = [](const auto &repo)
+        {
             safelyExecQuery(repo, QStringLiteral("ALTER TABLE %1 ADD COLUMN bpc TINYINT NULL DEFAULT NULL").arg(repo.getTableName()));
         };
 
         addColumns(itemRepo);
         addColumns(corpItemRepo);
+    }
+
+    void Updater::migrateDatabaseTo44(const Repository<Character> &characterRepo)
+    {
+        safelyExecQuery(characterRepo, QStringLiteral("PRAGMA foreign_keys = OFF"));
+
+        safelyExecQuery(characterRepo, QStringLiteral("PRAGMA legacy_alter_table = TRUE"));
+        safelyExecQuery(characterRepo, QStringLiteral("BEGIN TRANSACTION;"));
+
+        safelyExecQuery(characterRepo, QStringLiteral("ALTER TABLE %1 RENAME TO %2").arg(characterRepo.getTableName(), QStringLiteral("character_old")));
+
+        safelyExecQuery(characterRepo, QStringLiteral("CREATE TABLE \"characters\" ("
+                                                      "\"id\"	BIGINT,"
+                                                      "\"name\"	TEXT NOT NULL,"
+                                                      "\"corporation_name\"	TEXT NOT NULL,"
+                                                      "\"corporation_id\"	BIGINT NOT NULL,"
+                                                      "\"race\"	TEXT NOT NULL,"
+                                                      "\"bloodline\"	TEXT NOT NULL,"
+                                                      "\"gender\"	TEXT NOT NULL,"
+                                                      "\"isk\"	DOUBLE NOT NULL,"
+                                                      "\"corp_standing\"	FLOAT NOT NULL,"
+                                                      "\"faction_standing\"	FLOAT NOT NULL,"
+                                                      "\"trade_skill\"	TINYINT NOT NULL,"
+                                                      "\"retail_skill\"	TINYINT NOT NULL,"
+                                                      "\"wholesale_skill\"	TINYINT NOT NULL,"
+                                                      "\"tycoon_skill\"	TINYINT NOT NULL,"
+                                                      "\"marketing_skill\"	TINYINT NOT NULL,"
+                                                      "\"procurement_skill\"	TINYINT NOT NULL,"
+                                                      "\"daytrading_skill\"	TINYINT NOT NULL,"
+                                                      "\"visibility_skill\"	TINYINT NOT NULL,"
+                                                      "\"accounting_skill\"	TINYINT NOT NULL,"
+                                                      "\"broker_relations_skill\"	TINYINT NOT NULL,"
+                                                      "\"margin_trading_skill\"	TINYINT NOT NULL,"
+                                                      "\"contracting_skill\"	TINYINT NOT NULL,"
+                                                      "\"corporation_contracting_skill\"	TINYINT NOT NULL,"
+                                                      "\"enabled\"	TINYINT NOT NULL,"
+                                                      "\"brokers_fee\"	FLOAT,"
+                                                      "\"sell_brokers_fee\"	FLOAT,"
+                                                      "\"reprocessing_implant_bonus\"	FLOAT NOT NULL,"
+                                                      "\"arkonor_processing\"	TINYINT NOT NULL,"
+                                                      "\"bistot_processing\"	TINYINT NOT NULL,"
+                                                      "\"crokite_processing\"	TINYINT NOT NULL,"
+                                                      "\"dark_ochre_processing\"	TINYINT NOT NULL,"
+                                                      "\"gneiss_processing\"	TINYINT NOT NULL,"
+                                                      "\"hedbergite_processing\"	TINYINT NOT NULL,"
+                                                      "\"hemorphite_processing\"	TINYINT NOT NULL,"
+                                                      "\"ice_processing\"	TINYINT NOT NULL,"
+                                                      "\"jaspet_processing\"	TINYINT NOT NULL,"
+                                                      "\"kernite_processing\"	TINYINT NOT NULL,"
+                                                      "\"mercoxit_processing\"	TINYINT NOT NULL,"
+                                                      "\"omber_processing\"	TINYINT NOT NULL,"
+                                                      "\"plagioclase_processing\"	TINYINT NOT NULL,"
+                                                      "\"pyroxeres_processing\"	TINYINT NOT NULL,"
+                                                      "\"reprocessing\"	TINYINT NOT NULL,"
+                                                      "\"reprocessing_efficiency\"	TINYINT NOT NULL,"
+                                                      "\"scordite_processing\"	TINYINT NOT NULL,"
+                                                      "\"scrapmetal_processing\"	TINYINT NOT NULL,"
+                                                      "\"spodumain_processing\"	TINYINT NOT NULL,"
+                                                      "\"veldspar_processing\"	TINYINT NOT NULL,"
+                                                      "\"manufacturing_time_implant_bonus\"	FLOAT NOT NULL,"
+                                                      "\"industry\"	TINYINT NOT NULL,"
+                                                      "\"advanced_industry\"	TINYINT NOT NULL,"
+                                                      "\"advanced_small_ship_construction\"	TINYINT NOT NULL,"
+                                                      "\"advanced_medium_ship_construction\"	TINYINT NOT NULL,"
+                                                      "\"advanced_large_ship_construction\"	TINYINT NOT NULL,"
+                                                      "\"avanced_industrial_ship_construction\"	TINYINT NOT NULL,"
+                                                      "\"amarr_starship_engineering\"	TINYINT NOT NULL,"
+                                                      "\"caldari_starship_engineering\"	TINYINT NOT NULL,"
+                                                      "\"gallente_starship_engineering\"	TINYINT NOT NULL,"
+                                                      "\"minmatar_starship_engineering\"	TINYINT NOT NULL,"
+                                                      "\"electromagnetic_physics\"	TINYINT NOT NULL,"
+                                                      "\"electronic_engineering\"	TINYINT NOT NULL,"
+                                                      "\"graviton_physics\"	TINYINT NOT NULL,"
+                                                      "\"high_energy_physics\"	TINYINT NOT NULL,"
+                                                      "\"hydromagnetic_physics\"	TINYINT NOT NULL,"
+                                                      "\"laser_physics\"	TINYINT NOT NULL,"
+                                                      "\"mechanical_engineering\"	TINYINT NOT NULL,"
+                                                      "\"molecular_engineering\"	TINYINT NOT NULL,"
+                                                      "\"nuclear_physics\"	TINYINT NOT NULL,"
+                                                      "\"plasma_physics\"	TINYINT NOT NULL,"
+                                                      "\"quantum_physics\"	TINYINT NOT NULL,"
+                                                      "\"rocket_science\"	TINYINT NOT NULL,"
+                                                      "\"alpha_clone\"	TINYINT NOT NULL,"
+                                                      "PRIMARY KEY(\"id\"))"));
+
+        safelyExecQuery(characterRepo, QStringLiteral("INSERT INTO %1 SELECT id, name, corporation_name, corporation_id, race, bloodline, gender, isk, corp_standing, faction_standing, trade_skill, retail_skill, wholesale_skill, tycoon_skill, marketing_skill, procurement_skill, daytrading_skill, visibility_skill, accounting_skill, broker_relations_skill, margin_trading_skill, contracting_skill, corporation_contracting_skill, enabled, brokers_fee, sell_brokers_fee, reprocessing_implant_bonus, arkonor_processing, bistot_processing, crokite_processing, dark_ochre_processing, gneiss_processing, hedbergite_processing, hemorphite_processing, ice_processing, jaspet_processing, kernite_processing, mercoxit_processing, omber_processing, plagioclase_processing, pyroxeres_processing, reprocessing, reprocessing_efficiency, scordite_processing, scrapmetal_processing, spodumain_processing, veldspar_processing, manufacturing_time_implant_bonus, industry, advanced_industry, advanced_small_ship_construction, advanced_medium_ship_construction, advanced_large_ship_construction, avanced_industrial_ship_construction, amarr_starship_engineering, caldari_starship_engineering, gallente_starship_engineering, minmatar_starship_engineering, electromagnetic_physics, electronic_engineering, graviton_physics, high_energy_physics, hydromagnetic_physics, laser_physics, mechanical_engineering, molecular_engineering, nuclear_physics, plasma_physics, quantum_physics, rocket_science, alpha_clone FROM %2").arg(characterRepo.getTableName(), QStringLiteral("character_old")));
+
+        safelyExecQuery(characterRepo, QStringLiteral("DROP TABLE IF EXISTS %1").arg(QStringLiteral("character_old")));
+        safelyExecQuery(characterRepo, QStringLiteral("COMMIT;"));
+        safelyExecQuery(characterRepo, QStringLiteral("PRAGMA foreign_keys=on;"));
+        safelyExecQuery(characterRepo, QStringLiteral("PRAGMA legacy_alter_table = FALSE;"));
     }
 
     void Updater::migrateCoreTo130()
@@ -746,9 +874,8 @@ namespace Evernus
             const auto types = preset->getTypes();
 
             RegionTypePreset::TypeSet fixedTypes;
-            std::copy_if(std::begin(types), std::end(types), std::inserter(fixedTypes, std::end(fixedTypes)), [&](auto id) {
-                return typeIds.find(id) != std::end(typeIds);
-            });
+            std::copy_if(std::begin(types), std::end(types), std::inserter(fixedTypes, std::end(fixedTypes)), [&](auto id)
+                         { return typeIds.find(id) != std::end(typeIds); });
 
             if (fixedTypes.size() != types.size())
             {
@@ -762,27 +889,26 @@ namespace Evernus
     {
         QSettings settings;
 
-        const auto curVersion
-            = settings.value(EvernusApplication::versionKey, QCoreApplication::applicationVersion()).toString().split('.');
+        const auto curVersion = settings.value(EvernusApplication::versionKey, QCoreApplication::applicationVersion()).toString().split('.');
 
-        return { curVersion[0].toInt(), curVersion[1].toInt() };
+        return {curVersion[0].toInt(), curVersion[1].toInt()};
     }
 
     QVersionNumber Updater::getCurrentCoreVersion()
     {
-        return { version::majorNum(), version::minorNum() };
+        return {version::majorNum(), version::minorNum()};
     }
 
     QVersionNumber Updater::getDbVersion(const QSqlDatabase &db, const QVersionNumber &defaultVersion)
     {
         auto query = db.exec(QStringLiteral("SELECT major, minor FROM %1").arg(version::dbTableName()));
         if (query.next())
-            return { query.value(0).toInt(), query.value(1).toInt() };
+            return {query.value(0).toInt(), query.value(1).toInt()};
 
         return defaultVersion;
     }
 
-    template<class T>
+    template <class T>
     void Updater::safelyExecQuery(const Repository<T> &repo, const QString &query)
     {
         try
@@ -791,7 +917,10 @@ namespace Evernus
         }
         catch (const std::runtime_error &e)
         {
-            qWarning() << "Ignoring updater query error:" << query << e.what();
+            QMessageBox::critical(nullptr, tr("Error executing query"),
+                                  tr("Error executing query:\n%1\n\nError:\n%2")
+                                      .arg(query)
+                                      .arg(e.what()));
         }
     }
 }

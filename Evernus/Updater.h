@@ -80,6 +80,7 @@ namespace Evernus
 
         void updateCore(const QVersionNumber &prevVersion, CitadelAccessCache &citadelAccessCache) const;
         void updateDatabase(const QVersionNumber &prevVersion, const RepositoryProvider &provider) const;
+        static void updateDatabaseQtSqlite(const QSqlDatabase& db, const QString& script);
 
         static void migrateDatabaseTo05(const CacheTimerRepository &cacheTimerRepo,
                                         const Repository<Character> &characterRepo,
@@ -123,6 +124,7 @@ namespace Evernus
         static void migrateDatabaseTo34(const WalletJournalEntryRepository &walletJournalRepo,
                                         const WalletJournalEntryRepository &corpWalletJournalRepo);
         static void migrateDatabaseTo36(const ItemRepository &itemRepo, const ItemRepository &corpItemRepo);
+        static void migrateDatabaseTo44(const Repository<Character>&characterRepo);
 
         static void migrateCoreTo03();
         static void migrateCoreTo113();

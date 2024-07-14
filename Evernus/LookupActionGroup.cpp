@@ -29,14 +29,16 @@ namespace Evernus
         action = addAction(tr("Lookup item on adam4eve.eu"));
         connect(action, &QAction::triggered, this, &LookupActionGroup::lookupOnAdam4Eve);
 
-        action = addAction(tr("Lookup item on evemarketer.com"));
+        action = addAction(tr("Lookup item on evemarket.gitlab.io"));
         connect(action, &QAction::triggered, this, &LookupActionGroup::lookupOnEveMarketer);
+
     }
 
     void LookupActionGroup::lookupOnEveMarketdata()
     {
         lookupOnWeb(TypeLookupUtils::eveMarketdataUrl);
     }
+
 
     void LookupActionGroup::lookupOnEveMarketer()
     {

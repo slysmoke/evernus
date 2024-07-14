@@ -276,50 +276,42 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
 <context>
     <name>EditMenu_base</name>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
         <source>&amp;Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
         <source>&amp;Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
         <source>Cu&amp;t</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
         <source>&amp;Copy</source>
         <translation type="unfinished">&amp;Kopiuj</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
         <source>&amp;Paste</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.3-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
         <source>Select All</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5558,7 +5550,7 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
     </message>
     <message>
         <location filename="../LookupActionGroup.cpp" line="32"/>
-        <source>Lookup item on evemarketer.com</source>
+        <source>Lookup item on evemarket.gitlab.io</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9443,6 +9435,24 @@ Suma: %7</translation>
         <source>Invalid XML document received!</source>
         <translation type="obsolete">Nieprawidłowy dokument XML!</translation>
     </message>
+    <message>
+        <source>Update</source>
+        <translation type="obsolete">Aktualizacja</translation>
+    </message>
+    <message>
+        <location filename="../Updater.cpp" line="927"/>
+        <source>Error executing query</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Updater.cpp" line="928"/>
+        <source>Error executing query:
+%1
+
+Error:
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Evernus::TextFilterWidget</name>
@@ -10772,123 +10782,123 @@ Podatek produkcji: %3</translation>
 <context>
     <name>Updater</name>
     <message>
-        <location filename="../Updater.cpp" line="283"/>
-        <location filename="../Updater.cpp" line="294"/>
-        <location filename="../Updater.cpp" line="303"/>
+        <location filename="../Updater.cpp" line="318"/>
+        <location filename="../Updater.cpp" line="329"/>
+        <location filename="../Updater.cpp" line="338"/>
         <source>Error</source>
         <translation>Błąd</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="283"/>
+        <location filename="../Updater.cpp" line="318"/>
         <source>Error contacting update server: %1</source>
         <translation>Błąd odpytywania serwera akutalizacji: %1</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="294"/>
+        <location filename="../Updater.cpp" line="329"/>
         <source>Error parsing response from the update server: %1</source>
         <translation>Błąd parsowania odpowiedzi serwera: %1</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="303"/>
+        <location filename="../Updater.cpp" line="338"/>
         <source>Missing update version information!</source>
         <translation>Brak informacji o wersji!</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="312"/>
+        <location filename="../Updater.cpp" line="347"/>
         <source>No update found</source>
         <translation>Brak aktualizacji</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="312"/>
+        <location filename="../Updater.cpp" line="347"/>
         <source>Your current version is up-to-date.</source>
         <translation>Twoja wersja jest najbardziej aktualna.</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="321"/>
-        <location filename="../Updater.cpp" line="326"/>
-        <location filename="../Updater.cpp" line="337"/>
+        <location filename="../Updater.cpp" line="356"/>
+        <location filename="../Updater.cpp" line="361"/>
+        <location filename="../Updater.cpp" line="372"/>
         <source>Update found</source>
         <translation>Znaleziono aktualizację</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="321"/>
+        <location filename="../Updater.cpp" line="356"/>
         <source>A new version is available: %1
 Do you wish to download it now?</source>
         <translation>Znaleziono nową wersję: %1
 Czy chcesz ściągnąć ją teraz?</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="326"/>
+        <location filename="../Updater.cpp" line="361"/>
         <source>A new version is available: %1
 Do you wish to launch the updater?</source>
         <translation>Znaleziono nową wersję: %1
 Czy chcesz rozpocząć aktualizację?</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="337"/>
+        <location filename="../Updater.cpp" line="372"/>
         <source>Couldn&apos;t launch updater. Download manually?</source>
         <translation>Nie udało się rozpocząć aktualizacji. Pobrać ręcznie?</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="514"/>
+        <location filename="../Updater.cpp" line="549"/>
         <source>This update requires settings your custom broker&apos;s fee again.</source>
         <translation>Ta akutalizacja wymaga ustawienia własnego broker fee od nowa.</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="541"/>
+        <location filename="../Updater.cpp" line="576"/>
         <source>This update requires re-importing citadels.</source>
         <translation>Ta aktualizacja wymaga ponownego importu cytadel.</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="640"/>
+        <location filename="../Updater.cpp" line="675"/>
         <source>This update requires re-importing wallet journal.</source>
         <translation>Ta aktualizacja wymaga ponownego importu dziennika portfela.</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="653"/>
+        <location filename="../Updater.cpp" line="688"/>
         <source>This update requires importing wallet transactions again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="232"/>
-        <location filename="../Updater.cpp" line="241"/>
-        <location filename="../Updater.cpp" line="247"/>
+        <location filename="../Updater.cpp" line="268"/>
+        <location filename="../Updater.cpp" line="277"/>
+        <location filename="../Updater.cpp" line="283"/>
         <source>Error updating db version: %1</source>
         <translation>Błąd aktualizacji wersji bazy danych: %1</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="394"/>
-        <location filename="../Updater.cpp" line="419"/>
-        <location filename="../Updater.cpp" line="426"/>
-        <location filename="../Updater.cpp" line="438"/>
-        <location filename="../Updater.cpp" line="514"/>
-        <location filename="../Updater.cpp" line="541"/>
-        <location filename="../Updater.cpp" line="640"/>
-        <location filename="../Updater.cpp" line="653"/>
+        <location filename="../Updater.cpp" line="428"/>
+        <location filename="../Updater.cpp" line="453"/>
+        <location filename="../Updater.cpp" line="459"/>
+        <location filename="../Updater.cpp" line="471"/>
+        <location filename="../Updater.cpp" line="549"/>
+        <location filename="../Updater.cpp" line="576"/>
+        <location filename="../Updater.cpp" line="675"/>
+        <location filename="../Updater.cpp" line="688"/>
         <source>Update</source>
         <translation>Aktualizacja</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="394"/>
+        <location filename="../Updater.cpp" line="428"/>
         <source>An error occurred during the update process.
 Database backup was saved as %1. Please read online help how to deal with this situation.</source>
         <translation>Wystąpił błąd podczas akutalizacji.
 Kopia zapasowa bazay danych została zapisana jako %1. Zajrzyj do pomocy online w celu uzyskania informacji.</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="419"/>
+        <location filename="../Updater.cpp" line="453"/>
         <source>This update requires re-importing all data.
 Please click on &quot;Import all&quot; after the update.</source>
         <translation>Ta akutalizacja wymaga ponownego zaimportowania wszystkich danych.
 Kliknij na &quot;Importuj wszystko&quot; po akutalizacji.</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="426"/>
+        <location filename="../Updater.cpp" line="459"/>
         <source>This update requires re-importing all item prices.</source>
         <translation>Ta aktualizacja wymaga ponownego zaimportowania cen przedmiotów.</translation>
     </message>
     <message>
-        <location filename="../Updater.cpp" line="438"/>
+        <location filename="../Updater.cpp" line="471"/>
         <source>This update requires re-importing all corporation transactions and journal.</source>
         <translation>Ta akutalizacja wymaga ponownego zaimportowania dziennika i transakcji korporacji.</translation>
     </message>
