@@ -269,10 +269,10 @@ namespace Evernus
             "name TEXT NOT NULL,"
             "corporation_name TEXT NOT NULL,"
             "corporation_id BIGINT NOT NULL,"
-            "race TEXT NOT NULL,"
-            "bloodline TEXT NOT NULL,"
+            "race TEXT,"
+            "bloodline TEXT,"
             
-            "gender TEXT NOT NULL,"
+            "gender TEXT,"
             "isk DOUBLE NOT NULL,"
             "corp_standing FLOAT NOT NULL,"
             "faction_standing FLOAT NOT NULL,"

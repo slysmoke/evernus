@@ -216,9 +216,9 @@ namespace Evernus
                {
                    migrateDatabaseTo36(provider.getItemRepository(), provider.getCorpItemRepository());
                }},
-              {{4, 4}, [](const auto &provider)
+              {{4, 5}, [](const auto &provider)
                {
-                   migrateDatabaseTo44(provider.getCharacterRepository());
+                   migrateDatabaseTo45(provider.getCharacterRepository());
                }},
           }
     {
@@ -717,7 +717,7 @@ namespace Evernus
         addColumns(corpItemRepo);
     }
 
-    void Updater::migrateDatabaseTo44(const Repository<Character> &characterRepo)
+    void Updater::migrateDatabaseTo45(const Repository<Character> &characterRepo)
     {
         safelyExecQuery(characterRepo, QStringLiteral("PRAGMA foreign_keys = OFF"));
 
@@ -731,9 +731,9 @@ namespace Evernus
                                                       "\"name\"	TEXT NOT NULL,"
                                                       "\"corporation_name\"	TEXT NOT NULL,"
                                                       "\"corporation_id\"	BIGINT NOT NULL,"
-                                                      "\"race\"	TEXT NOT NULL,"
-                                                      "\"bloodline\"	TEXT NOT NULL,"
-                                                      "\"gender\"	TEXT NOT NULL,"
+                                                      "\"race\"	TEXT,"
+                                                      "\"bloodline\"	TEXT,"
+                                                      "\"gender\"	TEXT,"
                                                       "\"isk\"	DOUBLE NOT NULL,"
                                                       "\"corp_standing\"	FLOAT NOT NULL,"
                                                       "\"faction_standing\"	FLOAT NOT NULL,"
