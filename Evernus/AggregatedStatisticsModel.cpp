@@ -27,13 +27,15 @@ namespace Evernus
     AggregatedStatisticsModel::AggregatedStatisticsModel(const MarketOrderRepository &orderRepo,
                                                          const EveDataProvider &dataProvider,
                                                          QObject *parent)
-        : QAbstractTableModel{parent}, mOrderRepo{orderRepo}, mDataProvider{dataProvider}
+        : QAbstractTableModel{parent}
+        , mOrderRepo{orderRepo}
+        , mDataProvider{dataProvider}
     {
     }
 
     int AggregatedStatisticsModel::columnCount(const QModelIndex &parent) const
     {
-        return !parent.isValid() ? 4 : 0;
+        return (parent.isValid()) ? (0) : (4);
     }
 
     QVariant AggregatedStatisticsModel::data(const QModelIndex &index, int role) const
@@ -48,8 +50,7 @@ namespace Evernus
         {
             QLocale locale;
 
-            switch (column)
-            {
+            switch (column) {
             case idColumn:
                 if (mColumn == MarketOrderRepository::AggregateColumn::TypeId)
                     return mDataProvider.getTypeName(record.first);
@@ -65,8 +66,7 @@ namespace Evernus
         }
         else if (role == Qt::UserRole)
         {
-            switch (column)
-            {
+            switch (column) {
             case idColumn:
                 return record.first;
             case countColumn:
@@ -85,8 +85,7 @@ namespace Evernus
     {
         if (role == Qt::DisplayRole && orientation == Qt::Horizontal)
         {
-            switch (section)
-            {
+            switch (section) {
             case idColumn:
                 return tr("Id");
             case countColumn:
