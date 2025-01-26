@@ -1,4 +1,4 @@
-/**
+﻿/**
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -29,6 +29,9 @@
 #include <QMenuBar>
 #include <QTabBar>
 #include <QLabel>
+#include <QPushButton>
+
+
 
 #ifdef Q_OS_WIN
 #   include <sys/utime.h>
@@ -1031,9 +1034,38 @@ namespace Evernus
 
         updateTasksStatus(0);
 
+
+        QPushButton* donationButton = new QPushButton{ this };
+        donationButton->setText("Buy me a coffee");
+        donationButton->setIcon(QIcon(":/images/arrow_out.png")); // Устанавливаем иконку
+        donationButton->setIconSize(QSize(20, 20)); // Размер иконки
+        donationButton->setStyleSheet("QPushButton {"
+            "   background-color: #FFDD00;"
+            "   border: none;"
+            "   padding: 5px 10px;"
+            "   color: black;"
+            "   font-weight: bold;"
+            "   border-radius: 5px;"
+            "}"
+            "QPushButton:hover {"
+            "   background-color: #FFD700;"
+            "}");
+
+        // Подключаем слот для открытия ссылки при нажатии на кнопку
+        connect(donationButton, &QPushButton::clicked, this, []() {
+            QDesktopServices::openUrl(QUrl("https://www.buymeacoffee.com/dmitriwinston"));
+            });
+
+
         auto bar = statusBar();
         bar->addPermanentWidget(mStatusActiveTasksBtn);
         bar->addPermanentWidget(mStatusWalletLabel);
+        bar->addPermanentWidget(donationButton);
+
+
+
+       
+        
     }
 
     QWidget *MainWindow::createMainViewTab(QWidget *content)
