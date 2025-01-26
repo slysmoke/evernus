@@ -320,7 +320,9 @@ namespace Evernus
 
     QString ESIOAuth::getUserAgent()
     {
-        return QStringLiteral("%1 %2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion());
+        return QStringLiteral("%1 %2 Contact with developer: Ingame: Sasha Winston, Email: %3").arg(QCoreApplication::applicationName())
+            .arg(QCoreApplication::applicationVersion())
+            .arg("dmitri.merzin@gmail.com");
     }
 
     void ESIOAuth::grantOrRefresh(ESIOAuth2CharacterAuthorizationCodeFlow &oauth)
