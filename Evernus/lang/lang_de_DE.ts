@@ -222,42 +222,42 @@
 <context>
     <name>EditMenu_base</name>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
         <source>&amp;Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
         <source>&amp;Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
         <source>Cu&amp;t</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
         <source>&amp;Copy</source>
         <translation type="unfinished">&amp;Kopieren</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
         <source>&amp;Paste</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.5-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
         <source>Select All</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5099,33 +5099,33 @@ Do you want to try to continue? The application may not launch.</source>
 <context>
     <name>Evernus::MainWindow</name>
     <message>
-        <location filename="../MainWindow.cpp" line="547"/>
+        <location filename="../MainWindow.cpp" line="550"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="273"/>
-        <location filename="../MainWindow.cpp" line="508"/>
+        <location filename="../MainWindow.cpp" line="276"/>
+        <location filename="../MainWindow.cpp" line="511"/>
         <source>Evernus</source>
         <translation>Evernus</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="273"/>
+        <location filename="../MainWindow.cpp" line="276"/>
         <source>You can show/hide table columns via right-click menu. Columns can also be moved around via dragging.</source>
         <translation>Spalten können via Rechtsklick angezeigt/verborgen werden. Sie können durch Ziehen auch verschoben werden.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="288"/>
+        <location filename="../MainWindow.cpp" line="291"/>
         <source>No active tasks</source>
         <translation>Keine aktiven Aufgaben</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="293"/>
+        <location filename="../MainWindow.cpp" line="296"/>
         <source>Active tasks: %1</source>
         <translation>Aktive Aufgaben: %1</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="302"/>
+        <location filename="../MainWindow.cpp" line="305"/>
         <source>Wallet: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Kontostand: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
@@ -5134,43 +5134,43 @@ Do you want to try to continue? The application may not launch.</source>
         <translation type="vanished">IGB Link wurde in die Zwischenablage kopiert.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="508"/>
+        <location filename="../MainWindow.cpp" line="511"/>
         <source>HTTP link was copied to the clipboard.</source>
         <translation>HTTP Link wurde in die Zwischenablage kopiert.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="611"/>
+        <location filename="../MainWindow.cpp" line="614"/>
         <source>&amp;File</source>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="612"/>
+        <location filename="../MainWindow.cpp" line="615"/>
         <source>Select character</source>
         <translation>Charakter wählen</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="613"/>
+        <location filename="../MainWindow.cpp" line="616"/>
         <source>&amp;Manage characters...</source>
         <translation>Charaktere &amp;verwalten...</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="615"/>
-        <location filename="../MainWindow.cpp" line="617"/>
+        <location filename="../MainWindow.cpp" line="618"/>
+        <location filename="../MainWindow.cpp" line="620"/>
         <source>&amp;Preferences...</source>
         <translation>&amp;Einstellungen...</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="620"/>
+        <location filename="../MainWindow.cpp" line="623"/>
         <source>Import EVE Mentat order history...</source>
         <translation>EVE Mentat Orderhistorie importieren...</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="622"/>
+        <location filename="../MainWindow.cpp" line="625"/>
         <source>E&amp;xit</source>
         <translation>&amp;Beenden</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="624"/>
+        <location filename="../MainWindow.cpp" line="627"/>
         <source>&amp;Tools</source>
         <translation>&amp;Werkzeuge</translation>
     </message>
@@ -5179,27 +5179,27 @@ Do you want to try to continue? The application may not launch.</source>
         <translation type="vanished">Importiere Stationen</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="625"/>
+        <location filename="../MainWindow.cpp" line="628"/>
         <source>Import citadels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="626"/>
+        <location filename="../MainWindow.cpp" line="629"/>
         <source>Citadel manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="627"/>
+        <location filename="../MainWindow.cpp" line="630"/>
         <source>Ma&amp;rgin tool...</source>
         <translation>Ma&amp;rgenrechner...</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="628"/>
+        <location filename="../MainWindow.cpp" line="631"/>
         <source>Custom &amp;Fast Price Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="630"/>
+        <location filename="../MainWindow.cpp" line="633"/>
         <source>Copy HTTP link</source>
         <translation>HTTP Link kopieren</translation>
     </message>
@@ -5208,157 +5208,157 @@ Do you want to try to continue? The application may not launch.</source>
         <translation type="vanished">IGB Link kopieren</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="426"/>
+        <location filename="../MainWindow.cpp" line="429"/>
         <source>SSO authentication for unknown character: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="633"/>
+        <location filename="../MainWindow.cpp" line="636"/>
         <source>Upload data to cloud...</source>
         <translation>Daten in die Cloud hochladen...</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="636"/>
+        <location filename="../MainWindow.cpp" line="639"/>
         <source>&amp;View</source>
         <translation>&amp;Ansicht</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="637"/>
+        <location filename="../MainWindow.cpp" line="640"/>
         <source>Show/hide tabs</source>
         <translation>Register anzeigen/verbergen</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="638"/>
+        <location filename="../MainWindow.cpp" line="641"/>
         <source>Show/hide table columns</source>
         <translation>Spalten anzeigen/verbergen</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="640"/>
+        <location filename="../MainWindow.cpp" line="643"/>
         <source>Always on top</source>
         <translation>Immer im Vordergrund</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="664"/>
+        <location filename="../MainWindow.cpp" line="667"/>
         <source>&amp;Help</source>
         <translation>&amp;Hilfe</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="665"/>
+        <location filename="../MainWindow.cpp" line="668"/>
         <source>&amp;Online help...</source>
         <translation>&amp;Onlinehilfe...</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="666"/>
+        <location filename="../MainWindow.cpp" line="669"/>
         <source>Check for &amp;updates</source>
         <translation>Auf &amp;Updates prüfen</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="668"/>
+        <location filename="../MainWindow.cpp" line="671"/>
         <source>&amp;About...</source>
         <translation>&amp;Über...</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="704"/>
+        <location filename="../MainWindow.cpp" line="707"/>
         <source>Character</source>
         <translation>Charakter</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="718"/>
+        <location filename="../MainWindow.cpp" line="721"/>
         <source>Statistics</source>
         <translation>Statistiken</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="740"/>
+        <location filename="../MainWindow.cpp" line="743"/>
         <source>Assets</source>
         <translation>Gegenstände</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="763"/>
+        <location filename="../MainWindow.cpp" line="766"/>
         <source>Character orders</source>
         <translation>Aufträge - Charakter</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="787"/>
+        <location filename="../MainWindow.cpp" line="790"/>
         <source>Character journal</source>
         <translation>Logbuch - Charakter</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="799"/>
+        <location filename="../MainWindow.cpp" line="802"/>
         <source>Character transactions</source>
         <translation>Transaktionen - Charakter</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="812"/>
+        <location filename="../MainWindow.cpp" line="815"/>
         <source>Character contracts</source>
         <translation>Verträge - Charakter</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="822"/>
+        <location filename="../MainWindow.cpp" line="825"/>
         <source>Corporation assets</source>
         <translation>Gegenstände - Corporation</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="845"/>
+        <location filename="../MainWindow.cpp" line="848"/>
         <source>Corporation orders</source>
         <translation>Aufträge - Corporation</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="868"/>
+        <location filename="../MainWindow.cpp" line="871"/>
         <source>Corporation journal</source>
         <translation>Logbuch - Corporation</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="880"/>
+        <location filename="../MainWindow.cpp" line="883"/>
         <source>Corporation transactions</source>
         <translation>Transaktionen - Corporation</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="893"/>
+        <location filename="../MainWindow.cpp" line="896"/>
         <source>Corporation contracts</source>
         <translation>Verträge - Corporation</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="904"/>
+        <location filename="../MainWindow.cpp" line="907"/>
         <source>Item history</source>
         <translation>Verlauf Gegenstand</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="922"/>
+        <location filename="../MainWindow.cpp" line="925"/>
         <source>Market browser</source>
         <translation>Marktbetrachter</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="933"/>
+        <location filename="../MainWindow.cpp" line="936"/>
         <source>Item costs</source>
         <translation>Artikelkosten</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="942"/>
+        <location filename="../MainWindow.cpp" line="945"/>
         <source>LMeve</source>
         <translation>LMeve</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="964"/>
+        <location filename="../MainWindow.cpp" line="967"/>
         <source>Market analysis</source>
         <translation>Marktanalyse</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="979"/>
+        <location filename="../MainWindow.cpp" line="982"/>
         <source>Industry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="1009"/>
+        <location filename="../MainWindow.cpp" line="1012"/>
         <source>Toggle character tabs</source>
         <translation>Charakter Registerkarten</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="1015"/>
+        <location filename="../MainWindow.cpp" line="1018"/>
         <source>Toggle corporation tabs</source>
         <translation>Körperschaftsteuer Registerkarten</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="1153"/>
+        <location filename="../MainWindow.cpp" line="1185"/>
         <source>SSO Authentication for character: %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10189,7 +10189,7 @@ Please click on &quot;Import all&quot; after the update.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="190"/>
+        <location filename="../main.cpp" line="248"/>
         <source>Evernus EVE Online trade tool</source>
         <translation>Evernus EVE Online Trade Tool</translation>
     </message>
@@ -10202,90 +10202,90 @@ Please click on &quot;Import all&quot; after the update.</source>
         <translation type="vanished">CREST Client Secret.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="194"/>
+        <location filename="../main.cpp" line="252"/>
         <source>Force specific version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="195"/>
+        <location filename="../main.cpp" line="253"/>
         <source>Don&apos;t run internal updater</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="196"/>
+        <location filename="../main.cpp" line="254"/>
         <source>SSO client id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="197"/>
+        <location filename="../main.cpp" line="255"/>
         <source>SSO client secret</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="198"/>
+        <location filename="../main.cpp" line="256"/>
         <source>Max. log file size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="199"/>
+        <location filename="../main.cpp" line="257"/>
         <source>Max. log files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="200"/>
+        <location filename="../main.cpp" line="258"/>
         <source>Force Eve database update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="232"/>
-        <location filename="../main.cpp" line="247"/>
+        <location filename="../main.cpp" line="290"/>
+        <location filename="../main.cpp" line="305"/>
         <source>Already running</source>
         <translation>Läuft bereits</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="232"/>
+        <location filename="../main.cpp" line="290"/>
         <source>Evernus seems to be already running. If this is not the case, please remove &apos;%1&apos;.</source>
         <translation>Evernus scheint schon zu laufen. Is das nicht der Fall, entferne bitte &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="247"/>
+        <location filename="../main.cpp" line="305"/>
         <source>Evernus probably didn&apos;t close cleanly the last time. Do you want to try to perform a cleanup?</source>
         <translation>Evernus wurde letztes Mal wahrscheinlich nicht korrekt beendet. Möchtest du einen Aufräumversuch starten?</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="256"/>
-        <location filename="../main.cpp" line="559"/>
-        <location filename="../main.cpp" line="568"/>
+        <location filename="../main.cpp" line="314"/>
+        <location filename="../main.cpp" line="631"/>
+        <location filename="../main.cpp" line="640"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="257"/>
+        <location filename="../main.cpp" line="315"/>
         <source>Couldn&apos;t remove &apos;%1&apos;!</source>
         <translation>Konnte &apos;%1&apos; nicht entfernen!</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="516"/>
+        <location filename="../main.cpp" line="574"/>
         <source>New version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="517"/>
+        <location filename="../main.cpp" line="575"/>
         <source>Would you like to see what&apos;s new in this version?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="530"/>
+        <location filename="../main.cpp" line="588"/>
         <source>Citadel data import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="531"/>
+        <location filename="../main.cpp" line="589"/>
         <source>EVE doesn&apos;t provide any information about your access rights to citadels. This means, in order to fetch data from citadels, Evernus needs to ask EVE for data for all possible citadels in given regions. This usually takes a lot of time. After doing the first citadel import, the next imports will be much, much faster. From time to time, Evernus needs to refresh its citadel data and ask for all of it again - you can change the refresh period in the preferences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="579"/>
+        <location filename="../main.cpp" line="651"/>
         <source>Initialization error</source>
         <translation>Fehler beim Initialisieren</translation>
     </message>
