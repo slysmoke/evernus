@@ -58,6 +58,10 @@ namespace Evernus
 
     void ChainableFileLogger::writeMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg)
     {
+        if (type < QtWarningMsg) {
+            return; // Пропускаем debug и info сообщения
+        }
+
         if (mPrevHandler != nullptr)
             mPrevHandler(type, context, msg);
 
