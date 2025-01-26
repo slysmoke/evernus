@@ -175,18 +175,16 @@ namespace Evernus
                            const EveDataProvider &nameProvider,
                            bool showOwner,
                            QObject *parent)
-        : QAbstractItemModel(parent)
-        , mAssetProvider(assetProvider)
-        , mDataProvider(nameProvider)
+        : QAbstractItemModel(parent), mAssetProvider(assetProvider), mDataProvider(nameProvider)
     {
         mRootItem.setData(QVariantList{}
-            << tr("Name")
-            << tr("Quantity")
-            << tr("Unit volume")
-            << tr("Total volume")
-            << tr("Local unit sell price")
-            << tr("Custom value")
-            << tr("Local total sell price"));
+                          << tr("Name")
+                          << tr("Quantity")
+                          << tr("Unit volume")
+                          << tr("Total volume")
+                          << tr("Local unit sell price")
+                          << tr("Custom value")
+                          << tr("Local total sell price"));
 
         if (showOwner)
             mRootItem.addData(tr("Owner"));
@@ -197,15 +195,15 @@ namespace Evernus
     int AssetModel::columnCount(const QModelIndex &parent) const
     {
         if (parent.isValid())
-             return static_cast<const TreeItem *>(parent.internalPointer())->columnCount();
-         else
-             return mRootItem.columnCount();
+            return static_cast<const TreeItem *>(parent.internalPointer())->columnCount();
+        else
+            return mRootItem.columnCount();
     }
 
     QVariant AssetModel::data(const QModelIndex &index, int role) const
     {
         if (Q_UNLIKELY(!index.isValid()))
-             return QVariant{};
+            return QVariant{};
 
         auto item = static_cast<const TreeItem *>(index.internalPointer());
 
@@ -213,7 +211,8 @@ namespace Evernus
 
         QLocale locale;
 
-        switch (role) {
+        switch (role)
+        {
         case Qt::DecorationRole:
             if (column == typeColumn)
                 return item->decoration();
@@ -227,7 +226,8 @@ namespace Evernus
 
             return item->data(column);
         case Qt::DisplayRole:
-            switch (column) {
+            switch (column)
+            {
             case quantityColumn:
                 return locale.toString(item->data(quantityColumn).toUInt());
             case unitVolumeColumn:
@@ -241,19 +241,19 @@ namespace Evernus
                     return TextUtils::currencyToString(item->data(unitPriceColumn).toDouble(), locale);
                 break;
             case customValueColumn:
-                {
-                    const auto value = item->data(customValueColumn);
-                    if (!value.isNull())
-                        return TextUtils::currencyToString(value.toDouble(), locale);
-                }
-                break;
+            {
+                const auto value = item->data(customValueColumn);
+                if (!value.isNull())
+                    return TextUtils::currencyToString(value.toDouble(), locale);
+            }
+            break;
             case totalPriceColumn:
                 return TextUtils::currencyToString(item->data(totalPriceColumn).toDouble(), locale);
             case ownerColumn:
-                {
-                    const auto id = item->data(ownerColumn).value<Character::IdType>();
-                    return (id == Character::invalidId) ? (QVariant{}) : (mDataProvider.getGenericName(id));
-                }
+            {
+                const auto id = item->data(ownerColumn).value<Character::IdType>();
+                return (id == Character::invalidId) ? (QVariant{}) : (mDataProvider.getGenericName(id));
+            }
             }
             return item->data(column);
         case Qt::FontRole:
@@ -294,48 +294,48 @@ namespace Evernus
     QModelIndex AssetModel::index(int row, int column, const QModelIndex &parent) const
     {
         if (!hasIndex(row, column, parent))
-             return QModelIndex{};
+            return QModelIndex{};
 
-         const TreeItem *parentItem = nullptr;
+        const TreeItem *parentItem = nullptr;
 
-         if (!parent.isValid())
-             parentItem = &mRootItem;
-         else
-             parentItem = static_cast<const TreeItem *>(parent.internalPointer());
+        if (!parent.isValid())
+            parentItem = &mRootItem;
+        else
+            parentItem = static_cast<const TreeItem *>(parent.internalPointer());
 
-         auto childItem = parentItem->child(row);
-         if (childItem)
-             return createIndex(row, column, childItem);
+        auto childItem = parentItem->child(row);
+        if (childItem)
+            return createIndex(row, column, childItem);
 
-         return QModelIndex{};
+        return QModelIndex{};
     }
 
     QModelIndex AssetModel::parent(const QModelIndex &index) const
     {
         if (!index.isValid())
-             return QModelIndex{};
+            return QModelIndex{};
 
-         auto childItem = static_cast<const TreeItem *>(index.internalPointer());
-         auto parentItem = childItem->parent();
+        auto childItem = static_cast<const TreeItem *>(index.internalPointer());
+        auto parentItem = childItem->parent();
 
-         if (parentItem == &mRootItem)
-             return QModelIndex{};
+        if (parentItem == &mRootItem)
+            return QModelIndex{};
 
-         return createIndex(parentItem->row(), 0, parentItem);
+        return createIndex(parentItem->row(), 0, parentItem);
     }
 
     int AssetModel::rowCount(const QModelIndex &parent) const
     {
-         const TreeItem *parentItem = nullptr;
-         if (parent.column() > 0)
-             return 0;
+        const TreeItem *parentItem = nullptr;
+        if (parent.column() > 0)
+            return 0;
 
-         if (!parent.isValid())
-             parentItem = &mRootItem;
-         else
-             parentItem = static_cast<const TreeItem *>(parent.internalPointer());
+        if (!parent.isValid())
+            parentItem = &mRootItem;
+        else
+            parentItem = static_cast<const TreeItem *>(parent.internalPointer());
 
-         return parentItem->childCount();
+        return parentItem->childCount();
     }
 
     void AssetModel::setCharacter(Character::IdType id)
@@ -429,7 +429,8 @@ namespace Evernus
 
     void AssetModel::updateNames()
     {
-        std::function<void(TreeItem &, const QModelIndex &, int)> updateOwner = [=, &updateOwner](TreeItem &item, const QModelIndex &parent, int row) {
+        std::function<void(TreeItem &, const QModelIndex &, int)> updateOwner = [=, &updateOwner](TreeItem &item, const QModelIndex &parent, int row)
+        {
             const auto thisIndex = index(row, ownerColumn, parent);
 
             emit dataChanged(thisIndex, thisIndex, QVector<int>{} << Qt::UserRole << Qt::DisplayRole);
@@ -453,8 +454,7 @@ namespace Evernus
         }
     }
 
-    std::unique_ptr<AssetModel::TreeItem> AssetModel
-    ::createTreeItemForItem(const Item &item, LocationId locationId, Character::IdType ownerId)
+    std::unique_ptr<AssetModel::TreeItem> AssetModel ::createTreeItemForItem(const Item &item, LocationId locationId, Character::IdType ownerId)
     {
         const auto typeId = item.getTypeId();
         const auto volume = mDataProvider.getTypeVolume(typeId);
@@ -470,15 +470,14 @@ namespace Evernus
 
         auto treeItem = std::make_unique<TreeItem>();
         treeItem->setData(QVariantList{}
-            << mDataProvider.getTypeName(typeId)
-            << quantity
-            << volume
-            << (volume * quantity)
-            << sellPrice->getPrice()
-            << ((customValue) ? (*customValue) : (QVariant{}))
-            << (price * quantity)
-            << ownerId
-        );
+                          << mDataProvider.getTypeName(typeId)
+                          << quantity
+                          << volume
+                          << (volume * quantity)
+                          << sellPrice->getPrice()
+                          << ((customValue) ? (*customValue) : (QVariant{}))
+                          << (price * quantity)
+                          << ownerId);
         treeItem->setPriceTimestamp(sellPrice->getUpdateTime());
         treeItem->setLocationId(locationId);
         treeItem->setTypeId(typeId);
@@ -507,14 +506,14 @@ namespace Evernus
             {
                 auto treeItem = std::make_unique<TreeItem>();
                 treeItem->setData(QVariantList{}
-                    << mDataProvider.getLocationName(*id)
-                    << 0
-                    << QString{}
-                    << 0.
-                    << QString{}
-                    << QVariant{}
-                    << 0.
-                    << Character::invalidId);
+                                  << mDataProvider.getLocationName(*id)
+                                  << 0
+                                  << QString{}
+                                  << 0.
+                                  << QString{}
+                                  << QVariant{}
+                                  << 0.
+                                  << Character::invalidId);
                 treeItem->setLocationId(*id);
                 locationItem = treeItem.get();
 
