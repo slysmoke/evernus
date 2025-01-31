@@ -18,6 +18,8 @@
 #include <thread>
 #include <cmath>
 
+
+
 #include <QDialogButtonBox>
 #include <QStringBuilder>
 #include <QDesktopWidget>
@@ -71,7 +73,7 @@ namespace Evernus
                                        const ItemCostProvider &itemCostProvider,
                                        EveDataProvider &dataProvider,
                                        QWidget *parent)
-        : QDialog(parent, Qt::Dialog | Qt::WindowMinimizeButtonHint)
+        : QDialog(parent, Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint)
         , mCharacterRepository(characterRepository)
         , mItemCostProvider(itemCostProvider)
         , mDataProvider(dataProvider)
@@ -400,9 +402,10 @@ namespace Evernus
         auto table = new QTableWidget{this};
         table->setColumnCount(3);
         table->setAlternatingRowColors(true);
-        table->setRowCount(static_cast<int>(std::log10(samples)));
+        table->setRowCount(static_cast<int>(10));
         table->setHorizontalHeaderLabels(QStringList{} << "Volume" << "Cost" << "Profit");
         table->verticalHeader()->hide();
+        table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
         return table;
     }
@@ -596,8 +599,7 @@ namespace Evernus
         m1SampleDataTable = createSampleTable();
         sampleLayout->addWidget(m1SampleDataTable);
 
-        m5SampleDataTable = createSampleTable();
-        sampleLayout->addWidget(m5SampleDataTable);
+
 
         auto helpLayout = new QHBoxLayout{};
         mainLayout->addLayout(helpLayout);
@@ -770,7 +772,7 @@ namespace Evernus
                 mMarkupLabel->setText("-");
                 mMarginLabel->setStyleSheet("color: palette(text);");
                 m1SampleDataTable->clearContents();
-                m5SampleDataTable->clearContents();
+                
             }
             else
             {
@@ -808,7 +810,7 @@ namespace Evernus
                         clipboard->setText(QString::number(mBuyPrice, 'f', 2));
 
                     fillSampleData(*m1SampleDataTable, revenue, cos, 1);
-                    fillSampleData(*m5SampleDataTable, revenue, cos, 5);
+                    
             }
         }
         catch (const Repository<Character>::NotFoundException &)
@@ -882,28 +884,68 @@ namespace Evernus
         return file;
     }
 
-    void MarginToolDialog::fillSampleData(QTableWidget &table, double revenue, double cos, int multiplier)
+
+
+    void MarginToolDialog::fillSampleData(QTableWidget& table, double revenue, double cos, int multiplier)
     {
-        const auto inserter = [&table](auto &&text, auto row, auto column) {
-            std::unique_ptr<QTableWidgetItem> item{new QTableWidgetItem{std::forward<decltype(text)>(text)}};
+        const auto inserter = [&table](auto&& text, auto row, auto column) {
+            std::unique_ptr<QTableWidgetItem> item{ new QTableWidgetItem{std::forward<decltype(text)>(text)} };
             table.setItem(row, column, item.get());
             item.release();
         };
 
         const auto realMultiplier = multiplier / 1000000.;
         const auto profit = revenue - cos;
-
         QLocale locale;
 
-        for (auto i = 1, row = 0; i < samples; i *= 10, ++row)
-        {
-            inserter(locale.toString(i * multiplier), row, 0);
-            inserter(locale.toString(cos * i * realMultiplier, 'f', 2) + "M", row, 1);
-            inserter(locale.toString(profit * i * realMultiplier, 'f', 2) + "M", row, 2);
+        
+        int numDigits = 0;
+        if (cos >= 1.0) {
+            double intPart = std::floor(cos);
+            numDigits = static_cast<int>(std::log10(intPart)) + 1;
         }
 
-        table.resizeColumnsToContents();
+        const size_t displayCount = 10;
+        size_t startIdx = 0;
+
+        
+        if (numDigits > 6) {  
+            startIdx = 0;
+        }
+        else if (numDigits >= 1) {
+            if (numDigits % 2 == 0) {
+                startIdx = displayCount - numDigits + 2;
+            }
+            else {
+                startIdx = displayCount - numDigits + 1;
+            }
+            startIdx = std::min(startIdx, samples.size() - displayCount);
+        }
+        else {  
+            startIdx = samples.size() - displayCount;
+        }
+
+        size_t endIdx = std::min(startIdx + displayCount, samples.size());
+
+        
+        if (startIdx >= samples.size()) startIdx = 0;
+        if (endIdx > samples.size()) endIdx = samples.size();
+
+        
+        table.setRowCount(static_cast<int>(endIdx - startIdx));
+
+        
+        for (size_t i = startIdx; i < endIdx; ++i) {
+            const int sample = samples[i];
+            const size_t row = i - startIdx;
+
+            inserter(locale.toString(sample), row, 0);
+            inserter(locale.toString(cos * sample * realMultiplier, 'f', 2) + "M", row, 1);
+            inserter(locale.toString(profit * sample * realMultiplier, 'f', 2) + "M", row, 2);
+        }
     }
+
+
 
     MarginToolDialog::FileList MarginToolDialog::getKnownFiles(const QString &path)
     {

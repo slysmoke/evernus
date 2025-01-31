@@ -16,6 +16,8 @@
 
 #include <unordered_set>
 #include <vector>
+#include <array>
+
 
 #include <QFileSystemWatcher>
 #include <QDateTime>
@@ -80,7 +82,13 @@ namespace Evernus
     private:
         using FileList = QSet<QString>;
 
-        static const auto samples = 100000000;
+        static constexpr std::array<int, 20> samples = {
+    1, 5, 10, 50,
+    100, 500, 1000, 5000,
+    10000, 50000, 100000, 500000,
+    1000000, 5000000, 10000000, 50000000,
+    100000000, 500000000, 1000000000, 2147483647
+        };
 
         static const QString settingsGeometryKey;
 
