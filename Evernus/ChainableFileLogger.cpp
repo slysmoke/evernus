@@ -31,9 +31,7 @@ namespace Evernus
     const QString ChainableFileLogger::fileNameBase = "main.log";
 
     ChainableFileLogger::ChainableFileLogger(std::size_t maxLogSize, uint maxLogFiles)
-        : mMaxLogSize{maxLogSize}
-        , mMaxLogFiles{maxLogFiles}
-        , mLogFile{getLogDir() + fileNameBase}
+        : mMaxLogSize{maxLogSize}, mMaxLogFiles{maxLogFiles}, mLogFile{getLogDir() + fileNameBase}
     {
         QDir{}.mkpath(getLogDir());
 
@@ -58,6 +56,11 @@ namespace Evernus
 
     void ChainableFileLogger::writeMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg)
     {
+        if (type < QtWarningMsg)
+        {
+            return;
+        }
+
         if (mPrevHandler != nullptr)
             mPrevHandler(type, context, msg);
 
@@ -89,7 +92,7 @@ namespace Evernus
 
         QDir dir{getLogDir()};
 
-        auto logFiles = dir.entryList({ fileNameBase + ".*" }, QDir::Files);
+        auto logFiles = dir.entryList({fileNameBase + ".*"}, QDir::Files);
 
         QCollator collator;
         collator.setNumericMode(true);
