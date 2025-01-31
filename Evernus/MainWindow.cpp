@@ -1,4 +1,4 @@
-/**
+﻿/**
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -29,6 +29,8 @@
 #include <QMenuBar>
 #include <QTabBar>
 #include <QLabel>
+#include <QPushButton>
+
 
 #ifdef Q_OS_WIN
 #   include <sys/utime.h>
@@ -75,6 +77,9 @@
 
 
 
+
+
+
 #include "MainWindow.h"
 
 namespace Evernus
@@ -112,10 +117,16 @@ namespace Evernus
         , mStatusActiveTasksDonePixmap{QStringLiteral(":/images/tick.png")}
         , mClientId{interfaceManager.getClientId()}
         , mClientSecret{interfaceManager.getClientSecret()}
-    {
+    {   
+        
+        setWindowOpacity(0);
         readSettings();
         createStatusBar();
-        createMenu();
+        
+        createMenu();    
+        
+        
+        
         createMainView(charOrderProvider,
                        corpOrderProvider,
                        charAssetProvider,
@@ -126,7 +137,17 @@ namespace Evernus
                        cacheTimerProvider,
                        interfaceManager,
                        taskManager);
+        
+        
+        
+        
+        QTimer::singleShot(500, this, [this]() {
+            this->setWindowOpacity(1);  // Восстановить непрозрачность после задержки
+            });
 
+        
+
+        
         connect(mTrayIcon, &QSystemTrayIcon::activated, this, &MainWindow::activateTrayIcon);
         connect(&mAutoImportTimer, &QTimer::timeout, this, &MainWindow::refreshAll);
 
@@ -135,11 +156,19 @@ namespace Evernus
         setUpAutoImportTimer();
 
         mStatusActiveTasksThrobber.start();
+
+        
     }
 
+    
+
+
     void MainWindow::showAsSaved()
-    {
+    {   
+        
+        
         if (mShowMaximized)
+            
             showMaximized();
         else
             show();
@@ -218,7 +247,11 @@ namespace Evernus
                                                      mEveDataProvider};
             mMarginToolDialog->setCharacter(mCurrentCharacterId);
             connect(mMenuWidget, &MenuBarWidget::currentCharacterChanged, mMarginToolDialog, &MarginToolDialog::setCharacter);
-            connect(mMarginToolDialog, &MarginToolDialog::hidden, this, &MainWindow::showNormal);
+            connect(mMarginToolDialog, &MarginToolDialog::hidden, this, [this]() {
+                if (isMinimized()) {
+                    showNormal();
+                }
+                });
             connect(mMarginToolDialog, &MarginToolDialog::quit, this, &MainWindow::close);
             connect(this, &MainWindow::preferencesChanged, mMarginToolDialog, &MarginToolDialog::handleNewPreferences);
         }
@@ -260,7 +293,7 @@ namespace Evernus
 
     void MainWindow::openHelp()
     {
-        QDesktopServices::openUrl(QUrl{"http://evernus.com/help"});
+        QDesktopServices::openUrl(QUrl{"https://web.archive.org/web/20170603084210/evernus.com/help"});
     }
 
     void MainWindow::checkForUpdates()
@@ -567,8 +600,10 @@ namespace Evernus
 
     void MainWindow::closeEvent(QCloseEvent *event)
     {
-        if (!mMarginToolDialog.isNull())
+        if (!mMarginToolDialog.isNull()) {
+            
             mMarginToolDialog->close();
+        }
 
         writeSettings();
 
@@ -588,7 +623,7 @@ namespace Evernus
         QSettings settings;
 
         const auto pos = settings.value(settingsPosKey).toPoint();
-        const auto size = settings.value(settingsSizeKey, QSize{600, 400}).toSize();
+        const auto size = settings.value(settingsSizeKey, QSize{ 600, 400 }).toSize();
 
         resize(size);
         move(pos);
@@ -607,7 +642,7 @@ namespace Evernus
     void MainWindow::createMenu()
     {
         auto bar = menuBar();
-
+        
         auto fileMenu = bar->addMenu(tr("&File"));
         mCharactersMenu = fileMenu->addMenu(tr("Select character"));
         fileMenu->addAction(QIcon{":/images/user.png"}, tr("&Manage characters..."), this, &MainWindow::showCharacterManagement);
@@ -668,6 +703,7 @@ namespace Evernus
         helpMenu->addAction(tr("&About..."), this, &MainWindow::showAbout)->setMenuRole(QAction::AboutRole);
 
         mMenuWidget = new MenuBarWidget{mRepositoryProvider.getCharacterRepository(), this};
+        
         bar->setCornerWidget(mMenuWidget);
         connect(this, &MainWindow::charactersChanged, mMenuWidget, &MenuBarWidget::refreshCharacters);
         connect(mMenuWidget, &MenuBarWidget::currentCharacterChanged, this, &MainWindow::setCharacter);
@@ -688,8 +724,14 @@ namespace Evernus
                                     ESIInterfaceManager &interfaceManager,
                                     TaskManager &taskManager)
     {
+
+
+        
+
         mMainTabs = new QTabWidget{this};
+        
         setCentralWidget(mMainTabs);
+        
 #ifdef Q_OS_OSX
         mMainTabs->tabBar()->setElideMode(Qt::ElideNone);
         mMainTabs->tabBar()->setUsesScrollButtons(true);
@@ -1031,9 +1073,38 @@ namespace Evernus
 
         updateTasksStatus(0);
 
+
+        QPushButton* donationButton = new QPushButton{ this };
+        donationButton->setText("Buy me a coffee");
+        donationButton->setIcon(QIcon(":/images/arrow_out.png")); // Устанавливаем иконку
+        donationButton->setIconSize(QSize(20, 20)); // Размер иконки
+        donationButton->setStyleSheet("QPushButton {"
+            "   background-color: #FFDD00;"
+            "   border: none;"
+            "   padding: 5px 10px;"
+            "   color: black;"
+            "   font-weight: bold;"
+            "   border-radius: 5px;"
+            "}"
+            "QPushButton:hover {"
+            "   background-color: #FFD700;"
+            "}");
+
+        // Подключаем слот для открытия ссылки при нажатии на кнопку
+        connect(donationButton, &QPushButton::clicked, this, []() {
+            QDesktopServices::openUrl(QUrl("https://www.buymeacoffee.com/dmitriwinston"));
+            });
+
+
         auto bar = statusBar();
         bar->addPermanentWidget(mStatusActiveTasksBtn);
         bar->addPermanentWidget(mStatusWalletLabel);
+        bar->addPermanentWidget(donationButton);
+
+
+
+       
+        
     }
 
     QWidget *MainWindow::createMainViewTab(QWidget *content)
