@@ -15,6 +15,7 @@
 #pragma once
 
 #include <QDialog>
+#include <QTableWidgetItem>
 
 #include "EveType.h"
 
@@ -45,6 +46,7 @@ namespace Evernus
 
     private slots:
         void pasteData();
+        void validateFirstColumn(QTableWidgetItem* item);
 
     private:
         QTableWidget *mDataView = nullptr;
