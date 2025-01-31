@@ -22,6 +22,10 @@
 #include <QUrlQuery>
 #include <QUrl>
 
+#include <QNetworkDiskCache>
+#include <QStandardPaths>
+
+
 #include "ESIOAuth2CharacterAuthorizationCodeFlow.h"
 #include "ESIOAuthReplyHandler.h"
 #include "SecurityHelper.h"
@@ -52,12 +56,20 @@ namespace Evernus
     {
         QSettings settings;
         settings.beginGroup(SSOSettings::refreshTokenGroup);
+        
+
 
         const auto keys = settings.childKeys();
         for (const auto &key : keys)
             mRefreshTokens[key.toULongLong()] = mCrypt.decryptToString(settings.value(key).toByteArray());
 
         settings.endGroup();
+
+        auto* diskCache = new QNetworkDiskCache(this);
+        diskCache->setCacheDirectory(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/esi_cache");
+        diskCache->setMaximumCacheSize(1024 * 1024 * 1024); // 1 GB
+
+        mUnauthNetworkAccessManager.setCache(diskCache);
     }
 
     void ESIOAuth::get(Character::IdType charId, const QUrl &url, QVariantMap parameters, NetworkReplyCallback callback, AuthErrorCallback errorCallback)
@@ -320,7 +332,9 @@ namespace Evernus
 
     QString ESIOAuth::getUserAgent()
     {
-        return QStringLiteral("%1 %2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion());
+        return QStringLiteral("%1 %2 Contact with developer: Ingame: Sasha Winston, Email: %3").arg(QCoreApplication::applicationName())
+            .arg(QCoreApplication::applicationVersion())
+            .arg("dmitri.merzin@gmail.com");
     }
 
     void ESIOAuth::grantOrRefresh(ESIOAuth2CharacterAuthorizationCodeFlow &oauth)
