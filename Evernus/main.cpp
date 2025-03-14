@@ -539,7 +539,7 @@ int main(int argc, char *argv[])
                 );
 
                 if (ret == QMessageBox::Yes)
-                    QDesktopServices::openUrl(QUrl{QStringLiteral("https://github.com/slysmoke/evernus")});
+                    QDesktopServices::openUrl(QUrl{QStringLiteral("https://github.com/slysmoke/evernus/releases")});
 
                 settings.setValue(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, true);
             }
