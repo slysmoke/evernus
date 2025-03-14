@@ -105,7 +105,7 @@ namespace Evernus
         {
             EveType::IdType mId = EveType::invalidId;
             double mAvgVolume = 0.;
-            quint64 mMedianVolume = 0;
+            double mMedianVolume = 0;
             double mVolumeMAD = 0.;
             quint64 mDstVolume = 0;
             double mDstPrice = 0.;
