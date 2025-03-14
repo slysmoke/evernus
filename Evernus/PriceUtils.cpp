@@ -33,7 +33,7 @@ namespace Evernus
         Taxes calculateTaxes(const Character &character)
         {
             const auto feeSkills = character.getFeeSkills();
-            const auto salesTax = (0.045 - feeSkills.mAccounting * (0.045*0.11));
+            const auto salesTax = (0.075 - feeSkills.mAccounting * (0.075*0.11));
 
             auto calcBrokersFee = [&](auto customBrokersFee) {
                 return (customBrokersFee) ? (*customBrokersFee) : (0.03 - (feeSkills.mBrokerRelations * 0.003 +
