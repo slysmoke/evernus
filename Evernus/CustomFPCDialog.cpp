@@ -65,28 +65,11 @@ namespace Evernus
 
     }
 
-    void CustomFPCDialog::validateFirstColumn(QTableWidgetItem* item)
+
+
+    void CustomFPCDialog::executeFPC()
     {
-        // Проверяем, относится ли изменённый элемент к первому столбцу
-        if (item->column() == 0)
-        {
-            // Пробуем преобразовать текст в int
-            bool isInt = false;
-            item->text().toInt(&isInt);
-
-            // Если это не число, сбрасываем значение
-            if (!isInt)
-            {
-                item->setText(""); // Сбрасываем текст
-                QMessageBox::warning(nullptr, tr("Invalid Input"), tr("The first column must contain integers only."));
-            }
-        }
-    
-    }
-
-        void CustomFPCDialog::executeFPC()
-        {
-            static int mCurrentColumn = 1;
+        static int mCurrentColumn = 1;
 
         auto row = mDataView->currentRow();
         if (row < 0 || row >= mDataView->rowCount())
@@ -184,23 +167,30 @@ namespace Evernus
 
         mDataView->clearContents();
 
-            auto row = 0;
+        auto row = 0;
+        const auto lines = data.split('\n', QString::SkipEmptyParts);
+        mDataView->setRowCount(lines.size());
 
-            const auto lines = data.split('\n', QString::SkipEmptyParts);
-            mDataView->setRowCount(lines.size());
-
-            for (const auto& line : lines)
+        for (const auto& line : lines)
+        {
+            const auto values = line.split('\t', QString::SkipEmptyParts);
+            if (values.size() > 0)
             {
-                const auto values = line.split('\t', QString::SkipEmptyParts);
-                if (values.size() > 0)
+                bool isInt;
+                values[0].toInt(&isInt);
+                if (!isInt)
                 {
-                    mDataView->setItem(row, 0, new QTableWidgetItem{ values[0] });
-                    if (values.size() > 1)
-                        mDataView->setItem(row, 1, new QTableWidgetItem{ values[1] });
-                    if (values.size() > 2)
-                    {
-                        mDataView->setItem(row, 2, new QTableWidgetItem{ values[2] });
-                    }
+
+                    QMessageBox::critical(this, tr("Invalid Input"), tr("The first column must contain integers only."));
+                    mDataView->setRowCount(0);
+                    return;
+                }
+
+                mDataView->setItem(row, 0, new QTableWidgetItem{ values[0] });
+                if (values.size() > 1)
+                    mDataView->setItem(row, 1, new QTableWidgetItem{ values[1] });
+                if (values.size() > 2)
+                    mDataView->setItem(row, 2, new QTableWidgetItem{ values[2] });
 
                 ++row;
             }
