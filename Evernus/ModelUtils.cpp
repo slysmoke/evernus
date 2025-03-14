@@ -16,41 +16,63 @@
 #include <QClipboard>
 #include <QSettings>
 #include <QString>
+#include <QMap>
+#include <QVector>
+#include <QHeaderView>
+#include <algorithm>
 
 #include "UISettings.h"
-
 #include "ModelUtils.h"
 
-namespace Evernus
-{
-    namespace ModelUtils
-    {
-        void copyRowsToClipboard(const QModelIndexList &indexes, const QAbstractItemModel &model)
+namespace Evernus {
+    namespace ModelUtils {
+        void copyRowsToClipboard(const QModelIndexList& indexes,
+            const QAbstractItemModel& model,
+            const QHeaderView* header)
         {
             if (indexes.isEmpty())
                 return;
 
+            const QString defaultDelim = "\t";
+
             QSettings settings;
-            const auto delim
-                = settings.value(UISettings::columnDelimiterKey, UISettings::columnDelimiterDefault).value<char>();
+            QString delim = settings.value(UISettings::columnDelimiterDefault, defaultDelim).toString();
+            if (delim.isEmpty())
+                delim = defaultDelim;
 
-            QString result;
-
-            auto prevRow = indexes.first().row();
-            for (const auto &index : indexes)
-            {
-                if (prevRow != index.row())
-                {
-                    prevRow = index.row();
-                    result[result.size() - 1] = '\n';
+            // Собираем данные по строкам и столбцам.
+            QMap<int, QMap<int, QString>> rowMap;
+            for (const QModelIndex& index : indexes) {
+                if (index.isValid()) {
+                    rowMap[index.row()][index.column()] = model.data(index, Qt::DisplayRole).toString();
                 }
-
-                result.append(model.data(index).toString());
-                result.append(delim);
             }
 
-            result.chop(1);
-            QApplication::clipboard()->setText(result);
+            QList<int> rows = rowMap.keys();
+            QStringList result;
+            for (int row : rows) {
+                const QMap<int, QString>& columns = rowMap[row];
+                QList<int> colNumbers = columns.keys();
+
+
+                if (header) {
+                    std::sort(colNumbers.begin(), colNumbers.end(),
+                        [header](int col1, int col2) {
+                            return header->visualIndex(col1) < header->visualIndex(col2);
+                        });
+                }
+                else {
+                    std::sort(colNumbers.begin(), colNumbers.end());
+                }
+
+                QStringList rowData;
+                for (int col : colNumbers) {
+                    rowData << columns[col];
+                }
+                result << rowData.join(delim);
+            }
+
+            QApplication::clipboard()->setText(result.join("\n"));
         }
     }
 }

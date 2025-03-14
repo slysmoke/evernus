@@ -33,7 +33,7 @@ namespace Evernus
         const auto combineAssetsDefault = false;
         const auto combineJournalDefault = false;
         const auto combineTransactionsDefault = false;
-        const auto columnDelimiterDefault = '\t';
+        const auto columnDelimiterDefault = QStringLiteral("\t");
         const auto applyDateFormatToGraphsDefault = false;
         const auto showMarginToolSampleDataDefault = true;
         const auto combineReportsDefault = false;
