@@ -18,6 +18,7 @@
 
 #include "MarketHistory.h"
 
+
 namespace Evernus
 {
     class DoubleTypeAggregatedDetailsWidget;
