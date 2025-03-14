@@ -149,7 +149,7 @@ namespace Evernus
         const auto filterValueValidator = new QDoubleValidator{this};
         filterValueValidator->setBottom(0.);
 
-        toolBarLayout->addWidget(new QLabel{tr("Avg. volume:"), this});
+        toolBarLayout->addWidget(new QLabel{tr("Median volume:"), this});
 
         auto value = settings.value(MarketAnalysisSettings::minAvgVolumeFilterKey);
 

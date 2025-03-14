@@ -76,7 +76,7 @@ namespace Evernus
                 case durationColumn:
                     return tr("Time left");
                 case updatedColumn:
-                    return tr("Imported");
+                    return tr("Last modified");
                 case regionColumn:
                     return tr("Region");
                 }
@@ -272,7 +272,14 @@ namespace Evernus
                     }
                     break;
                 case updatedColumn:
-                    return TextUtils::dateTimeToString(order.getUpdateTime().toLocalTime(), locale);
+                {
+                    const auto timeStart = order.getIssued().toMSecsSinceEpoch() / 1000;
+                    const auto timeCur = QDateTime::currentDateTimeUtc().toMSecsSinceEpoch() / 1000;
+
+                    if (timeCur > timeStart)
+                        return TextUtils::secondsToString(std::chrono::seconds{ timeCur - timeStart });
+                }
+                    
                 case regionColumn:
                     return mDataProvider.getRegionName(order.getRegionId());
                 }
@@ -304,7 +311,13 @@ namespace Evernus
                 }
                 break;
             case updatedColumn:
-                return order.getUpdateTime();
+            {
+                const auto timeStart = order.getIssued().toMSecsSinceEpoch() / 1000;
+                const auto timeCur = QDateTime::currentDateTimeUtc().toMSecsSinceEpoch() / 1000;
+
+                if (timeCur > timeStart)
+                    return  timeCur - timeStart;
+            }
             case regionColumn:
                 return mDataProvider.getRegionName(order.getRegionId());
             }

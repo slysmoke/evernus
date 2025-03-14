@@ -46,7 +46,7 @@ namespace Evernus
 
     private slots:
         void pasteData();
-        void validateFirstColumn(QTableWidgetItem* item);
+       
 
     private:
         QTableWidget *mDataView = nullptr;

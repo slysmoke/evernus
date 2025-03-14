@@ -21,7 +21,7 @@ namespace Evernus
     namespace TypeLookupUtils
     {
         const QString eveMarketdataUrl = "https://evetycoon.com/market/%1";
-        const QString eveMarketerUrl = "https://evemarket.gitlab.io/#/orders/%1?r=10000002,10000030,10000032,10000042,10000043&sec=h,l,n";
+        const QString eveMarketerUrl = "https://evemarketbrowser.com/region/0/type/%1";
         const QString adam4eveUrl = "https://dev.adam4eve.eu/price_history.php?typeID=%1";
 
         void lookupType(EveType::IdType id, const QString &baseUrl);

@@ -41,6 +41,8 @@ namespace Evernus
                                   mFilterWidget->getMACDSlowDays(),
                                   mFilterWidget->getMACDEMADays(),
                                   mFilterWidget->getVolumeType());
+
+        
     }
 
     void TypeAggregatedDetailsWidget::handleNewPreferences()

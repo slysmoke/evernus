@@ -74,14 +74,17 @@ namespace Evernus
                 QLocale locale;
 
                 switch (column) {
+                case idColumn:
+                    return data.mId;
+
                 case nameColumn:
                     return mDataProvider.getTypeName(data.mId);
                 case avgVolumeColumn:
-                    return locale.toString(data.mAvgVolume, 'f', 2);
+                    return locale.toString(data.mAvgVolume, 'f', 0);
                 case medianDstVolume:
                     return locale.toString(data.mMedianVolume);
                 case madDstVolume:
-                    return locale.toString(data.mVolumeMAD, 'f', 2);
+                    return locale.toString(data.mVolumeMAD, 'f', 0);
                 case dstVolumeColumn:
                     return locale.toString(data.mDstVolume);
                 case relativeDstVolumeColumn:
@@ -110,6 +113,8 @@ namespace Evernus
             break;
         case Qt::UserRole:
             switch (column) {
+            case idColumn:
+                return data.mId;
             case nameColumn:
                 return mDataProvider.getTypeName(data.mId);
             case avgVolumeColumn:
@@ -121,10 +126,10 @@ namespace Evernus
             case dstVolumeColumn:
                 return data.mDstVolume;
             case relativeDstVolumeColumn:
-                if (qFuzzyIsNull(data.mAvgVolume))
+                if (qFuzzyIsNull(data.mMedianVolume))
                     return 0;
 
-                return data.mDstVolume * 100 / data.mAvgVolume;
+                return data.mDstVolume * 100 / data.mMedianVolume;
             case srcOrderCountColumn:
                 return data.mSrcOrderCount;
             case dstOrderCountColumn:
@@ -164,6 +169,8 @@ namespace Evernus
         if (orientation == Qt::Horizontal && role == Qt::DisplayRole)
         {
             switch (section) {
+            case idColumn:
+                return tr("ID");
             case nameColumn:
                 return tr("Name");
             case avgVolumeColumn:
@@ -442,7 +449,8 @@ namespace Evernus
             TypeData data;
             data.mId = type.first;
             data.mAvgVolume = static_cast<double>(type.second.mTotalVolume) * aggrDays / analysisDays;
-            data.mMedianVolume = type.second.mMedianVolume;
+            data.mMedianVolume = static_cast<double>(type.second.mMedianVolume) * aggrDays;
+            //data.mMedianVolume = type.second.mMedianVolume;
             data.mDstVolume = (dstVolume == std::end(dstSellVolumes)) ? (0) : (dstVolume->second);
             data.mSrcOrderCount = type.second.mSrcOrderCount;
             data.mDstOrderCount = type.second.mDstOrderCount;
@@ -483,7 +491,7 @@ namespace Evernus
             data.mImportPrice = data.mSrcPrice + collateralPrice * collateral + mDataProvider.getTypeVolume(data.mId) * pricePerM3;
             data.mPriceDifference = data.mDstPrice - data.mImportPrice;
             data.mMargin = (qFuzzyIsNull(data.mDstPrice)) ? (0.) : (100. * data.mPriceDifference / data.mDstPrice);
-            data.mProjectedProfit = data.mAvgVolume * data.mPriceDifference;
+            data.mProjectedProfit = data.mMedianVolume * data.mPriceDifference;
 
             std::lock_guard<std::mutex> lock{dataMutex};
             mData.emplace_back(std::move(data));

@@ -16,6 +16,8 @@
 #include <QAbstractProxyModel>
 #include <QAbstractItemView>
 #include <QAction>
+#include <QTableView>
+#include <QHeaderView>
 
 #include "ModelWithTypes.h"
 #include "ModelUtils.h"
@@ -73,7 +75,17 @@ namespace Evernus
 
     void StandardModelProxyWidget::copyRows() const
     {
-        ModelUtils::copyRowsToClipboard(mDataView->selectionModel()->selectedIndexes(), mDataProxy);
+        if (!mDataView)
+            return;
+
+        QModelIndexList indexes = mDataView->selectionModel()->selectedIndexes();
+
+        const QHeaderView* header = nullptr;
+        if (auto tableView = qobject_cast<QTableView*>(mDataView)) {
+            header = tableView->horizontalHeader();
+        }
+
+        ModelUtils::copyRowsToClipboard(indexes, mDataProxy, header);
     }
 
     void StandardModelProxyWidget::selectType(const QItemSelection &selected)

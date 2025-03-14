@@ -20,6 +20,6 @@ namespace Evernus
 {
     namespace ModelUtils
     {
-        void copyRowsToClipboard(const QModelIndexList &indexes, const QAbstractItemModel &model);
+        void copyRowsToClipboard(const QModelIndexList &indexes, const QAbstractItemModel &model, const QHeaderView* header = nullptr);
     }
 }

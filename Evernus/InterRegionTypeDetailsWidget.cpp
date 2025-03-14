@@ -15,6 +15,8 @@
 #include <QVBoxLayout>
 #include <QTabWidget>
 
+
+
 #include "DoubleTypeAggregatedDetailsWidget.h"
 #include "DoubleTypeCompareWidget.h"
 
@@ -28,7 +30,7 @@ namespace Evernus
                                                                const QString &secondInfo,
                                                                QWidget *parent,
                                                                Qt::WindowFlags flags)
-        : QWidget(parent, flags)
+        : QWidget(parent, flags | Qt::Window)
     {
         const auto mainLayout = new QVBoxLayout{this};
 
@@ -48,6 +50,9 @@ namespace Evernus
                                                      secondInfo,
                                                      tabs};
         tabs->addTab(mCompareWidget, tr("Combined"));
+
+       
+        showMaximized();
     }
 
     void InterRegionTypeDetailsWidget::handleNewPreferences()

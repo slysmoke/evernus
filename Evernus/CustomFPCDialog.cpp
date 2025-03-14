@@ -62,112 +62,130 @@ namespace Evernus
         mDataView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
         mDataView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
-        
+
     }
 
-   
+    void CustomFPCDialog::validateFirstColumn(QTableWidgetItem* item)
+    {
+        // Проверяем, относится ли изменённый элемент к первому столбцу
+        if (item->column() == 0)
+        {
+            // Пробуем преобразовать текст в int
+            bool isInt = false;
+            item->text().toInt(&isInt);
+
+            // Если это не число, сбрасываем значение
+            if (!isInt)
+            {
+                item->setText(""); // Сбрасываем текст
+                QMessageBox::warning(nullptr, tr("Invalid Input"), tr("The first column must contain integers only."));
+            }
+        }
+    
+    }
 
         void CustomFPCDialog::executeFPC()
         {
             static int mCurrentColumn = 1;
 
-            auto row = mDataView->currentRow();
-            if (row < 0 || row >= mDataView->rowCount())
-                return;
+        auto row = mDataView->currentRow();
+        if (row < 0 || row >= mDataView->rowCount())
+            return;
 
-            auto item = mDataView->item(row, mCurrentColumn);
-            if (item == nullptr)
-                return;
+        auto item = mDataView->item(row, mCurrentColumn);
+        if (item == nullptr)
+            return;
 
-            copyData(row, mCurrentColumn);
+        copyData(row, mCurrentColumn);
 
-            try
-            {
-                QIcon icon(":/images/accept.png");
-                item->setIcon(icon);
-            }
-            catch (const std::exception& e)
-            {
-                // Handle exception or log error
-                qDebug() << "Error setting icon:" << e.what();
-                return;
-            }
-
-            if (mCurrentColumn == 1 && mDataView->item(row, 2) != nullptr)
-            {
-                mCurrentColumn = 2;
-            }
-            else
-            {
-                mCurrentColumn = 1;
-                ++row;
-                if (row >= mDataView->rowCount())
-                    row = 0;
-            }
-
-            mDataView->setCurrentCell(row, 0);
+        try
+        {
+            QIcon icon(":/images/accept.png");
+            item->setIcon(icon);
+        }
+        catch (const std::exception& e)
+        {
+            // Handle exception or log error
+            qDebug() << "Error setting icon:" << e.what();
+            return;
         }
 
-        // void CustomFPCDialog::executeFPC()
-        // {
-        //     auto row = mDataView->currentRow();
-        //     if (row >= 0)
-        //     {
-        //         copyData(row);
-
-        //         ++row;
-        //         if (row >= mDataView->rowCount())
-        //             row = 0;
-
-        //         mDataView->setCurrentCell(row, 0);
-        //     }
-        // }
-
-        void CustomFPCDialog::executeBackwardFPC()
+        if (mCurrentColumn == 1 && mDataView->item(row, 2) != nullptr)
         {
-            static int mCurrentColumn = 1;
+            mCurrentColumn = 2;
+        }
+        else
+        {
+            mCurrentColumn = 1;
+            ++row;
+            if (row >= mDataView->rowCount())
+                row = 0;
+        }
 
-            auto row = mDataView->currentRow();
+        mDataView->setCurrentCell(row, 0);
+    }
+
+    // void CustomFPCDialog::executeFPC()
+    // {
+    //     auto row = mDataView->currentRow();
+    //     if (row >= 0)
+    //     {
+    //         copyData(row);
+
+    //         ++row;
+    //         if (row >= mDataView->rowCount())
+    //             row = 0;
+
+    //         mDataView->setCurrentCell(row, 0);
+    //     }
+    // }
+
+    void CustomFPCDialog::executeBackwardFPC()
+    {
+        static int mCurrentColumn = 1;
+
+        auto row = mDataView->currentRow();
+        if (row < 0)
+            return;
+
+        auto item = mDataView->item(row, mCurrentColumn);
+        if (item == nullptr)
+            return;
+
+        copyData(row, mCurrentColumn);
+
+        if (item != nullptr)
+            item->setIcon(QIcon());
+
+        if (mCurrentColumn == 1 && mDataView->item(row, 2) != nullptr)
+        {
+            mCurrentColumn = 2;
+        }
+        else
+        {
+            mCurrentColumn = 1;
+
+            --row;
             if (row < 0)
-                return;
-
-            auto item = mDataView->item(row, mCurrentColumn);
-            if (item == nullptr)
-                return;
-
-            copyData(row, mCurrentColumn);
-
-            if (item != nullptr)
-                item->setIcon(QIcon());
-
-            if (mCurrentColumn == 1 && mDataView->item(row, 2) != nullptr)
-            {
-                mCurrentColumn = 2;
-            }
-            else
-            {
-                mCurrentColumn = 1;
-
-                --row;
-                if (row < 0)
-                    row = mDataView->rowCount() - 1;
-            }
-
-            if (row >= 0 && row < mDataView->rowCount())
-                mDataView->setCurrentCell(row, 0);
-            else
-                mDataView->clearSelection();
+                row = mDataView->rowCount() - 1;
         }
 
-        void CustomFPCDialog::pasteData()
-        {
-            const auto data = QApplication::clipboard()->text();
-            if (data.isEmpty())
-                return;
+        if (row >= 0 && row < mDataView->rowCount())
+            mDataView->setCurrentCell(row, 0);
+        else
+            mDataView->clearSelection();
+    }
 
-            mDataView->clearContents();
+    void CustomFPCDialog::pasteData()
+    {
+        const auto data = QApplication::clipboard()->text();
+        if (data.isEmpty())
+            return;
+
+        mDataView->clearContents();
 
             auto row = 0;
+
             const auto lines = data.split('\n', QString::SkipEmptyParts);
             mDataView->setRowCount(lines.size());
 
@@ -176,76 +194,68 @@ namespace Evernus
                 const auto values = line.split('\t', QString::SkipEmptyParts);
                 if (values.size() > 0)
                 {
-                    bool isInt;
-                    values[0].toInt(&isInt);
-                    if (!isInt)
-                    {
-                        
-                        QMessageBox::critical(this, tr("Invalid Input"), tr("The first column must contain integers only."));
-                        mDataView->setRowCount(0);
-                        return;
-                    }
-
                     mDataView->setItem(row, 0, new QTableWidgetItem{ values[0] });
                     if (values.size() > 1)
                         mDataView->setItem(row, 1, new QTableWidgetItem{ values[1] });
                     if (values.size() > 2)
+                    {
                         mDataView->setItem(row, 2, new QTableWidgetItem{ values[2] });
+                    }
 
-                    ++row;
-                }
-            }
-
-            mDataView->setRowCount(row);
-            mDataView->setCurrentCell(0, 0);
-        }
-
-        void CustomFPCDialog::copyData(int row, int column) const
-        {
-            const auto item = mDataView->item(row, column);
-            if (item != nullptr)
-            {
-                auto ok = false;
-                const auto text = item->text();
-                const auto value = text.toDouble(&ok);
-
-                if (ok)
-                    QApplication::clipboard()->setText(QString::number(value, 'f', 2));
-                else
-                    QApplication::clipboard()->setText(text); // Если значение не число, копируем текст как есть
-            }
-
-            QSettings settings;
-            if (settings.value(PriceSettings::showInEveOnFpcKey, PriceSettings::showInEveOnFpcDefault).toBool())
-            {
-                const auto idItem = mDataView->item(row, 0);
-                if (idItem != nullptr)
-                {
-                    const auto id = idItem->text().toULongLong();
-                    if (id != EveType::invalidId)
-                        emit showInEve(id);
-                }
+                ++row;
             }
         }
 
-        // void CustomFPCDialog::copyData(int row) const
-        // {
-        //     const auto priceItem = mDataView->item(row, 1);
-        //     if (priceItem != nullptr)
-        //     {
-        //         auto ok = false;
-        //         const auto price = priceItem->text().toDouble(&ok);
-
-        //         if (ok)
-        //             QApplication::clipboard()->setText(QString::number(price, 'f', 2));
-        //     }
-
-        //     QSettings settings;
-        //     if (settings.value(PriceSettings::showInEveOnFpcKey, PriceSettings::showInEveOnFpcDefault).toBool())
-        //     {
-        //         const auto id = mDataView->item(row, 0)->text().toULongLong();
-        //         if (id != EveType::invalidId)
-        //             emit showInEve(id);
-        //     }
-        // }
+        mDataView->setRowCount(row);
+        mDataView->setCurrentCell(0, 0);
     }
+
+    void CustomFPCDialog::copyData(int row, int column) const
+    {
+        const auto item = mDataView->item(row, column);
+        if (item != nullptr)
+        {
+            auto ok = false;
+            const auto text = item->text();
+            const auto value = text.toDouble(&ok);
+
+            if (ok)
+                QApplication::clipboard()->setText(QString::number(value, 'f', 2));
+            else
+                QApplication::clipboard()->setText(text); // Если значение не число, копируем текст как есть
+        }
+
+        QSettings settings;
+        if (settings.value(PriceSettings::showInEveOnFpcKey, PriceSettings::showInEveOnFpcDefault).toBool())
+        {
+            const auto idItem = mDataView->item(row, 0);
+            if (idItem != nullptr)
+            {
+                const auto id = idItem->text().toULongLong();
+                if (id != EveType::invalidId)
+                    emit showInEve(id);
+            }
+        }
+    }
+
+    // void CustomFPCDialog::copyData(int row) const
+    // {
+    //     const auto priceItem = mDataView->item(row, 1);
+    //     if (priceItem != nullptr)
+    //     {
+    //         auto ok = false;
+    //         const auto price = priceItem->text().toDouble(&ok);
+
+    //         if (ok)
+    //             QApplication::clipboard()->setText(QString::number(price, 'f', 2));
+    //     }
+
+    //     QSettings settings;
+    //     if (settings.value(PriceSettings::showInEveOnFpcKey, PriceSettings::showInEveOnFpcDefault).toBool())
+    //     {
+    //         const auto id = mDataView->item(row, 0)->text().toULongLong();
+    //         if (id != EveType::invalidId)
+    //             emit showInEve(id);
+    //     }
+    // }
+}
