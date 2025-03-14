@@ -41,6 +41,7 @@ namespace Evernus
     public:
         enum
         {
+            idColumn,
             nameColumn,
             avgVolumeColumn,
             medianDstVolume,
