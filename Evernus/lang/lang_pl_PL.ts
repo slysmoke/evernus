@@ -276,7 +276,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
 <context>
     <name>EditMenu_base</name>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
@@ -284,7 +284,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
@@ -292,7 +292,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
@@ -300,7 +300,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
@@ -308,7 +308,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation type="unfinished">&amp;Kopiuj</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
@@ -316,7 +316,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
@@ -324,7 +324,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
@@ -332,7 +332,7 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
@@ -2702,12 +2702,12 @@ Czy na pewno chcesz kontynuować (może to spowodować wyciek danych logowania)?
         <translation type="unfinished">Ilość</translation>
     </message>
     <message>
-        <location filename="../CustomFPCDialog.cpp" line="80"/>
+        <location filename="../CustomFPCDialog.cpp" line="184"/>
         <source>Invalid Input</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../CustomFPCDialog.cpp" line="80"/>
+        <location filename="../CustomFPCDialog.cpp" line="184"/>
         <source>The first column must contain integers only.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3520,9 +3520,8 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
         <translation>Pozostały czas</translation>
     </message>
     <message>
-        <location filename="../ExternalOrderBuyModel.cpp" line="82"/>
         <source>Imported</source>
-        <translation>Zaimportowano</translation>
+        <translation type="vanished">Zaimportowano</translation>
     </message>
     <message>
         <location filename="../ExternalOrderBuyModel.cpp" line="95"/>
@@ -3535,6 +3534,11 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
         <location filename="../ExternalOrderBuyModel.cpp" line="295"/>
         <source>Region</source>
         <translation>Region</translation>
+    </message>
+    <message>
+        <location filename="../ExternalOrderBuyModel.cpp" line="82"/>
+        <source>Last modified</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ExternalOrderBuyModel.cpp" line="103"/>
@@ -3567,7 +3571,7 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
         <translation>%1 skoków</translation>
     </message>
     <message>
-        <location filename="../ExternalOrderBuyModel.cpp" line="375"/>
+        <location filename="../ExternalOrderBuyModel.cpp" line="387"/>
         <source>Your order</source>
         <translation>Twoje zlecenie</translation>
     </message>
@@ -3575,7 +3579,7 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
 <context>
     <name>Evernus::ExternalOrderSellModel</name>
     <message>
-        <location filename="../ExternalOrderSellModel.cpp" line="331"/>
+        <location filename="../ExternalOrderSellModel.cpp" line="344"/>
         <source>Your order</source>
         <translation>Twoje zlecenie</translation>
     </message>
@@ -3606,6 +3610,11 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
         <location filename="../ExternalOrderSellModel.cpp" line="108"/>
         <source>Total profit</source>
         <translation>Całkowity zysk</translation>
+    </message>
+    <message>
+        <location filename="../ExternalOrderSellModel.cpp" line="79"/>
+        <source>Last modified</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ExternalOrderSellModel.cpp" line="92"/>
@@ -3659,9 +3668,8 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
         <translation>Pozostały czas</translation>
     </message>
     <message>
-        <location filename="../ExternalOrderSellModel.cpp" line="79"/>
         <source>Imported</source>
-        <translation>Zaimportowano</translation>
+        <translation type="vanished">Zaimportowano</translation>
     </message>
 </context>
 <context>
@@ -4475,6 +4483,11 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
         <translation>Zabezpieczenie:</translation>
     </message>
     <message>
+        <location filename="../ImportingAnalysisWidget.cpp" line="152"/>
+        <source>Median volume:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Addtional cost added to buy price. This is the percetange of the base price.</source>
         <translation type="vanished">Dodatkowy koszt dodany do ceny kupna. Jest to procent z ceny bazowej.</translation>
     </message>
@@ -4502,11 +4515,6 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
         <location filename="../ImportingAnalysisWidget.cpp" line="145"/>
         <source>Hide item types which have 0 source orders when source price type is set to &quot;Sell&quot;.</source>
         <translation>Ukryj dane, które mają 0 zleceń sprzedaży kiedy typ źródła to &quot;Kupno&quot;.</translation>
-    </message>
-    <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="152"/>
-        <source>Avg. volume:</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ImportingAnalysisWidget.cpp" line="168"/>
@@ -4547,77 +4555,82 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
 <context>
     <name>Evernus::ImportingDataModel</name>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="148"/>
+        <location filename="../ImportingDataModel.cpp" line="153"/>
         <source>Double-click for detailed market information.</source>
         <translation>Kliknij dwa razy, aby zobaczyć szczegółowe informacje.</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="168"/>
+        <location filename="../ImportingDataModel.cpp" line="173"/>
+        <source>ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ImportingDataModel.cpp" line="175"/>
         <source>Name</source>
         <translation>Nazwa</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="170"/>
+        <location filename="../ImportingDataModel.cpp" line="177"/>
         <source>Avg. dst. volume</source>
         <translation>Średni docelowy wolumen</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="172"/>
+        <location filename="../ImportingDataModel.cpp" line="179"/>
         <source>Median dst. volume</source>
         <translation>Mediana docelowego wolumenu</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="174"/>
+        <location filename="../ImportingDataModel.cpp" line="181"/>
         <source>Dst. volume mean absolute deviation</source>
         <translation>Średnie odchylenie bezwzględne decelowego wolumenu</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="176"/>
+        <location filename="../ImportingDataModel.cpp" line="183"/>
         <source>Dst. remaining volume</source>
         <translation>Pozostały wolumen u celu</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="178"/>
+        <location filename="../ImportingDataModel.cpp" line="185"/>
         <source>Relative dst. remaining volume</source>
         <translation>Relatywny wolumen u celu</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="180"/>
+        <location filename="../ImportingDataModel.cpp" line="187"/>
         <source>Source order count</source>
         <translation>Ilość zleceń u źródła</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="182"/>
+        <location filename="../ImportingDataModel.cpp" line="189"/>
         <source>Destination order count</source>
         <translation>Ilość zleceń u celu</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="184"/>
+        <location filename="../ImportingDataModel.cpp" line="191"/>
         <source>5% volume destination price</source>
         <translation>Cena 5% celu</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="186"/>
+        <location filename="../ImportingDataModel.cpp" line="193"/>
         <source>5% volume source price</source>
         <translation>Cena 5% źródła</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="188"/>
+        <location filename="../ImportingDataModel.cpp" line="195"/>
         <source>Import price (src. price + price per m³ + collateral)</source>
         <translation>Cena importu (cena źródła + cena za m³ + zabezpieczenie)</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="190"/>
+        <location filename="../ImportingDataModel.cpp" line="197"/>
         <source>Price difference</source>
         <translation>Różnica cen</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="192"/>
+        <location filename="../ImportingDataModel.cpp" line="199"/>
         <source>Margin</source>
         <translation>Marża</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="194"/>
+        <location filename="../ImportingDataModel.cpp" line="201"/>
         <source>Projected profit</source>
         <translation>Przewidywany zysk</translation>
     </message>
@@ -5158,12 +5171,12 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
 <context>
     <name>Evernus::InterRegionTypeDetailsWidget</name>
     <message>
-        <location filename="../InterRegionTypeDetailsWidget.cpp" line="43"/>
+        <location filename="../InterRegionTypeDetailsWidget.cpp" line="45"/>
         <source>Individual</source>
         <translation>Pojedyncze</translation>
     </message>
     <message>
-        <location filename="../InterRegionTypeDetailsWidget.cpp" line="50"/>
+        <location filename="../InterRegionTypeDetailsWidget.cpp" line="52"/>
         <source>Combined</source>
         <translation>Połączone</translation>
     </message>
@@ -5584,7 +5597,7 @@ Jeśli wybierzesz &apos;Tak&apos; przyjmujesz na siebie pełną odpowiedzialnoś
     </message>
     <message>
         <location filename="../LookupActionGroup.cpp" line="32"/>
-        <source>Lookup item on evemarket.gitlab.io</source>
+        <source>Lookup item on evemarketbrowser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8936,12 +8949,12 @@ Zapimportuj dane z zakładki zleceń/aktywów lub przy użyciu narzędzia marży
 <context>
     <name>Evernus::StandardModelProxyWidget</name>
     <message>
-        <location filename="../StandardModelProxyWidget.cpp" line="52"/>
+        <location filename="../StandardModelProxyWidget.cpp" line="54"/>
         <source>Show in EVE</source>
         <translation>Pokaż w EVE</translation>
     </message>
     <message>
-        <location filename="../StandardModelProxyWidget.cpp" line="57"/>
+        <location filename="../StandardModelProxyWidget.cpp" line="59"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopiuj</translation>
     </message>

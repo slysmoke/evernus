@@ -25,7 +25,7 @@
 <context>
     <name>EditMenu_base</name>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
@@ -33,7 +33,7 @@
         <translation>&amp;Отменить</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
@@ -41,7 +41,7 @@
         <translation>&amp;Повторить</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
@@ -49,7 +49,7 @@
         <translation>Вырезать</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
@@ -57,7 +57,7 @@
         <translation>Копировать</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
@@ -65,7 +65,7 @@
         <translation>Вставить</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
@@ -73,7 +73,7 @@
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
@@ -81,7 +81,7 @@
         <translation>Очистить</translation>
     </message>
     <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.51-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
+        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.52-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
         <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
         <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
         <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
@@ -1794,12 +1794,12 @@ Total: %7</source>
         <translation>Кол-во</translation>
     </message>
     <message>
-        <location filename="../CustomFPCDialog.cpp" line="80"/>
+        <location filename="../CustomFPCDialog.cpp" line="184"/>
         <source>Invalid Input</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../CustomFPCDialog.cpp" line="80"/>
+        <location filename="../CustomFPCDialog.cpp" line="184"/>
         <source>The first column must contain integers only.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2493,8 +2493,12 @@ Do you want to try to continue? The application may not launch.</source>
     </message>
     <message>
         <location filename="../ExternalOrderBuyModel.cpp" line="82"/>
+        <source>Last modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Imported</source>
-        <translation>Импортировано</translation>
+        <translation type="vanished">Импортировано</translation>
     </message>
     <message>
         <location filename="../ExternalOrderBuyModel.cpp" line="84"/>
@@ -2539,7 +2543,7 @@ Do you want to try to continue? The application may not launch.</source>
         <translation>%1 прыгов</translation>
     </message>
     <message>
-        <location filename="../ExternalOrderBuyModel.cpp" line="375"/>
+        <location filename="../ExternalOrderBuyModel.cpp" line="387"/>
         <source>Your order</source>
         <translation>Ваш ордер</translation>
     </message>
@@ -2592,8 +2596,12 @@ Do you want to try to continue? The application may not launch.</source>
     </message>
     <message>
         <location filename="../ExternalOrderSellModel.cpp" line="79"/>
+        <source>Last modified</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Imported</source>
-        <translation>Импортировано</translation>
+        <translation type="vanished">Импортировано</translation>
     </message>
     <message>
         <location filename="../ExternalOrderSellModel.cpp" line="81"/>
@@ -2627,7 +2635,7 @@ Do you want to try to continue? The application may not launch.</source>
         <translation>Ордера</translation>
     </message>
     <message>
-        <location filename="../ExternalOrderSellModel.cpp" line="331"/>
+        <location filename="../ExternalOrderSellModel.cpp" line="344"/>
         <source>Your order</source>
         <translation>Твой ордер</translation>
     </message>
@@ -3255,8 +3263,12 @@ Do you want to try to continue? The application may not launch.</source>
     </message>
     <message>
         <location filename="../ImportingAnalysisWidget.cpp" line="152"/>
+        <source>Median volume:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Avg. volume:</source>
-        <translation>Средний объем:</translation>
+        <translation type="vanished">Средний объем:</translation>
     </message>
     <message>
         <location filename="../ImportingAnalysisWidget.cpp" line="168"/>
@@ -3297,77 +3309,82 @@ Do you want to try to continue? The application may not launch.</source>
 <context>
     <name>Evernus::ImportingDataModel</name>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="148"/>
+        <location filename="../ImportingDataModel.cpp" line="153"/>
         <source>Double-click for detailed market information.</source>
         <translation>Дважды щелкните для получения подробной информации о рынке.</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="168"/>
+        <location filename="../ImportingDataModel.cpp" line="173"/>
+        <source>ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ImportingDataModel.cpp" line="175"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="170"/>
+        <location filename="../ImportingDataModel.cpp" line="177"/>
         <source>Avg. dst. volume</source>
         <translation>Средний. Напр. объем</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="172"/>
+        <location filename="../ImportingDataModel.cpp" line="179"/>
         <source>Median dst. volume</source>
         <translation>Медианный объем назначения</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="174"/>
+        <location filename="../ImportingDataModel.cpp" line="181"/>
         <source>Dst. volume mean absolute deviation</source>
         <translation>среднее абсолютное отклонение тома đích</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="176"/>
+        <location filename="../ImportingDataModel.cpp" line="183"/>
         <source>Dst. remaining volume</source>
         <translation>Ост. оставшийся объем</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="178"/>
+        <location filename="../ImportingDataModel.cpp" line="185"/>
         <source>Relative dst. remaining volume</source>
         <translation>Относительный оставшийся объем</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="180"/>
+        <location filename="../ImportingDataModel.cpp" line="187"/>
         <source>Source order count</source>
         <translation>Количество заказов источника</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="182"/>
+        <location filename="../ImportingDataModel.cpp" line="189"/>
         <source>Destination order count</source>
         <translation>Количество заказов по назначению</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="184"/>
+        <location filename="../ImportingDataModel.cpp" line="191"/>
         <source>5% volume destination price</source>
         <translation>5% цена назначения объема</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="186"/>
+        <location filename="../ImportingDataModel.cpp" line="193"/>
         <source>5% volume source price</source>
         <translation>5% объема исходной цены</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="188"/>
+        <location filename="../ImportingDataModel.cpp" line="195"/>
         <source>Import price (src. price + price per m³ + collateral)</source>
         <translation>Импортная цена (ист. цена + цена за м³ + залог)</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="190"/>
+        <location filename="../ImportingDataModel.cpp" line="197"/>
         <source>Price difference</source>
         <translation>Разница в цене</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="192"/>
+        <location filename="../ImportingDataModel.cpp" line="199"/>
         <source>Margin</source>
         <translation>Маржа</translation>
     </message>
     <message>
-        <location filename="../ImportingDataModel.cpp" line="194"/>
+        <location filename="../ImportingDataModel.cpp" line="201"/>
         <source>Projected profit</source>
         <translation>Прогнозируемая прибыль</translation>
     </message>
@@ -3854,12 +3871,12 @@ Do you want to try to continue? The application may not launch.</source>
 <context>
     <name>Evernus::InterRegionTypeDetailsWidget</name>
     <message>
-        <location filename="../InterRegionTypeDetailsWidget.cpp" line="43"/>
+        <location filename="../InterRegionTypeDetailsWidget.cpp" line="45"/>
         <source>Individual</source>
         <translation>Индивидуальный</translation>
     </message>
     <message>
-        <location filename="../InterRegionTypeDetailsWidget.cpp" line="50"/>
+        <location filename="../InterRegionTypeDetailsWidget.cpp" line="52"/>
         <source>Combined</source>
         <translation>Комбинированный</translation>
     </message>
@@ -4238,7 +4255,7 @@ Do you want to try to continue? The application may not launch.</source>
     </message>
     <message>
         <location filename="../LookupActionGroup.cpp" line="32"/>
-        <source>Lookup item on evemarket.gitlab.io</source>
+        <source>Lookup item on evemarketbrowser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6996,12 +7013,12 @@ Please import prices from Orders/Assets tab or by using Margin tool.</source>
 <context>
     <name>Evernus::StandardModelProxyWidget</name>
     <message>
-        <location filename="../StandardModelProxyWidget.cpp" line="52"/>
+        <location filename="../StandardModelProxyWidget.cpp" line="54"/>
         <source>Show in EVE</source>
         <translation>Показать в EVE</translation>
     </message>
     <message>
-        <location filename="../StandardModelProxyWidget.cpp" line="57"/>
+        <location filename="../StandardModelProxyWidget.cpp" line="59"/>
         <source>&amp;Copy</source>
         <translation>Копировать</translation>
     </message>
