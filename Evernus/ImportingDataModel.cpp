@@ -82,7 +82,7 @@ namespace Evernus
                 case avgVolumeColumn:
                     return locale.toString(data.mAvgVolume, 'f', 0);
                 case medianDstVolume:
-                    return locale.toString(data.mMedianVolume);
+                    return locale.toString(data.mMedianVolume, 'f', 0);
                 case madDstVolume:
                     return locale.toString(data.mVolumeMAD, 'f', 0);
                 case dstVolumeColumn:
@@ -246,6 +246,7 @@ namespace Evernus
                                           int aggrDays,
                                           double pricePerM3,
                                           double collateral,
+                                          double priceMod,
                                           PriceType collateralType,
                                           bool hideEmptySell)
     {
@@ -488,7 +489,7 @@ namespace Evernus
 
             const auto collateralPrice = (collateralType == PriceType::Buy) ? (data.mSrcPrice) : (data.mDstPrice);
 
-            data.mImportPrice = data.mSrcPrice + collateralPrice * collateral + mDataProvider.getTypeVolume(data.mId) * pricePerM3;
+            data.mImportPrice = (data.mSrcPrice + collateralPrice * collateral + mDataProvider.getTypeVolume(data.mId) * pricePerM3) * (1 + priceMod);
             data.mPriceDifference = data.mDstPrice - data.mImportPrice;
             data.mMargin = (qFuzzyIsNull(data.mDstPrice)) ? (0.) : (100. * data.mPriceDifference / data.mDstPrice);
             data.mProjectedProfit = data.mMedianVolume * data.mPriceDifference;

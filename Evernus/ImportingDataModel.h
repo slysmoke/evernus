@@ -93,6 +93,7 @@ namespace Evernus
                           int aggrDays,
                           double pricePerM3,
                           double collateral,
+                          double priceMod,
                           PriceType collateralType,
                           bool hideEmptySell);
 

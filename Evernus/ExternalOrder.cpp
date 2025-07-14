@@ -36,6 +36,17 @@ namespace Evernus
         mTypeId = id;
     }
 
+    quint64 ExternalOrder::getId() const noexcept
+    {
+        return mOrderId;
+    }
+
+    void ExternalOrder::setId(quint64 id) noexcept
+    {
+        mOrderId = id;
+    }
+
+
     quint64 ExternalOrder::getStationId() const noexcept
     {
         return mLocationId;

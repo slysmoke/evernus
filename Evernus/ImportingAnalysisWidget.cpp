@@ -129,6 +129,9 @@ namespace Evernus
         mCollateralEdit->setToolTip(tr("Additional cost added to buy price. This is the percentage of the base price."));
         mCollateralEdit->setValue(settings.value(MarketAnalysisSettings::importingCollateralKey).toInt());
 
+        
+
+
         const auto collateralType = static_cast<PriceType>(
             settings.value(MarketAnalysisSettings::importingCollateralPriceTypeKey, MarketAnalysisSettings::importingCollateralPriceTypeDefault).toInt());
 
@@ -139,6 +142,21 @@ namespace Evernus
         mCollateralSellTypeBtn = new QRadioButton{tr("sell"), this};
         toolBarLayout->addWidget(mCollateralSellTypeBtn);
         mCollateralSellTypeBtn->setChecked(collateralType == PriceType::Sell);
+
+        toolBarLayout->addWidget(new QLabel{ tr("Src. Price mod:"), this });
+
+        mPriceModEdit = new QSpinBox{ this };
+        toolBarLayout->addWidget(mPriceModEdit);
+        mPriceModEdit->setRange(-100, 100);
+        mPriceModEdit->setSuffix(locale().percent());
+        mPriceModEdit->setToolTip(tr("Moddifing source price. This is the percentage of the base price."));
+        mPriceModEdit->setValue(settings.value(MarketAnalysisSettings::importingPriceModKey).toInt());
+
+        
+
+
+        toolBarLayout->addItem(new QSpacerItem(200, 10, QSizePolicy::Expanding, QSizePolicy::Minimum));
+
 
         mIgnoreEmptySellBtn = new QCheckBox{tr("Hide empty source sell orders"), this};
         toolBarLayout->addWidget(mIgnoreEmptySellBtn);
@@ -165,7 +183,7 @@ namespace Evernus
         toolBarLayout->addWidget(mMaxAvgVolumeEdit);
         mMaxAvgVolumeEdit->setValidator(filterValueValidator);
 
-        toolBarLayout->addWidget(new QLabel{tr("Price diff.:"), this});
+        toolBarLayout->addWidget(new QLabel{tr("Proj. profit:"), this});
 
         value = settings.value(MarketAnalysisSettings::minPriceDifferenceFilterKey);
 
@@ -284,6 +302,7 @@ namespace Evernus
         const auto aggrDays = mAggrDaysEdit->value();
         const auto pricePerM3 = mPricePerM3Edit->value();
         const auto collateral = mCollateralEdit->value() / 100.;
+        const auto priceMod = mPriceModEdit->value() / 100.;
         const auto collateralPriceType = (mCollateralBuyTypeBtn->isChecked()) ? (PriceType::Buy) : (PriceType::Sell);
         const auto hideEmptySell = mIgnoreEmptySellBtn->isChecked();
         const auto minAvgVolume = mMinAvgVolumeEdit->text();
@@ -298,6 +317,7 @@ namespace Evernus
         settings.setValue(MarketAnalysisSettings::importingAggrDaysKey, aggrDays);
         settings.setValue(MarketAnalysisSettings::importingPricePerM3Key, pricePerM3);
         settings.setValue(MarketAnalysisSettings::importingCollateralKey, collateral);
+        settings.setValue(MarketAnalysisSettings::importingPriceModKey, priceMod);
         settings.setValue(MarketAnalysisSettings::importingCollateralPriceTypeKey, static_cast<int>(collateralPriceType));
         settings.setValue(MarketAnalysisSettings::importingHideEmptySellOrdersKey, hideEmptySell);
         settings.setValue(MarketAnalysisSettings::minAvgVolumeFilterKey, minAvgVolume);
@@ -330,6 +350,7 @@ namespace Evernus
                                     std::min(analysisDays, aggrDays),
                                     pricePerM3,
                                     collateral,
+                                    priceMod,
                                     collateralPriceType,
                                     hideEmptySell);
 

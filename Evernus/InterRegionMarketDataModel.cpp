@@ -88,9 +88,13 @@ namespace Evernus
                 case differenceColumn:
                     return TextUtils::currencyToString(data.mDifference, locale);
                 case volumeColumn:
-                    return locale.toString(data.mVolume);
+                    return locale.toString(data.mVolume, 'f', 0);
                 case marginColumn:
                     return QStringLiteral("%1%2").arg(locale.toString(data.mMargin, 'f', 2)).arg(locale.percent());
+                case srcSellBuyoutColumn:
+                    return TextUtils::currencyToString(data.mSrcSellBuyout, locale);
+                case dstSellBuyoutColumn:
+                    return TextUtils::currencyToString(data.mDstSellBuyout, locale);
                 }
             }
             break;
@@ -122,6 +126,11 @@ namespace Evernus
                 return data.mVolume;
             case marginColumn:
                 return data.mMargin;
+            case srcSellBuyoutColumn:
+                return data.mSrcSellBuyout;
+            case dstSellBuyoutColumn:
+                return data.mDstSellBuyout;
+
             }
             break;
         case Qt::UserRole + 1:
@@ -179,6 +188,10 @@ namespace Evernus
                 return tr("30-day avg. min. volume");
             case marginColumn:
                 return tr("Margin");
+            case srcSellBuyoutColumn:
+                return tr("Buyout price (source, sell)");
+            case dstSellBuyoutColumn:
+                return tr("Buyout price (dest, sell)");
             }
         }
 
@@ -249,6 +262,7 @@ namespace Evernus
             quint64 mVolume = 0;
             quint64 mBuyOrderCount = 0;
             quint64 mSellOrderCount = 0;
+            double mSellBuyout = 0.;
         };
 
         RegionMap<TypeMap<AggrTypeData>> aggrTypeData;
@@ -288,6 +302,11 @@ namespace Evernus
                                                             avgPrice30,
                                                             mDiscardBogusOrders,
                                                             mBogusOrderThreshold);
+                for (const auto& orderRef : typeSellOrders)
+                {
+                    const auto& order = orderRef.get();
+                    data.mSellBuyout += order.getPrice() * order.getVolumeRemaining();
+                }
 
                 aggrTypeData[regionHistory.first].emplace(type.first, std::move(data));
 
@@ -337,6 +356,8 @@ namespace Evernus
                     data.mVolume = std::min(type.second.mVolume, dstData->second.mVolume);
                     data.mSrcRegion = srcRegion.first;
                     data.mDstRegion = dstRegion.first;
+                    data.mSrcSellBuyout = type.second.mSellBuyout;
+                    data.mDstSellBuyout = dstData->second.mSellBuyout;
 
                     auto realSellPrice = getDstPrice(data);
                     auto realBuyPrice = getSrcPrice(data);

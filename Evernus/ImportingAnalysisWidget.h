@@ -86,6 +86,7 @@ namespace Evernus
         QSpinBox *mAggrDaysEdit = nullptr;
         QDoubleSpinBox *mPricePerM3Edit = nullptr;
         QSpinBox *mCollateralEdit = nullptr;
+        QSpinBox *mPriceModEdit = nullptr;
         QRadioButton *mCollateralBuyTypeBtn = nullptr;
         QRadioButton *mCollateralSellTypeBtn = nullptr;
         QCheckBox *mIgnoreEmptySellBtn = nullptr;

@@ -96,6 +96,10 @@ namespace Evernus
             volumeColumn,
             marginColumn,
 
+
+            srcSellBuyoutColumn,
+            dstSellBuyoutColumn,
+
             numColumns
         };
 
@@ -115,6 +119,11 @@ namespace Evernus
             quint64 mSrcSellOrderCount = 0;
             quint64 mDstBuyOrderCount = 0;
             quint64 mDstSellOrderCount = 0;
+
+            double mSrcSellBuyout = 0.;
+            double mDstSellBuyout = 0.;
+            
+            
         };
 
         const EveDataProvider &mDataProvider;

@@ -65,6 +65,10 @@ namespace Evernus
         TypeIdType getTypeId() const noexcept;
         void setTypeId(TypeIdType id) noexcept;
 
+
+        quint64 getId() const noexcept;
+        void setId(quint64 id) noexcept;
+
         quint64 getStationId() const noexcept;
         void setStationId(quint64 id) noexcept;
 
@@ -108,6 +112,7 @@ namespace Evernus
     private:
         Type mType = Type::Buy;
         TypeIdType mTypeId = TypeIdType{};
+        quint64 mOrderId = 0;
         quint64 mLocationId = 0;
         uint mSolarSystemId = 0;
         uint mRegionId = 0;

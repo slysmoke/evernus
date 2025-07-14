@@ -76,9 +76,12 @@ namespace Evernus
                 case sellOrderCountColumn:
                     return locale.toString(data.mSellOrderCount);
                 case volumeColumn:
-                    return locale.toString(data.mVolume);
+                    return locale.toString(data.mVolume, 'f' , 0);
                 case marginColumn:
                     return QString{"%1%2"}.arg(locale.toString(data.mMargin, 'f', 2)).arg(locale.percent());
+                case sellBuyoutColumn:
+                    return TextUtils::currencyToString(data.mSellBuyout, locale);
+
                 }
             }
             break;
@@ -102,6 +105,9 @@ namespace Evernus
                 return data.mVolume;
             case marginColumn:
                 return data.mMargin;
+            case sellBuyoutColumn:
+                return data.mSellBuyout;
+
             }
             break;
         case Qt::ToolTipRole:
@@ -143,6 +149,9 @@ namespace Evernus
                 return tr("Avg. volume");
             case marginColumn:
                 return tr("Margin");
+            case sellBuyoutColumn:
+                return tr("Buyout");
+
             }
         }
 
@@ -194,6 +203,7 @@ namespace Evernus
         TypeMap<uint> sellVolumes, buyVolumes;
 
         std::unordered_set<EveType::IdType> usedTypes;
+        std::unordered_set<uint64_t> seenBuyOrderIds;
 
         for (const auto &order : orders)
         {
@@ -203,8 +213,11 @@ namespace Evernus
             const auto typeId = order.getTypeId();
             if (order.getType() == ExternalOrder::Type::Buy)
             {
-                buyOrders[typeId].insert(std::cref(order));
-                buyVolumes[typeId] += order.getVolumeRemaining();
+                if (seenBuyOrderIds.insert(order.getId()).second) 
+                {
+                    buyOrders[typeId].insert(std::cref(order));
+                    buyVolumes[typeId] += order.getVolumeRemaining();
+                }
             }
             else
             {
@@ -272,6 +285,9 @@ namespace Evernus
                                                             mBogusOrderThreshold);
             }
 
+            
+
+
             double realSellPrice, realBuyPrice;
             if (useSkillsForDifference)
             {
@@ -286,6 +302,13 @@ namespace Evernus
 
             data.mDifference = realSellPrice - realBuyPrice;
             data.mMargin = (qFuzzyIsNull(realSellPrice)) ? (0.) : (100. * data.mDifference / realSellPrice);
+
+            for (const auto& orderRef : typeSellOrders)
+            {
+                const auto& order = orderRef.get();
+                data.mSellBuyout += order.getPrice() * order.getVolumeRemaining();
+            }
+
 
             mData.emplace_back(std::move(data));
         }

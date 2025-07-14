@@ -60,7 +60,7 @@ namespace Evernus
         };
 
         return checkRange(ImportingDataModel::medianDstVolume, mMinAvgVolume, mMaxAvgVolume) &&
-               checkRange(ImportingDataModel::priceDifferenceColumn, mMinPriceDifference, mMaxPriceDifference) &&
+               checkRange(ImportingDataModel::projectedProfitColumn, mMinPriceDifference, mMaxPriceDifference) &&
                checkRange(ImportingDataModel::marginColumn, mMinMargin, mMaxMargin);
     }
 }

@@ -63,17 +63,18 @@
 #include "Defines.h"
 #include "Citadel.h"
 
+#ifdef Q_OS_WIN
+    #include <windows.h>
+    #include <dwmapi.h>
+    #pragma comment(lib, "Dwmapi.lib")
 
-#include <windows.h>
-#include <dwmapi.h>
-#pragma comment(lib, "Dwmapi.lib")
+    #ifndef DWMWA_CAPTION_COLOR
+    #define DWMWA_CAPTION_COLOR 35
+    #endif
 
-#ifndef DWMWA_CAPTION_COLOR
-#define DWMWA_CAPTION_COLOR 35
-#endif
-
-#ifndef DWMWA_BORDER_COLOR
-#define DWMWA_BORDER_COLOR 36
+    #ifndef DWMWA_BORDER_COLOR
+    #define DWMWA_BORDER_COLOR 36
+    #endif
 #endif
 
 #if EVERNUS_CREATE_DUMPS
@@ -140,13 +141,14 @@ namespace
 }
 #endif
 
-void setTitleBarColor(HWND hwnd) {
-    COLORREF titlebar_color = RGB(43, 43, 43);  // Темный цвет
+#ifdef Q_OS_WIN
+    void setTitleBarColor(HWND hwnd) {
+        COLORREF titlebar_color = RGB(43, 43, 43);
 
-    DwmSetWindowAttribute(hwnd, DWMWA_BORDER_COLOR, &titlebar_color, sizeof(titlebar_color));
-    DwmSetWindowAttribute(hwnd, DWMWA_CAPTION_COLOR, &titlebar_color, sizeof(titlebar_color));
-}
-
+        DwmSetWindowAttribute(hwnd, DWMWA_BORDER_COLOR, &titlebar_color, sizeof(titlebar_color));
+        DwmSetWindowAttribute(hwnd, DWMWA_CAPTION_COLOR, &titlebar_color, sizeof(titlebar_color));
+    }
+#endif
 
 int main(int argc, char *argv[])
 {
@@ -374,10 +376,13 @@ int main(int argc, char *argv[])
                 //QString styleSheet = QLatin1String(file.readAll());
             qApp->setStyle(QStyleFactory::create("fusion"));
             qDebug() << QStyleFactory::keys();
-            //qApp->setStyleSheet(styleSheet);  
+            //qApp->setStyleSheet(styleSheet);
+            
+            #ifdef Q_OS_WIN
 
-            HWND hwnd = (HWND)mainWnd.winId();
-            setTitleBarColor(hwnd);
+                HWND hwnd = (HWND)mainWnd.winId();
+                setTitleBarColor(hwnd);
+            #endif
 
             if (settings.value(Evernus::UISettings::mDarkModeKey, Evernus::UISettings::mDarkModeDefault).toBool()) {
 
@@ -385,7 +390,7 @@ int main(int argc, char *argv[])
                 
 
                 QPalette palette;
-                // Настраиваем палитру для цветовых ролей элементов интерфейса
+                
                 palette.setColor(QPalette::Window, QColor(53, 53, 53));
                 palette.setColor(QPalette::WindowText, Qt::white);
                 palette.setColor(QPalette::Base, QColor(25, 25, 25));

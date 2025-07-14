@@ -84,6 +84,7 @@ namespace Evernus
         const auto importingAnalysisDaysKey = QStringLiteral("marketAnalysis/importing/analysisDays");
         const auto importingPricePerM3Key = QStringLiteral("marketAnalysis/importing/pricePerM3");
         const auto importingCollateralKey = QStringLiteral("marketAnalysis/importing/collateral");
+        const auto importingPriceModKey = QStringLiteral("marketAnalysis/importing/priceMod");
         const auto importingCollateralPriceTypeKey = QStringLiteral("marketAnalysis/importing/collateralPriceType");
         const auto importingHideEmptySellOrdersKey = QStringLiteral("marketAnalysis/importing/hideEmptySellOrders");
         const auto reprocessingStationEfficiencyKey = QStringLiteral("marketAnalysis/reprocessing/stationEfficiency");

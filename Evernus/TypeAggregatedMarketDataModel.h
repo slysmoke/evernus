@@ -90,6 +90,7 @@ namespace Evernus
             buyOrderCountColumn,
             sellOrderCountColumn,
             marginColumn,
+            sellBuyoutColumn,
 
             numColumns
         };
@@ -102,6 +103,7 @@ namespace Evernus
             double mDifference = 0.;
             double mVolume = 0;
             double mMargin = 0.;
+            double mSellBuyout = 0.;
             quint64 mBuyOrderCount = 0;
             quint64 mSellOrderCount = 0;
         };
