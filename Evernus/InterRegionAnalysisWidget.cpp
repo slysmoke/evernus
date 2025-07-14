@@ -61,12 +61,16 @@ namespace Evernus
         , mInterRegionViewProxy{InterRegionMarketDataModel::getSrcRegionColumn(),
                                 InterRegionMarketDataModel::getDstRegionColumn(),
                                 InterRegionMarketDataModel::getVolumeColumn(),
-                                InterRegionMarketDataModel::getMarginColumn()}
+                                InterRegionMarketDataModel::getMarginColumn(),
+                                InterRegionMarketDataModel::getSrcBuyoutColumn(),
+                                InterRegionMarketDataModel::getDstBuyoutColumn(), this}
     {
         auto mainLayout = new QVBoxLayout{this};
 
         auto toolBarLayout = new FlowLayout{};
         mainLayout->addLayout(toolBarLayout);
+        
+        auto BuyoutLayout = new FlowLayout{};
 
         QSettings settings;
 
@@ -124,11 +128,56 @@ namespace Evernus
         mMaxInterRegionMarginEdit->setValidator(marginValidator);
         mMaxInterRegionMarginEdit->setPlaceholderText(locale().percent());
 
+        auto buyoutValidator = new QDoubleValidator(0, std::numeric_limits<double>::max(), 2, this);
+        buyoutValidator->setNotation(QDoubleValidator::StandardNotation);
+
+        
+
+        BuyoutLayout->addWidget(new QLabel{tr("Src Buyout:"), this});
+
+        value = settings.value(MarketAnalysisSettings::srcBuyoutMinKey);
+        mSrcBuyoutMinEdit = new QLineEdit{value.isValid() ? value.toString() : QString{}, this};
+        BuyoutLayout->addWidget(mSrcBuyoutMinEdit);
+        mSrcBuyoutMinEdit->setValidator(buyoutValidator);
+        mSrcBuyoutMinEdit->setPlaceholderText(QStringLiteral("ISK"));
+
+        BuyoutLayout->addWidget(new QLabel{tr("-"), this});
+
+        value = settings.value(MarketAnalysisSettings::srcBuyoutMaxKey);
+        mSrcBuyoutMaxEdit = new QLineEdit{value.isValid() ? value.toString() : QString{}, this};
+        BuyoutLayout->addWidget(mSrcBuyoutMaxEdit);
+        mSrcBuyoutMaxEdit->setValidator(buyoutValidator);
+        mSrcBuyoutMaxEdit->setPlaceholderText(QStringLiteral("ISK"));
+
+        BuyoutLayout->addWidget(new QLabel{tr("Dst Buyout:"), this});
+
+        value = settings.value(MarketAnalysisSettings::dstBuyoutMinKey);
+        mDstBuyoutMinEdit = new QLineEdit{value.isValid() ? value.toString() : QString{}, this};
+        BuyoutLayout->addWidget(mDstBuyoutMinEdit);
+        mDstBuyoutMinEdit->setValidator(buyoutValidator);
+        mDstBuyoutMinEdit->setPlaceholderText(QStringLiteral("ISK"));
+
+        BuyoutLayout->addWidget(new QLabel{tr("-"), this});
+
+        value = settings.value(MarketAnalysisSettings::dstBuyoutMaxKey);
+        mDstBuyoutMaxEdit = new QLineEdit{value.isValid() ? value.toString() : QString{}, this};
+        BuyoutLayout->addWidget(mDstBuyoutMaxEdit);
+        mDstBuyoutMaxEdit->setValidator(buyoutValidator);
+        mDstBuyoutMaxEdit->setPlaceholderText(QStringLiteral("ISK"));
+
+        mSrcBuyoutMinEdit->setFixedWidth(150);
+        mSrcBuyoutMaxEdit->setFixedWidth(150);
+        mDstBuyoutMinEdit->setFixedWidth(150);
+        mDstBuyoutMaxEdit->setFixedWidth(150);
+
+        
+
         auto filterBtn = new QPushButton{tr("Apply"), this};
-        toolBarLayout->addWidget(filterBtn);
+        BuyoutLayout->addWidget(filterBtn);
         connect(filterBtn, &QPushButton::clicked, this, &InterRegionAnalysisWidget::applyInterRegionFilter);
 
-        toolBarLayout->addWidget(new QLabel{tr("Press \"Apply\" to show results. Additional actions are available via the right-click menu."), this});
+        BuyoutLayout->addWidget(new QLabel{tr("Press \"Apply\" to show results. Additional actions are available via the right-click menu."), this});
+        mainLayout->addLayout(BuyoutLayout);
 
         mInterRegionDataStack = new QStackedWidget{this};
         mainLayout->addWidget(mInterRegionDataStack);
@@ -212,19 +261,33 @@ namespace Evernus
         const auto minMargin = mMinInterRegionMarginEdit->text();
         const auto maxMargin = mMaxInterRegionMarginEdit->text();
 
+        const auto srcBuyoutMin = mSrcBuyoutMinEdit->text();
+        const auto srcBuyoutMax = mSrcBuyoutMaxEdit->text();
+        const auto dstBuyoutMin = mDstBuyoutMinEdit->text();
+        const auto dstBuyoutMax = mDstBuyoutMaxEdit->text();
+
         QSettings settings;
         settings.setValue(MarketAnalysisSettings::minVolumeFilterKey, minVolume);
         settings.setValue(MarketAnalysisSettings::maxVolumeFilterKey, maxVolume);
         settings.setValue(MarketAnalysisSettings::minMarginFilterKey, minMargin);
         settings.setValue(MarketAnalysisSettings::maxMarginFilterKey, maxMargin);
+        settings.setValue(MarketAnalysisSettings::srcBuyoutMinKey, srcBuyoutMin);
+        settings.setValue(MarketAnalysisSettings::srcBuyoutMaxKey, srcBuyoutMax);
+        settings.setValue(MarketAnalysisSettings::dstBuyoutMinKey, dstBuyoutMin);
+        settings.setValue(MarketAnalysisSettings::dstBuyoutMaxKey, dstBuyoutMax);
 
-        mInterRegionViewProxy.setFilter(srcRegions,
-                                        dstRegions,
-                                        (minVolume.isEmpty()) ? (InterRegionMarketDataFilterProxyModel::VolumeValueType{}) : (minVolume.toUInt()),
-                                        (maxVolume.isEmpty()) ? (InterRegionMarketDataFilterProxyModel::VolumeValueType{}) : (maxVolume.toUInt()),
-                                        (minMargin.isEmpty()) ? (InterRegionMarketDataFilterProxyModel::MarginValueType{}) : (minMargin.toDouble()),
-                                        (maxMargin.isEmpty()) ? (InterRegionMarketDataFilterProxyModel::MarginValueType{}) : (maxMargin.toDouble()));
-
+        mInterRegionViewProxy.setFilter(
+            srcRegions,
+            dstRegions,
+            minVolume.isEmpty() ? InterRegionMarketDataFilterProxyModel::VolumeValueType{} : minVolume.toUInt(),
+            maxVolume.isEmpty() ? InterRegionMarketDataFilterProxyModel::VolumeValueType{} : maxVolume.toUInt(),
+            minMargin.isEmpty() ? InterRegionMarketDataFilterProxyModel::MarginValueType{} : minMargin.toDouble(),
+            maxMargin.isEmpty() ? InterRegionMarketDataFilterProxyModel::MarginValueType{} : maxMargin.toDouble(),
+            srcBuyoutMin.isEmpty() ? std::optional<double>{} : srcBuyoutMin.toDouble(),
+            srcBuyoutMax.isEmpty() ? std::optional<double>{} : srcBuyoutMax.toDouble(),
+            dstBuyoutMin.isEmpty() ? std::optional<double>{} : dstBuyoutMin.toDouble(),
+            dstBuyoutMax.isEmpty() ? std::optional<double>{} : dstBuyoutMax.toDouble()
+        );
         mInterRegionTypeDataView->horizontalHeader()->resizeSections(QHeaderView::ResizeToContents);
 
         if (!mRefreshedInterRegionData)

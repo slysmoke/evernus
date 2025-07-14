@@ -15,7 +15,6 @@
 #pragma once
 
 #include <unordered_set>
-
 #include <optional>
 
 #include <QSortFilterProxyModel>
@@ -28,6 +27,7 @@ namespace Evernus
     public:
         using VolumeValueType = std::optional<uint>;
         using MarginValueType = std::optional<double>;
+        using PriceValueType = std::optional<double>;
 
         using RegionList = std::unordered_set<uint>;
 
@@ -35,6 +35,8 @@ namespace Evernus
                                               int dstRegionColumn,
                                               int volumeColumn,
                                               int marginColumn,
+                                              int srcBuyoutColumn,
+                                              int dstBuyoutColumn,
                                               QObject *parent = nullptr);
         virtual ~InterRegionMarketDataFilterProxyModel() = default;
 
@@ -43,7 +45,11 @@ namespace Evernus
                        VolumeValueType minVolume,
                        VolumeValueType maxVolume,
                        MarginValueType minMargin,
-                       MarginValueType maxMargin);
+                       MarginValueType maxMargin,
+                       PriceValueType srcBuyoutMin,
+                       PriceValueType srcBuyoutMax,
+                       PriceValueType dstBuyoutMin,
+                       PriceValueType dstBuyoutMax);
 
     protected:
         virtual bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
@@ -53,11 +59,15 @@ namespace Evernus
         int mDstRegionColumn = 0;
         int mVolumeColumn = 0;
         int mMarginColumn = 0;
+        int mSrcBuyoutColumn = 0;
+        int mDstBuyoutColumn = 0;
 
         RegionList mSrcRegions;
         RegionList mDstRegions;
 
         VolumeValueType mMinVolume, mMaxVolume;
         MarginValueType mMinMargin, mMaxMargin;
+        PriceValueType mSrcBuyoutMin, mSrcBuyoutMax;
+        PriceValueType mDstBuyoutMin, mDstBuyoutMax;
     };
 }

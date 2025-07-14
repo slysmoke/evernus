@@ -23,73 +23,6 @@
     </message>
 </context>
 <context>
-    <name>EditMenu_base</name>
-    <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.53-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
-        <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
-        <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="51"/>
-        <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.53-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
-        <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
-        <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="62"/>
-        <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.53-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
-        <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
-        <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="73"/>
-        <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.53-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
-        <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
-        <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="87"/>
-        <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.53-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
-        <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
-        <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="101"/>
-        <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.53-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
-        <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
-        <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="112"/>
-        <source>Delete</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.53-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
-        <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
-        <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="123"/>
-        <source>Clear</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../_CPack_Packages/win64/IFW/Evernus-4.53-win64/packages/Evernus/data/bin/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
-        <location filename="../Debug/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
-        <location filename="../Release/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
-        <location filename="../RelWithDebInfo/QtQuick/Controls/Private/EditMenu_base.qml" line="134"/>
-        <source>Select All</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Evernus::AboutDialog</name>
     <message>
         <location filename="../AboutDialog.cpp" line="50"/>
@@ -3236,52 +3169,52 @@ Do you want to try to continue? The application may not launch.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="161"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="164"/>
         <source>Hide empty source sell orders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="163"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="166"/>
         <source>Hide item types which have 0 source orders when source price type is set to &quot;Sell&quot;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="170"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="173"/>
         <source>Median volume:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="186"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="189"/>
         <source>Proj. profit:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="202"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="205"/>
         <source>Margin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="218"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="221"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="225"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="228"/>
         <source>Press &quot;Apply&quot; to show results. Additional actions are available via the right-click menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="249"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="252"/>
         <source>Show details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="430"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="433"/>
         <source>Station change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ImportingAnalysisWidget.cpp" line="430"/>
+        <location filename="../ImportingAnalysisWidget.cpp" line="433"/>
         <source>Changing station requires data recalculation. Do you wish to do it now?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8497,95 +8430,95 @@ Please click on &quot;Import all&quot; after the update.</source>
 <context>
     <name>main</name>
     <message>
-        <location filename="../main.cpp" line="207"/>
+        <location filename="../main.cpp" line="209"/>
         <source>Evernus EVE Online trade tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="211"/>
+        <location filename="../main.cpp" line="213"/>
         <source>Force specific version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="212"/>
+        <location filename="../main.cpp" line="214"/>
         <source>Don&apos;t run internal updater</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="213"/>
+        <location filename="../main.cpp" line="215"/>
         <source>SSO client id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="214"/>
+        <location filename="../main.cpp" line="216"/>
         <source>SSO client secret</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="215"/>
+        <location filename="../main.cpp" line="217"/>
         <source>Max. log file size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="216"/>
+        <location filename="../main.cpp" line="218"/>
         <source>Max. log files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="217"/>
+        <location filename="../main.cpp" line="219"/>
         <source>Force Eve database update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="249"/>
-        <location filename="../main.cpp" line="264"/>
+        <location filename="../main.cpp" line="251"/>
+        <location filename="../main.cpp" line="266"/>
         <source>Already running</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="249"/>
+        <location filename="../main.cpp" line="251"/>
         <source>Evernus seems to be already running. If this is not the case, please remove &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="264"/>
+        <location filename="../main.cpp" line="266"/>
         <source>Evernus probably didn&apos;t close cleanly the last time. Do you want to try to perform a cleanup?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="273"/>
-        <location filename="../main.cpp" line="583"/>
-        <location filename="../main.cpp" line="592"/>
+        <location filename="../main.cpp" line="275"/>
+        <location filename="../main.cpp" line="590"/>
+        <location filename="../main.cpp" line="599"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="274"/>
+        <location filename="../main.cpp" line="276"/>
         <source>Couldn&apos;t remove &apos;%1&apos;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="537"/>
+        <location filename="../main.cpp" line="542"/>
         <source>New version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="538"/>
+        <location filename="../main.cpp" line="543"/>
         <source>Would you like to see what&apos;s new in this version?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="551"/>
+        <location filename="../main.cpp" line="558"/>
         <source>Citadel data import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="552"/>
+        <location filename="../main.cpp" line="559"/>
         <source>EVE doesn&apos;t provide any information about your access rights to citadels. This means, in order to fetch data from citadels, Evernus needs to ask EVE for data for all possible citadels in given regions. This usually takes a lot of time. After doing the first citadel import, the next imports will be much, much faster. From time to time, Evernus needs to refresh its citadel data and ask for all of it again - you can change the refresh period in the preferences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="603"/>
+        <location filename="../main.cpp" line="610"/>
         <source>Initialization error</source>
         <translation type="unfinished"></translation>
     </message>

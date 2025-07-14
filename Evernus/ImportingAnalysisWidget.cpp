@@ -154,8 +154,11 @@ namespace Evernus
 
         
 
-
-        toolBarLayout->addItem(new QSpacerItem(200, 10, QSizePolicy::Expanding, QSizePolicy::Minimum));
+        auto breakLine = new QWidget(this);
+        breakLine->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        breakLine->setMinimumHeight(0);
+        toolBarLayout->addWidget(breakLine);
+        
 
 
         mIgnoreEmptySellBtn = new QCheckBox{tr("Hide empty source sell orders"), this};

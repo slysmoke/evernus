@@ -88,6 +88,12 @@ namespace Evernus
         QLineEdit *mMaxInterRegionVolumeEdit = nullptr;
         QLineEdit *mMinInterRegionMarginEdit = nullptr;
         QLineEdit *mMaxInterRegionMarginEdit = nullptr;
+
+        QLineEdit *mSrcBuyoutMinEdit = nullptr;
+        QLineEdit *mSrcBuyoutMaxEdit = nullptr;
+        QLineEdit *mDstBuyoutMinEdit = nullptr;
+        QLineEdit *mDstBuyoutMaxEdit = nullptr;
+
         QStackedWidget *mInterRegionDataStack = nullptr;
         AdjustableTableView *mInterRegionTypeDataView = nullptr;
 

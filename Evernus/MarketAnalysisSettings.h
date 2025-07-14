@@ -77,6 +77,17 @@ namespace Evernus
         const auto dstRegionKey = QStringLiteral("marketAnalysis/interRegion/dstRegion");
         const auto srcStationKey = QStringLiteral("marketAnalysis/interRegion/srcStation");
         const auto dstStationKey = QStringLiteral("marketAnalysis/interRegion/dstStation");
+
+        const auto srcBuyoutMinKey = QStringLiteral("marketAnalysis/interRegion/srcBuyoutMin");
+        const auto srcBuyoutMaxKey = QStringLiteral("marketAnalysis/interRegion/srcBuyoutMax");
+        const auto dstBuyoutMinKey = QStringLiteral("marketAnalysis/interRegion/dstBuyoutMin");
+        const auto dstBuyoutMaxKey = QStringLiteral("marketAnalysis/interRegion/dstBuyoutMax");
+
+        const auto interRegionSrcBuyoutMinKey = QStringLiteral("marketAnalysis/interRegion/srcBuyoutMin");
+        const auto interRegionSrcBuyoutMaxKey = QStringLiteral("marketAnalysis/interRegion/srcBuyoutMax");
+        const auto interRegionDstBuyoutMinKey = QStringLiteral("marketAnalysis/interRegion/dstBuyoutMin");
+        const auto interRegionDstBuyoutMaxKey = QStringLiteral("marketAnalysis/interRegion/dstBuyoutMax");
+
         const auto useSkillsForDifferenceKey = QStringLiteral("marketAnalysis/useSkillsForDifference");
         const auto srcImportStationKey = QStringLiteral("marketAnalysis/importing/srcStation");
         const auto dstImportStationKey = QStringLiteral("marketAnalysis/importing/dstStation");

@@ -52,3 +52,9 @@ db
 build/*
 
 *.zip
+Evernus-Installer/CMakeFiles/CMakeDirectoryInformation.cmake
+Evernus-Installer/CMakeFiles/progress.marks
+Makefile
+Evernus/.lupdate/lang/lang_de_DE.ts.stamp
+Evernus/.lupdate/lang/lang_pl_PL.ts.stamp
+Evernus/.lupdate/lang/lang_ru_RU.ts.stamp

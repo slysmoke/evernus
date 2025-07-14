@@ -267,9 +267,9 @@ namespace Evernus
 
         RegionMap<TypeMap<AggrTypeData>> aggrTypeData;
 
-        for (const auto regionHistory : history)
+        for (const auto &regionHistory : history)
         {
-            for (const auto type : regionHistory.second)
+            for (const auto &type : regionHistory.second)
             {
                 AggrTypeData data;
 
@@ -323,14 +323,14 @@ namespace Evernus
         if (useSkillsForDifference)
             taxes = PriceUtils::calculateTaxes(*mCharacter);
 
-        for (const auto srcRegion : aggrTypeData)
+        for (const auto &srcRegion : aggrTypeData)
         {
             if (srcRegionId != 0 && srcRegion.first != srcRegionId)
                 continue;
 
             for (const auto type : srcRegion.second)
             {
-                for (const auto dstRegion : aggrTypeData)
+                for (const auto &dstRegion : aggrTypeData)
                 {
                     if ((dstRegionId != 0 && dstRegion.first != dstRegionId) || (dstRegion.first == srcRegion.first))
                         continue;
@@ -453,6 +453,16 @@ namespace Evernus
     int InterRegionMarketDataModel::getMarginColumn()
     {
         return marginColumn;
+    }
+
+    int InterRegionMarketDataModel::getSrcBuyoutColumn() 
+    {
+        return srcSellBuyoutColumn; 
+    }
+
+    int InterRegionMarketDataModel::getDstBuyoutColumn() 
+    {
+        return dstSellBuyoutColumn;
     }
 
     double InterRegionMarketDataModel::getSrcPrice(const TypeData &data) const noexcept

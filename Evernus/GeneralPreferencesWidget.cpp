@@ -83,7 +83,12 @@ namespace Evernus
 
         mUsePackagedVolumeBtn = new QCheckBox{tr("Use packaged size for ships and modules"), this};
         generalGroupLayout->addWidget(mUsePackagedVolumeBtn);
-        mUsePackagedVolumeBtn->setChecked(settings.value(UISettings::usePackagedVolumeKey, UISettings::usePackagedVolumeDefault).toBool());
+        //mUsePackagedVolumeBtn->setChecked(settings.value(UISettings::usePackagedVolumeKey, UISettings::usePackagedVolumeDefault).toBool());
+        QFont font = mUsePackagedVolumeBtn->font();
+        font.setStrikeOut(true);
+        mUsePackagedVolumeBtn->setFont(font);
+        mUsePackagedVolumeBtn->setChecked(false);
+        mUsePackagedVolumeBtn->setEnabled(false);
 
         mOmitCurrencySymbolBtn = new QCheckBox{tr("Omit currency symbol (requires restart)"), this};
         generalGroupLayout->addWidget(mOmitCurrencySymbolBtn);

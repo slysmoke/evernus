@@ -78,6 +78,8 @@ namespace Evernus
         static int getDstRegionColumn();
         static int getVolumeColumn();
         static int getMarginColumn();
+        static int getSrcBuyoutColumn();
+        static int getDstBuyoutColumn();
 
     private:
         enum

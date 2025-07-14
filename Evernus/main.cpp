@@ -534,20 +534,22 @@ int main(int argc, char *argv[])
                              webImporterPtr, &Evernus::ProxyWebExternalOrderImporter::handleNewPreferences);
             mainWnd.showAsSaved();
 
-            
-            if (!settings.value(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, false).toBool())
-            {
-                const auto ret = QMessageBox::question(
-                    &mainWnd,
-                    QCoreApplication::translate("main", "New version"),
-                    QCoreApplication::translate("main", "Would you like to see what's new in this version?")
-                );
+            #ifndef Q_OS_LINUX
+                if (!settings.value(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, false).toBool())
+                {
+                    const auto ret = QMessageBox::question(
+                        &mainWnd,
+                        QCoreApplication::translate("main", "New version"),
+                        QCoreApplication::translate("main", "Would you like to see what's new in this version?")
+                    );
 
-                if (ret == QMessageBox::Yes)
-                    QDesktopServices::openUrl(QUrl{QStringLiteral("https://github.com/slysmoke/evernus/releases")});
+                    if (ret == QMessageBox::Yes)
+                        QDesktopServices::openUrl(QUrl{QStringLiteral("https://github.com/slysmoke/evernus/releases")});
 
-                settings.setValue(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, true);
-            }
+                    settings.setValue(Evernus::UpdaterSettings::askedToShowReleaseNotesKey, true);
+                }
+            #endif
+
 
             if (settings.value(Evernus::ImportSettings::citadelAccessCacheWarningKey, Evernus::ImportSettings::citadelAccessCacheWarningDefault).toBool())
             {
