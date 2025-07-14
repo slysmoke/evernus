@@ -326,6 +326,7 @@ namespace Evernus
     {
         QNetworkRequest request{url};
         request.setHeader(QNetworkRequest::UserAgentHeader, getUserAgent());
+        request.setRawHeader("X-Compatibility-Date", "2025-07-14");
 
         return request;
     }
