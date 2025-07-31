@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-22.04, windows-2022]
+        os: [ubuntu-latest, windows-2022]
 
     steps:
       - name: Checkout repo
@@ -40,7 +40,7 @@ jobs:
           fi
 
       - name: Install dependencies (Linux)
-        if: matrix.os == 'ubuntu-22.04'
+        if: matrix.os == 'ubuntu-latest'
         run: |
           
           sudo apt update
@@ -83,4 +83,14 @@ jobs:
       - name: Build project
         run: |
           
-          make -j$(nproc)
+          make -j$(nproc) 
+
+      - name: Build AppImage
+        uses: Kidev/qt-appimage@v1
+        with:
+          install_folder: './build'   # Required: Path to folder where Qt installed your project
+          app_name: 'Evernus'             # Optional: App name (deduced from binary if not set)
+          comment: 'My awesome Qt app'  # Optional: Desktop entry comment
+          category: 'Games'          # Optional: Desktop category (default: Utility)
+          icon: 'path/to/icon.png'      # Optional: Path to icon file
+          binary: 'Evernus'               # Optional: Binary name (auto-detected if not set)
