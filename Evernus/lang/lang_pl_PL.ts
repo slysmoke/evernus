@@ -2673,57 +2673,57 @@ Do you want to try to continue? The application may not launch.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="88"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="93"/>
         <source>Omit currency symbol (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="92"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="97"/>
         <source>Force UTC date/time (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="101"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="106"/>
         <source>Date/time format (requires restart):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="103"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="108"/>
         <source>Apply date format to graphs (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="109"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="114"/>
         <source>Column data delimiter:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="110"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="115"/>
         <source>Tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="111"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="116"/>
         <source>Space</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="112"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="117"/>
         <source>;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="113"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="118"/>
         <source>,</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="118"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="123"/>
         <source>Database synchronous flag:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../GeneralPreferencesWidget.cpp" line="123"/>
+        <location filename="../GeneralPreferencesWidget.cpp" line="128"/>
         <source>Value of the &quot;synchronous&quot; flag for SQLite. Change it only when you know what it means.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3671,37 +3671,53 @@ Do you want to try to continue? The application may not launch.</source>
 <context>
     <name>Evernus::InterRegionAnalysisWidget</name>
     <message>
-        <location filename="../InterRegionAnalysisWidget.cpp" line="91"/>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="95"/>
         <source>Volume:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InterRegionAnalysisWidget.cpp" line="109"/>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="113"/>
         <source>Margin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InterRegionAnalysisWidget.cpp" line="127"/>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="136"/>
+        <source>Src Buyout:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="144"/>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="160"/>
+        <source>-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="152"/>
+        <source>Dst Buyout:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="175"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InterRegionAnalysisWidget.cpp" line="131"/>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="179"/>
         <source>Press &quot;Apply&quot; to show results. Additional actions are available via the right-click menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InterRegionAnalysisWidget.cpp" line="154"/>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="203"/>
         <source>Show details</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InterRegionAnalysisWidget.cpp" line="289"/>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="352"/>
         <source>Station change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InterRegionAnalysisWidget.cpp" line="289"/>
+        <location filename="../InterRegionAnalysisWidget.cpp" line="352"/>
         <source>Changing station requires data recalculation. Do you wish to do it now?</source>
         <translation type="unfinished"></translation>
     </message>

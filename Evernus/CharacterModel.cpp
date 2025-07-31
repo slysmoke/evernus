@@ -95,7 +95,7 @@ namespace Evernus
 
     bool CharacterModel::removeRows(int row, int count, const QModelIndex &parent)
     {
-		if (row < 0 || row + count > mData.size())
+		if (row < 0 || static_cast<size_t>(row) + count > mData.size())
 			return false;
 
         beginRemoveRows(parent, row, row + count);

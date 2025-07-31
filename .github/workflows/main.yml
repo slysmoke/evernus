@@ -1,5 +1,4 @@
-# CI
-
+name: Qt CMake Build
 
 on:
   workflow_dispatch:
@@ -12,29 +11,76 @@ on:
         type: string
 
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-18.04
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, windows-2022]
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v3
+      - name: Install Python (for aqtinstall)
+        uses: actions/setup-python@v5
         with:
-          aqtversion: '==3.1.*'
-          py7zrversion: '>=0.20.2'
-          version: '5.12.5'
-          dir: '${{ github.workspace }}/QT/'
-          host: 'linux'
-          target: 'desktop'
-          arch: 'gcc_64'
-          modules: 'qtcharts qtdatavis3d qtscript qtwebengine qtwebglplugin'
-          tools: 'tools_ifw tools_cmake tools_maintenance'      
+          python-version: '3.10'
 
+      - name: Install aqtinstall
+        run: pip install aqtinstall
 
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          path: "evernus"
+      - name: Install Qt 5.12.7 with modules
+        run: |
+          QT_INSTALL_DIR=/opt/Qt
+          QT_MODULES="qtcharts qtdatavis3d qtnetworkauth qtpurchasing qtscript qtwebengine"
+          if [[ "${{ matrix.os }}" == "windows-2022" ]]; then
+            aqt install-qt windows desktop 5.12.7 win64_msvc2019_64 -O $QT_INSTALL_DIR -m $QT_MODULES
+          else
+            aqt install-qt linux desktop 5.12.7 gcc_64 -O $QT_INSTALL_DIR -m $QT_MODULES
+          fi
+
+      - name: Install dependencies (Linux)
+        if: matrix.os == 'ubuntu-22.04'
+        run: |
           
-      - run: ls -al
+          sudo apt update
+          sudo apt install -y \
+                cmake \
+                libboost-all-dev \
+                libglu1-mesa-dev \
+                libx11-dev libxext-dev \
+                libpulse-dev libpulse-mainloop-glib0 \
+                libxcb1-dev libxcomposite-dev libxcursor-dev libxdamage-dev \
+                libxfixes-dev libxi-dev libxrandr-dev libxrender-dev libxtst-dev \
+                libnss3-dev libasound2-dev libegl1-mesa-dev \
+                libdbus-1-dev libudev-dev
+          cmake --version
+          echo "deb http://security.ubuntu.com/ubuntu focal-security main" | sudo tee /etc/apt/sources.list.d/focal-security.list
+          sudo apt-get update
+          sudo apt-get install -y --allow-downgrades libssl-dev=1.1.*
+
+      - name: Install dependencies (Windows)
+        if: matrix.os == 'windows-2022'
+        shell: pwsh
+        run: |
+          choco install openssl.light boost cmake --version=3.22.0 -y
+          cmake --version
+
+      - name: Configure project
+        run: |
+          mkdir -p build 
+          cmake . \
+            -DMajor=5 \
+            -DMinor=12 \
+            -DCMAKE_PREFIX_PATH="/opt/Qt//5.12.7/gcc_64/lib/cmake" \
+            -D_qt_bin_dir="/opt/Qt//5.12.7/gcc_64/bin" \
+            -DOPENSSL_ROOT_DIR=/usr/lib/x86_64-linux-gnu \
+            -DOPENSSL_LIBRARIES=/usr/lib/x86_64-linux-gnu/libssl.so.1.1 \
+            -DOPENSSL_INCLUDE_DIR=/usr/include \
+            -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=$(pwd)/build
+        shell: bash
+
+      - name: Build project
+        run: |
+          
+          make -j$(nproc)
