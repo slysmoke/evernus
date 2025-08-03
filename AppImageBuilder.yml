@@ -1,0 +1,25 @@
+# appimage-builder recipe see https://appimage-builder.readthedocs.io for details
+version: 1
+AppDir:
+  path: /home/devnull/develop/build/evernus/AppDir
+  app_info:
+    id: com.evernus.app
+    name: Evernus
+    icon: Evernus.png
+    version: latest
+    exec: usr/local/bin/Evernus
+    exec_args: $@
+  pacman:
+    include: []
+    exclude: []
+  files:
+    include: []
+    exclude:
+    - usr/share/man
+    - usr/share/doc/*/README.*
+    - usr/share/doc/*/changelog.*
+    - usr/share/doc/*/NEWS.*
+    - usr/share/doc/*/TODO.*
+AppImage:
+  arch: x86_64
+  update-information: guess
