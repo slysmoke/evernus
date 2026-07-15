@@ -3,6 +3,9 @@
 ![GitHub Release Date](https://img.shields.io/github/release-date/slysmoke/evernus)
 [![Visits Badge](https://badges.pufler.dev/visits/slysmoke/evernus)](https://badges.pufler.dev)
 
+> [!WARNING]
+> **This project is abandoned.**  
+> A new active project is available here: **[EVE NTT](https://github.com/slysmoke/eventt)**.
 
 Evernus
 EVE Online Market Tool
